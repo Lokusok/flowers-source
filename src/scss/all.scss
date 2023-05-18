@@ -1,0 +1,286 @@
+@use 'vars' as vars;
+
+.choices {
+  padding-right: 17px;
+
+  &::after {
+    border-color: #fff rgba(0,0,0,0) rgba(0,0,0,0) !important;
+    right: 0 !important;
+    border-width: 4.5px !important;
+    top: 65% !important;
+  }
+
+  &.is-open::after {
+    transform: rotate(180deg);
+  }
+
+  &__inner {
+    background: none;
+    border: none;
+    min-height: 0;
+    padding: 0 !important;
+  }
+
+  &__list {
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  .choices__list--dropdown .options-link__elem:hover {
+    background-color: #956D84;
+    color: #fff;
+  }
+}
+
+.dropdown {
+  text-align: left;
+  padding: 8px 0 8px 20px !important;
+  cursor: pointer;
+  position: relative;
+
+  &__title {
+    white-space: nowrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      transform: translate(0, -50%);
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: #082828 transparent transparent transparent;
+    }
+
+    &.selected {
+      color: #000;
+    }
+  }
+
+  &-list {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease .2s, visibility ease .2s;
+    pointer-events: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid vars.$color-accent-1;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+
+    .dropdown-list {
+      top: 0;
+      left: auto !important;
+      bottom: auto !important;
+      right: -250px;
+      transform: translate(0, 5%);
+
+      .dropdown-item__title {
+        white-space: break-spaces;
+      }
+    }
+  }
+
+  &__indicator {
+    display: none;
+  }
+
+  &.active > .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+
+  &.active > .dropdown__title::before {
+    top: 40%;
+    transform: rotate(180deg);
+  }
+
+  &-item {
+    padding: 8px 26px 8px 15px;
+    transition: padding ease .2s, background ease .2s, font-weight ease .2s, opacity ease .1s;
+    white-space: nowrap;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      right: -20px;
+      top: 0;
+      background: transparent;
+      display: block;
+    }
+
+    &__more {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding-right: 23px;
+      transform: translate(0, 0);
+      display: flex;
+      align-items: center;
+      
+      path {
+        transition: stroke ease .2s;
+      }
+    }
+
+    &:hover .dropdown-list {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+      
+    }
+    
+    &:hover .dropdown-item__icon,
+    &.active .dropdown-item__icon {
+      scale: -1;
+    }
+
+    &:hover .dropdown-item__icon path,
+    &.active .dropdown-item__icon path {
+      stroke: #fff;
+    }
+
+    &__title {
+      color: #333333;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      transition: transform ease .2s;
+      display: block;
+      text-decoration: none;
+    }
+    
+    &:hover {
+      background-color: vars.$color-accent-1;
+      
+      >.dropdown-item__title {
+        color: #fff;
+      }
+    }
+
+    &.active {
+      background-color: vars.$color-accent-1;
+      
+      >.dropdown-item__title {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Бургер
+.burger {
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  padding: 10px;
+
+  &__inner {
+    position: relative;
+    width: 30px;
+    height: 15px;
+  }
+
+  &__line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: vars.$color-accent-1;
+
+    &_1 {
+      top: 0;
+    }
+    
+    &_2 {
+      top: 6px;
+      width: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    
+    &_3 {
+      top: 12px;
+    }
+  }     
+}
+
+// Кнопка действия
+.action-btn {
+  background: vars.$color-accent-1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  
+  &__inner {
+    padding: 10px 30px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &::before {
+    content: "";
+    width: 68px;
+    height: 112px;
+    background: url(../images/decor-btn-1.png) center / cover no-repeat;
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: -15px;
+  }
+}
+
+// Список соцсетей
+.social-list {
+  display: flex;
+  column-gap: 13px;
+  
+  &__link {
+    border-radius: 50%;
+    background-color: vars.$color-accent-1;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      transition: opacity ease .2s;
+    }
+
+    &:hover img {
+      opacity: .7;
+    }
+
+    &:active img {
+      opacity: .4;
+    }
+  }
+}

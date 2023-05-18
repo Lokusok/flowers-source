@@ -1,0 +1,25 @@
+body.no-js {
+  .dropdown {
+    &__indicator {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    &__indicator:checked ~ .dropdown-list {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+    }
+
+    &__indicator:checked ~ .dropdown__title::before {
+      top: 40%;
+      transform: rotate(180deg);
+    }
+  }
+}

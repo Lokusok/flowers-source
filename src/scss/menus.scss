@@ -1,0 +1,249 @@
+@use 'vars' as vars;
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-100%, 0);
+  transition: opacity ease .2s, visibility ease .2s, transform ease .4s;
+  
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+
+  &__row {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  &__header {
+    background-color: #333333;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+  }
+
+  &__close {
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    appearance: none;
+  }
+
+  &__content {
+    padding: 20px 0;
+    max-width: 289px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .tel-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+
+    &__number {
+      white-space: nowrap;
+    }
+  }
+
+  &__area {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &-field {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      color: #333333;
+    }
+
+    &__value {
+      color: vars.$color-accent-1;
+      text-decoration: none;
+    }
+
+    .choices__list--single .options-link__elem_active {
+      display: none;
+    }
+  }
+
+  .city-field {
+    .choices {
+      width: 150px;
+      height: 18px;
+      position: absolute;
+
+      &__list--dropdown {
+        transform: translate(0, -10px);
+      }
+    }
+  }
+
+  .favourite-field {
+    &__icon {
+      width: 25px;
+      height: 22px;
+    }
+
+    &__value {
+      position: relative;
+
+      .counter {
+        position: absolute;
+        right: -13px;
+        top: -6px;
+        width: 22px;
+        height: 22px;
+        background-color: rgba(vars.$color-accent-1, .8);
+        border-radius: 50%;
+        color: #414141;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  &-links {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+
+    &-item {
+      display: flex;
+      position: relative;
+
+      &__title {
+        position: relative;
+      }
+      
+      &__link {
+        padding-bottom: 26px;
+        border-bottom: 1px solid #ccc;
+        text-decoration: none;
+        color: #333;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .accordeon {
+        .inner-list {
+          margin-top: 25px;
+          display: none;
+
+          &-item {
+            display: flex;
+            position: relative;
+          }
+
+          &-item__link {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 0 10px 43px;
+            flex-grow: 1;
+          }
+
+          &-item:hover {
+            font-weight: 900;
+
+            .inner-list-item__link {
+              color: #fff;
+            }
+
+            background-color: vars.$color-accent-1;
+          }
+        }
+
+        &.active {
+          .menu-links-item__title {
+            font-weight: 700;
+            color: vars.$color-accent-1;
+          }
+
+          .menu-links-item__icon {
+            transform: rotate(90deg);
+            top: 35%;
+          }
+
+          .inner-list {
+            display: block;
+          }
+        }
+      }
+
+      &__icon {
+        position: absolute;
+
+        &:not(.left),
+        &.right {
+          right: 0;
+        }
+
+        &:not(.right),
+        &.left {
+          left: 0;
+        }
+
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    &-item.highlighted {
+      .menu-links-item__title {
+        padding-left: 35px;
+        color: vars.$color-accent-1;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .social-list {
+    margin-top: 44px;
+
+    &__link {
+      width: 49px;
+      height: 49px; 
+    }
+
+    &__icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
