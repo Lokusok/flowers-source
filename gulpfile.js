@@ -33,7 +33,7 @@ function watching() {
   watch('./src/scss/**/*.scss', scssToCss);
   watch('./src/js/**/*.js').on('change', browserSync.reload);
 
-  watch('./src/images/src', images);
+  // watch('./src/images/src', images);
 }
 
 function scssToCss() {

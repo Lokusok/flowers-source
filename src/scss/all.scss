@@ -154,7 +154,7 @@
     }
 
     &__title {
-      color: #333333;
+      color: vars.$color-accent-2;
       font-weight: 300;
       font-size: 16px;
       line-height: 18px;
@@ -229,6 +229,16 @@
   cursor: pointer;
   display: flex;
   padding: 0;
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: opacity ease .2s;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &:active {
+    opacity: .7;
+  }
   
   &__inner {
     padding: 10px 30px;
@@ -280,7 +290,41 @@
     }
 
     &:active img {
-      opacity: .4;
+      opacity: .5;
     }
+  }
+}
+
+// Декоративные цветочки по бокам
+.flowers-decor {
+  position: absolute;
+  z-index: -1;
+
+  @media (max-width: 1700px) {
+    display: none;
+  }
+}
+
+// Скрытые элементы
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+// Заголовок секций
+.section-title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+
+  @media (max-width: 640px) {
+    font-size: 24px !important;
+    line-height: 28px !important;
   }
 }

@@ -1,0 +1,19 @@
+// Пагинация для слайдера
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  transform: translate(-50%, 0) !important;
+
+  .swiper-pagination-bullet {
+    color: #fff;
+    background: currentColor;
+    opacity: 1 !important;
+    width: 4px;
+    height: 4px;
+
+    &-active {
+      outline: 1px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
+}
