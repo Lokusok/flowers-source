@@ -1,0 +1,185 @@
+header#header.header
+  .container.header__container
+    .header__row
+      .burger.header__burger
+        .burger__inner
+          span.burger__line.burger__line_1
+          span.burger__line.burger__line_2
+          span.burger__line.burger__line_3
+
+      a.logo.header__logo(href="./index.html")
+        img.logo__image(src="./images/src/logo.svg" alt="Flowers Ukraine")
+      
+      .header__advanced.searches
+        ul.searches-inputs
+          li.searches-inputs__input-elem.input-elem
+            button(type="button").dropdown.dropdown-select.input-elem__input
+              input(type="checkbox").dropdown__indicator
+              span.dropdown__title Поиск по категориям
+
+              ul.dropdown-list
+                li.dropdown-item(data-cat-value="cat-1")
+                  span.dropdown-item__title Категория № 1
+                li.dropdown-item(data-cat-value="cat-2")
+                  span.dropdown-item__title Категория № 2
+                li.dropdown-item(data-cat-value="cat-3")
+                  span.dropdown-item__title Категория № 3
+                li.dropdown-item(data-cat-value="cat-4")
+                  span.dropdown-item__title Категория № 4
+                li.dropdown-item(data-cat-value="cat-5")
+                  span.dropdown-item__title Категория № 5
+
+          li.searches-inputs__input-elem.input-elem
+            input(type="text" placeholder="Поиск по товарам").input-elem__input
+            button(type="button" aria-label="Начать поиск").input-elem__search-btn
+              img(src="./images/src/search-icon.svg" alt="" aria-hidden="true")
+
+        nav.nav
+          ul.searches-cats
+            li.searches-cats__cat-elem.cat-elem
+              button.dropdown
+                span.dropdown__title.cat-elem__title Каталог товаров
+
+                ul.dropdown-list
+                  li.dropdown-item(data-cat-value="cat-1")
+                    span.dropdown-item__title Букеты
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                    ul.dropdown-list
+                      li.dropdown-item
+                        a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                      li.dropdown-item
+                        a(href="#").dropdown-item__title Цветы в коробке сердце
+                      li.dropdown-item
+                        a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-2")
+                    span.dropdown-item__title Розы
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-3")
+                    span.dropdown-item__title Цветы в коробке
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-4")
+                    span.dropdown-item__title Композиции
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-5")
+                    span.dropdown-item__title Подарки
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-4")
+                    span.dropdown-item__title Подарочные корзины
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-5")
+                    span.dropdown-item__title Букеты невесты
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+                  li.dropdown-item(data-cat-value="cat-4")
+                    span.dropdown-item__title Вкусные букеты
+                    .dropdown-item__more
+                      <svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+                      </svg>
+
+                      ul.dropdown-list
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке с пироженым Macarons
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в коробке сердце
+                        li.dropdown-item
+                          a(href="#").dropdown-item__title Цветы в прямоугольной коробке 
+
+            li.searches-cats__cat-elem.cat-elem
+              a(href="#").cat-elem__title Форум
+            li.searches-cats__cat-elem.cat-elem
+              a(href="#").cat-elem__title Отзывы
+            li.searches-cats__cat-elem.cat-elem
+              a(href="#").cat-elem__title Акции
+            li.searches-cats__cat-elem.cat-elem
+              a(href="#").cat-elem__title Новости
+            li.searches-cats__cat-elem.cat-elem
+              a(href="#").cat-elem__title Информация
+
+      .other-links
+        nav.nav-social
+          include ../partials/social-list
+
+        a(href="tel:380678293030").other-links__tel +38 (067) 829 30 30
+        .other-links__opts
+          a(href="#").other-links__link.search-link
+            img(src="./images/src/search-icon.svg" alt="поиск")
+
+          a(href="#").other-links__link.favourite-link
+            img(src="./images/src/heart-icon.svg" alt="избранное")
+            span.counter 2
+
+          a(href="#").other-links__link.basket-link
+            img(src="./images/src/cart-icon.svg" alt="корзина")
+            span.counter 1
+
+          span.other-links__summary ₴ 1 520

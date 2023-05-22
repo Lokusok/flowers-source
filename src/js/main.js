@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectBurger();
   setCorrectSliders();
   setCorrectFavourites();
+  setCorrectMap();
 });
 
 
@@ -208,10 +209,10 @@ function setCorrectSliders() {
   doWelcomeSwiper();
   doForumSlider();
 
-  // window.matchMedia('(min-width: 911px)')
-  //   .addEventListener('change', () => {
-  //     location.reload();
-  //   });
+  window.matchMedia('(min-width: 911px)')
+    .addEventListener('change', () => {
+      location.reload();
+    });
 }
 
 // Добавление в избранное
@@ -224,4 +225,41 @@ function setCorrectFavourites() {
       btn.classList.toggle('active');
     });
   });
+}
+
+// Карта
+function setCorrectMap() {
+  ymaps.ready(init);
+
+  function init(){
+    const myMap = new ymaps.Map("map-view", {
+      center: [49.836330, 24.027426],      
+      zoom: 19
+    });
+    const placemark = new ymaps.Placemark([49.836290, 24.026669], {
+      balloonContent: 'Мы находимся здесь :)'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '../images/src/map-hint-icon.svg',
+      iconImageSize: [30, 42],
+      iconImageOffset: [-5, -38]
+    });
+
+    myMap.geoObjects.add(placemark);
+    myMap.controls.remove('geolocationControl');
+    myMap.controls.remove('searchControl');
+    myMap.controls.remove('trafficControl');
+    myMap.controls.remove('typeSelector');
+    myMap.controls.remove('fullscreenControl');
+    myMap.controls.remove('zoomControl');
+    myMap.controls.remove('rulerControl');
+
+    if (window.matchMedia('(max-width: 800px)').matches) {
+      myMap.setCenter([49.836290, 24.026669]);
+    }
+
+    if (window.matchMedia('(max-width: 500px)').matches) {
+      myMap.setCenter([49.836146, 24.026682]);
+    }
+  }
 }

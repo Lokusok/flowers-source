@@ -299,6 +299,8 @@
 .flowers-decor {
   position: absolute;
   z-index: -1;
+  pointer-events: none;
+  user-select: none;
 
   @media (max-width: 1700px) {
     display: none;

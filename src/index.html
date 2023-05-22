@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowers Ukraine</title>
+    <meta name="format-detection" content="telephone=no">
+    <title>Flowers Ukraine | Главная</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./images/src/logo.svg">
     <script defer src="./js/libs/choices.min.js"></script>
     <script defer src="./js/libs/swiped-events.js"></script>
     <script defer src="./js/libs/swiper.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8a668916-04d0-4f25-8d4a-b97888776387&amp;lang=ru_RU" type="text/javascript"></script>
     <script defer src="./js/main.js"></script>
   </head>
   <body class="no-js">
@@ -1900,7 +1902,7 @@
           </div>
         </div>
       </section>
-      <section class="forum" id="forum">
+      <section class="forum" id="forum"><img class="flowers-decor forum__decor forum__decor_1" src="./images/flowers-decor-2.png" alt="" aria-hidden="true">
         <div class="container forum__container">
           <div class="forum__row">
             <div class="forum__top-line">
@@ -1943,6 +1945,98 @@
           </div>
         </div>
       </section>
+      <section class="map" id="map">
+        <div class="container map__container">
+          <div class="map__row">
+            <h2 class="visually-hidden map__title">Карта и контактные данные</h2>
+            <div class="map-content">
+              <div class="map-view map-content__map-view" id="map-view"></div>
+              <div class="map-card">
+                <div class="map-card__logo"><img src="./images/src/logo.svg" alt="Flowers Ukraine Логотип"></div>
+                <div class="map-card__content">
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/phone-icon.svg" alt="" aria-hidden="true">Телефон:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/skype-icon.svg" alt="" aria-hidden="true">Skype:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">Flowers-Ukraine</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/mail-icon.svg" alt="" aria-hidden="true">Почта:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">flowers.ukraine2014@gmail.com</li>
+                    </ul>
+                  </div>
+                  <ul class="social-list">
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/inst-icon.svg" alt="Instagram"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/skype-social-icon.svg" alt="Skype"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/facebook-icon.svg" alt="Facebook"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer" id="footer"><img class="flowers-decor footer__decor footer__decor_1" src="./images/src/flowers-decor-footer-1.png" alt="" aria-hidden="true"><img class="flowers-decor footer__decor footer__decor_2" src="./images/src/flowers-decor-footer-2.png" alt="" aria-hidden="true">
+      <div class="container footer__container">
+        <div class="footer__row">
+          <div class="footer__top">
+            <div class="footer__logo"><img src="./images/src/logo-light.svg" alt="Flowers Ukraine Логотип"></div>
+            <div class="footer__lists">
+              <div class="footer-block"><span class="footer-block__title">Информация</span>
+                <ul class="footer-list">
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">О нас</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Доставка и оплата</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+              <div class="footer-block"><span class="footer-block__title">Служба поддержки</span>
+                <ul class="footer-list">
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Карта сайта</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Возврат товара</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Связаться с нами</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Для сотрудничества</a></li>
+                </ul>
+              </div>
+              <div class="footer-block"><span class="footer-block__title">Личный кабинет</span>
+                <ul class="footer-list">
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Личный кабинет</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">История заказа</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Закладки</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Список новостей</a></li>
+                </ul>
+              </div>
+              <div class="footer-block"><span class="footer-block__title">Дополнительно</span>
+                <ul class="footer-list">
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Подарочные</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Сертификаты</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Акции</a></li>
+                  <li class="footer-list__item"><a class="footer-list__link" href="#">Цветы в офис</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom"><span class="footer__copyright">Copyright &copy; 2021. Все права защищены</span>
+            <div class="pay-methods footer__pay-methods"><span class="pay-methods__title">Способы оплаты:</span>
+              <ul class="pay-methods__list">
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/src/pay-method-1.png" alt="liqpay"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/src/pay-method-2.png" alt="mastercard"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/src/pay-method-3.png" alt="maestro"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/src/pay-method-4.png" alt="visa electron"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/src/pay-method-5.png" alt="visa"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
