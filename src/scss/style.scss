@@ -1133,7 +1133,7 @@ body {
     position: relative;
   }
 
-  &:not(:first-child) {
+  &:not(.products-1) {
     .products__row {
       padding-top: 170px;
     }
@@ -1695,7 +1695,7 @@ body {
   }
 
   &__content {
-    padding-top: 70px;
+    // padding-top: 70px;
     position: relative;
   }
 
@@ -1761,6 +1761,8 @@ body {
 
   // Слайдер
   &-slider {
+    padding-top: 70px;
+
     &__wrapper {
       display: flex;
       justify-content: space-between;
