@@ -188,6 +188,7 @@ function setCorrectSliders() {
     const forumSwiper = new Swiper(forumSlider, {
       slidesPerView: 1,
       spaceBetween: 21,
+      simulateTouch: false,
       pagination: {
         el: '.forum-slider-pagination'
       },

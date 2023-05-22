@@ -1699,6 +1699,17 @@ body {
     position: relative;
   }
 
+  &__more-link {
+    display: block;
+    text-align: center;
+    margin-top: 85px;
+    color: vars.$color-accent-1;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 18px;
+    display: none;
+  }
+
   // Карточка
   &-card {
     display: flex;
@@ -1845,6 +1856,18 @@ body {
         width: auto;
         min-width: auto;
       }
+
+      &__image-block {
+        height: 257px;
+      }
+    }
+
+    .forum-more {
+      display: none;
+    }
+
+    &__more-link {
+      display: block;
     }
   }
 }
