@@ -1984,6 +1984,8 @@ body {
   }
 
   @media (max-width: 800px) {
+    height: 895px;
+
     &-content {
       justify-content: center;
     }
@@ -1996,6 +1998,8 @@ body {
   }
 
   @media (max-width: 500px) {
+    height: 695px;
+
     &-card {
       &__row {
         padding-top: 60px;
@@ -2047,7 +2051,7 @@ body {
       }
 
       &__content {
-        padding: 23px 15px;
+        padding: 23px 30px;
       }
 
       &-list {
@@ -2089,9 +2093,10 @@ body {
   }
 
   &__lists {
-    margin-left: auto;
-    column-gap: 90px;
-    display: flex;
+    margin-left: 193px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 90px;
     justify-content: space-between;
   }
 
@@ -2116,6 +2121,9 @@ body {
     &__link {
       color: #fff;
       text-decoration: none;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
     }
 
     &__link:hover {
@@ -2130,6 +2138,18 @@ body {
     align-items: center;
   }
 
+  // Зануление выпадающего меню
+  .menu-drop {
+    &__icon {
+      display: none;
+    }
+
+    .inner-list {
+      margin: 0;
+      display: flex;
+    }
+  }
+
   .pay-methods {
     display: flex;
     align-items: center;
@@ -2142,8 +2162,147 @@ body {
     }
 
     &__list {
-      display: flex;
       column-gap: 28px;
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 1380px) {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__lists {
+      margin-left: 0;
+      margin-top: 66px;
+    }
+  }
+
+  @media (max-width: 1005px) {
+    &__lists {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 60px;
+    }
+  }
+
+  @media (max-width: 890px) {
+    &__bottom {
+      column-gap: 35px;
+    }
+
+    .pay-methods {
+      &__title {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 690px) {
+    &-block {
+      text-align: center;
+    }
+
+    .pay-methods {
+      &__list {
+        grid-template-columns: repeat(3, auto);
+        grid-row-gap: 38px;
+      }
+    }
+
+    .menu-drop {
+      .inner-list-item {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    &__top {
+      align-items: stretch;
+    }
+
+    &__logo {
+      align-self: center;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+      row-gap: 57px;
+    }
+    
+    &-block {
+      text-align: left;
+      row-gap: 20px;
+
+      &__title {
+        font-weight: 900;
+      }
+    }
+
+    &-list {
+      &__link {
+        padding: 10px 0 10px 0;
+      }
+    }
+
+    .menu-drop {
+      &__icon {
+        display: block;
+      }
+
+      .inner-list {
+        display: none;
+
+        &-item {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    &__lists {
+      grid-template-columns: 1fr;
+      grid-row-gap: 34px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 420px) {
+    &__top {
+      padding: 0;
+      padding-top: 38px;
+      border-bottom: none;
+    }
+
+    .pay-methods {
+      align-self: center;
+
+      &__list {
+        grid-gap: 50px;
+      }
+
+      .pay-method {
+        &__image {
+          transform: scale(1.25);
+        }
+      }
+    }
+
+    &__copyright {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 18px;
+    }
+    
+    &__bottom {
+      align-items: stretch;
+      padding: 56px 0 18px 0;
     }
   }
 }
+

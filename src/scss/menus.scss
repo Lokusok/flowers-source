@@ -156,51 +156,6 @@
         flex-direction: column;
       }
 
-      .accordeon {
-        .inner-list {
-          margin-top: 25px;
-          display: none;
-
-          &-item {
-            display: flex;
-            position: relative;
-          }
-
-          &-item__link {
-            color: vars.$color-accent-2;
-            text-decoration: none;
-            padding: 10px 0 10px 43px;
-            flex-grow: 1;
-          }
-
-          &-item:hover {
-            font-weight: 900;
-
-            .inner-list-item__link {
-              color: #fff;
-            }
-
-            background-color: vars.$color-accent-1;
-          }
-        }
-
-        &.active {
-          .menu-links-item__title {
-            font-weight: 700;
-            color: vars.$color-accent-1;
-          }
-
-          .menu-links-item__icon {
-            transform: rotate(90deg);
-            top: 35%;
-          }
-
-          .inner-list {
-            display: block;
-          }
-        }
-      }
-
       &__icon {
         position: absolute;
 

@@ -72,7 +72,7 @@ function setCorrectChoices() {
 
 // Аккордеон в меню
 function setCorrectMenuAccordeon() {
-  const accordeons = document.querySelectorAll('.accordeon');
+  const accordeons = document.querySelectorAll('.menu-drop');
 
   accordeons.forEach((accordeon) => {
     const accordeonItems = accordeon.querySelectorAll('.inner-list-item');
@@ -258,7 +258,7 @@ function setCorrectMap() {
       myMap.setCenter([49.836290, 24.026669]);
     }
 
-    if (window.matchMedia('(max-width: 500px)').matches) {
+    if (window.matchMedia('(max-width: 670px)').matches) {
       myMap.setCenter([49.836146, 24.026682]);
     }
   }

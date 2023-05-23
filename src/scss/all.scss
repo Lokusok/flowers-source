@@ -330,3 +330,72 @@
     line-height: 28px !important;
   }
 }
+
+// Выпадающее меню
+.menu-drop {
+  position: relative;
+
+  &__title {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 7px;
+    height: 14px;
+    background-image: url(../images/src/menu-drop-icon-black.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    &.white {
+      background-image: url(../images/src/menu-drop-icon-white.svg);
+    }
+  }
+
+  .inner-list {
+    margin-top: 25px;
+    display: none;
+
+    &-item {
+      display: flex;
+      position: relative;
+    }
+
+    &-item__link {
+      color: vars.$color-accent-2;
+      text-decoration: none;
+      padding: 10px 0 10px 43px;
+      flex-grow: 1;
+    }
+
+    &-item:hover {
+      font-weight: 900;
+
+      .inner-list-item__link {
+        color: #fff;
+      }
+
+      background-color: vars.$color-accent-1;
+    }
+  }
+
+  &.active {
+    .menu-drop__title {
+      font-weight: 700;
+      color: vars.$color-accent-1;
+    }
+
+    .menu-drop__icon {
+      transform: rotate(90deg);
+      top: 35%;
+    }
+
+    .inner-list {
+      display: block !important;
+    }
+  }
+}
