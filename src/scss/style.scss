@@ -1462,8 +1462,12 @@ body {
   }
 
   @media (max-width: 640px) {
-    &__row {
-      padding-top: 65px;
+    .products__row {
+      padding-top: 130px !important;
+    }
+
+    &.products-1 .products__row {
+      padding-top: 80px !important;
     }
 
     &__arrows {
@@ -1821,6 +1825,12 @@ body {
   @media (max-width: 1150px) {
     &__row {
       padding-top: 100px;
+    }
+  }
+
+  @media (max-width: 1149px) {
+    .forum-slider {
+      padding-top: 60px;
     }
   }
 
