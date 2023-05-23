@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
+  setCorrectPopups();
+  setCorrectInputMasks();
 });
 
 
@@ -37,8 +39,6 @@ function setCorrectChoices() {
       const documentClickHandler = (event) => {
         const isChildOfDropdown = Boolean(event.target.closest('.dropdown'));
         
-        console.log(isChildOfDropdown);
-
         if (!isChildOfDropdown) {
           dropdownSelect.classList.remove('active');
           document.removeEventListener('click', documentClickHandler);
@@ -262,4 +262,54 @@ function setCorrectMap() {
       myMap.setCenter([49.836146, 24.026682]);
     }
   }
+}
+
+// Попапы
+function setCorrectPopups() {
+  const triggers = document.querySelectorAll('.trigger');
+  const setUnscroll = () => document.body.classList.add('unscroll');
+  const delUnscroll = () => document.body.classList.remove('unscroll');
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const popupSelector = trigger.dataset.popupSelector;
+      const popup = document.querySelector(popupSelector);
+      const hideButtons = popup.querySelectorAll('.click-and-hide');
+      const requiredInputs = Array.from(popup.querySelectorAll('input[required]'));
+      const closePopup = (event) => {
+        if (event.target !== popup) return;
+
+        popup.classList.remove('active');
+        delUnscroll();
+      };
+
+      if (!popup) return;
+      if (hideButtons) {
+        hideButtons.forEach((hideButton) => {
+          hideButton.addEventListener('click', () => {
+            if (requiredInputs.every((input) => input.checkValidity())) {
+              requiredInputs.forEach((input) => input.value = '');
+              popup.classList.remove('active');
+            } else {
+              alert('Введите номер телефона!');
+            }
+          });
+        });     
+      }
+
+      popup.classList.add('active');
+      setUnscroll();
+      document.addEventListener('mousedown', closePopup);
+    });
+  });
+}
+
+// Маски на инпуты
+function setCorrectInputMasks() {
+  const telMask = new Inputmask('8-(999)-999-99-99');
+  const inputsTel = document.querySelectorAll('input[type="tel"]');
+
+  inputsTel.forEach((inputTel) => {
+    telMask.mask(inputTel);
+  });
 }

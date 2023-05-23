@@ -243,6 +243,17 @@
   &__inner {
     padding: 10px 30px;
   }
+
+  &.small {
+    .action-btn__inner {
+      padding: 0;
+      width: 122px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   
   a {
     text-decoration: none;

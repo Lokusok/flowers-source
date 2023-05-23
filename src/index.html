@@ -10,6 +10,7 @@
     <link rel="icon" href="./images/src/logo.svg">
     <script defer src="./js/libs/choices.min.js"></script>
     <script defer src="./js/libs/swiped-events.js"></script>
+    <script defer src="./js/libs/inputmask.min.js"></script>
     <script defer src="./js/libs/swiper.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8a668916-04d0-4f25-8d4a-b97888776387&amp;lang=ru_RU" type="text/javascript"></script>
     <script defer src="./js/main.js"></script>
@@ -22,7 +23,7 @@
         </div>
         <div class="menu__content">
           <div class="menu-field tel-field"><span class="menu-field__title tel-field__number">+38 (067) 829 30 30</span>
-            <button class="action-btn tel-field__button" type="button"><a class="action-btn__inner tel-field__link" href="tel:380678293030"><span class="action-btn__text">Позвонить</span></a></button>
+            <button class="small action-btn tel-field__button" type="button"><a class="action-btn__inner tel-field__link" href="tel:380678293030"><span class="action-btn__text">Позвонить</span></a></button>
           </div>
           <div class="menu__area">
             <div class="menu-field city-field"><span class="menu-field__title city-field__title">Киев</span>
@@ -62,6 +63,19 @@
             <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/tg-icon.svg" alt="Telegram"></a></li>
             <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/facebook-icon.svg" alt="Facebook"></a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popup tel-popup">
+      <div class="popup__row tel-popup__row">
+        <div class="popup__content tel-popup__content"><span class="tel-popup__title">Заказ звонка</span>
+          <p class="tel-popup__description">Оставьте Ваш номер телефона и мы перезвоним Вам через 5 минут</p>
+          <div class="tel-popup__input-block">
+            <input class="tel-popup__input" type="tel" name="tel" required><span class="tel-popup__input-label">Телефон *</span>
+          </div>
+          <button class="action-btn click-and-hide tel-popup__button" type="button">
+            <div class="action-btn__inner"><span class="action-btn__text">Отправить</span></div>
+          </button>
         </div>
       </div>
     </div>
@@ -150,14 +164,13 @@
           <div class="header__advanced searches">
             <ul class="searches-inputs">
               <li class="searches-inputs__input-elem input-elem">
-                <button class="dropdown dropdown-select input-elem__input" type="button">
-                  <input class="dropdown__indicator" type="checkbox"><span class="dropdown__title">Поиск по категориям</span>
+                <button class="dropdown dropdown-select input-elem__input" type="button"><span class="dropdown__title">Поиск по категориям</span>
                   <ul class="dropdown-list">
-                    <li class="dropdown-item" data-cat-value="cat-1"><span class="dropdown-item__title">Категория № 1</span></li>
-                    <li class="dropdown-item" data-cat-value="cat-2"><span class="dropdown-item__title">Категория № 2</span></li>
-                    <li class="dropdown-item" data-cat-value="cat-3"><span class="dropdown-item__title">Категория № 3</span></li>
-                    <li class="dropdown-item" data-cat-value="cat-4"><span class="dropdown-item__title">Категория № 4</span></li>
-                    <li class="dropdown-item" data-cat-value="cat-5"><span class="dropdown-item__title">Категория № 5</span></li>
+                    <li class="dropdown-item" data-cat-value="cat-1" tabindex="0"><span class="dropdown-item__title">Категория № 1</span></li>
+                    <li class="dropdown-item" data-cat-value="cat-2" tabindex="0"><span class="dropdown-item__title">Категория № 2</span></li>
+                    <li class="dropdown-item" data-cat-value="cat-3" tabindex="0"><span class="dropdown-item__title">Категория № 3</span></li>
+                    <li class="dropdown-item" data-cat-value="cat-4" tabindex="0"><span class="dropdown-item__title">Категория № 4</span></li>
+                    <li class="dropdown-item" data-cat-value="cat-5" tabindex="0"><span class="dropdown-item__title">Категория № 5</span></li>
                   </ul>
                 </button>
               </li>
@@ -169,9 +182,9 @@
             <nav class="nav">
               <ul class="searches-cats">
                 <li class="searches-cats__cat-elem cat-elem">
-                  <button class="dropdown"><span class="dropdown__title cat-elem__title">Каталог товаров</span>
+                  <button class="dropdown" type="button"><span class="dropdown__title cat-elem__title">Каталог товаров</span>
                     <ul class="dropdown-list">
-                      <li class="dropdown-item" data-cat-value="cat-1"><span class="dropdown-item__title">Букеты</span>
+                      <li class="dropdown-item" data-cat-value="cat-1" tabindex="0"><span class="dropdown-item__title">Букеты</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -182,7 +195,7 @@
                           <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
                         </ul>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-2"><span class="dropdown-item__title">Розы</span>
+                      <li class="dropdown-item" data-cat-value="cat-2" tabindex="0"><span class="dropdown-item__title">Розы</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -193,7 +206,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-3"><span class="dropdown-item__title">Цветы в коробке</span>
+                      <li class="dropdown-item" data-cat-value="cat-3" tabindex="0"><span class="dropdown-item__title">Цветы в коробке</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -204,7 +217,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-4"><span class="dropdown-item__title">Композиции</span>
+                      <li class="dropdown-item" data-cat-value="cat-4" tabindex="0"><span class="dropdown-item__title">Композиции</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -215,7 +228,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-5"><span class="dropdown-item__title">Подарки</span>
+                      <li class="dropdown-item" data-cat-value="cat-5" tabindex="0"><span class="dropdown-item__title">Подарки</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -226,7 +239,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-4"><span class="dropdown-item__title">Подарочные корзины</span>
+                      <li class="dropdown-item" data-cat-value="cat-6" tabindex="0"><span class="dropdown-item__title">Подарочные корзины</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -237,7 +250,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-5"><span class="dropdown-item__title">Букеты невесты</span>
+                      <li class="dropdown-item" data-cat-value="cat-7" tabindex="0"><span class="dropdown-item__title">Букеты невесты</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -248,7 +261,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="dropdown-item" data-cat-value="cat-4"><span class="dropdown-item__title">Вкусные букеты</span>
+                      <li class="dropdown-item" data-cat-value="cat-8" tabindex="0"><span class="dropdown-item__title">Вкусные букеты</span>
                         <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
 </svg>
@@ -458,7 +471,8 @@
                             <div class="product-card-text-block__bottom-line">
                               <button class="action-btn product-card__get-order" type="button">
                                 <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
-                              </button><a class="product-card__quick-order" href="#">Быстрый заказ</a>
+                              </button>
+                              <div class="trigger product-card__quick-order" href="#" data-popup-selector=".tel-popup">Быстрый заказ</div>
                             </div>
                           </div>
                         </div>

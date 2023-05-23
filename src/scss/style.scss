@@ -7,6 +7,7 @@
 @use 'menus';
 @use 'no-js';
 @use 'sliders';
+@use 'popups';
 
 
 html {
@@ -311,7 +312,6 @@ body {
 
         
         &:focus {
-          outline: none;
           border-color: rgba(vars.$color-accent-1, .5);
         }
       }
@@ -381,9 +381,6 @@ body {
           &-list {
             width: 240px;
             bottom: -12px;
-          }
-
-          &-item {
           }
         }
       }
@@ -1406,6 +1403,7 @@ body {
 
     // Быстрый заказ
     &__quick-order {
+      cursor: pointer;
       color: #828282;
       font-weight: 400;
       font-size: 16px;
@@ -2138,6 +2136,7 @@ body {
 
     &__link:hover {
       text-decoration: underline;
+      background: vars.$color-accent-1;
     }
   }
 
@@ -2248,7 +2247,7 @@ body {
       row-gap: 20px;
 
       &__title {
-        font-weight: 900;
+        font-weight: 900 !important;
       }
     }
 
