@@ -23,7 +23,7 @@
               option(value="odessa") Одесса
         .menu-field.favourite-field
           span.menu-field__title.city-field__title Закладки
-          a(href="#").favourite-field__value.menu-field__value
+          button(type="button" data-popup-selector=".favourite-popup").trigger.favourite-field__value.menu-field__value
             img.favourite-field__icon(src="./images/src/heart-icon.svg" alt="избранное")
             .counter 2
         .menu-field.city-field

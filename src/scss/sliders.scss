@@ -17,3 +17,32 @@
     }
   }
 }
+
+// Стрелки навигации
+.slider-arrows {
+  margin-left: auto;
+  display: flex;
+  column-gap: 27px;
+
+  .products-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity ease .2s;    
+
+    &.disable {
+      opacity: .2 !important;
+      cursor: default;
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        opacity: .4;
+      }
+    }
+  }
+}

@@ -17,15 +17,15 @@ header#header.header
               span.dropdown__title Поиск по категориям
 
               ul.dropdown-list
-                li.dropdown-item(data-cat-value="cat-1")(tabindex="0")
+                li.dropdown-item(data-cat-value="cat-1" tabindex="0")
                   span.dropdown-item__title Категория № 1
-                li.dropdown-item(data-cat-value="cat-2")(tabindex="0")
+                li.dropdown-item(data-cat-value="cat-2" tabindex="0")
                   span.dropdown-item__title Категория № 2
-                li.dropdown-item(data-cat-value="cat-3")(tabindex="0")
+                li.dropdown-item(data-cat-value="cat-3" tabindex="0")
                   span.dropdown-item__title Категория № 3
-                li.dropdown-item(data-cat-value="cat-4")(tabindex="0")
+                li.dropdown-item(data-cat-value="cat-4" tabindex="0")
                   span.dropdown-item__title Категория № 4
-                li.dropdown-item(data-cat-value="cat-5")(tabindex="0")
+                li.dropdown-item(data-cat-value="cat-5" tabindex="0")
                   span.dropdown-item__title Категория № 5
 
           li.searches-inputs__input-elem.input-elem
@@ -173,7 +173,7 @@ header#header.header
           a(href="#").other-links__link.search-link
             img(src="./images/src/search-icon.svg" alt="поиск")
 
-          a(href="#").other-links__link.favourite-link
+          button(type="button" data-popup-selector=".favourite-popup").trigger.other-links__link.favourite-link
             img(src="./images/src/heart-icon.svg" alt="избранное")
             span.counter 2
 

@@ -36,8 +36,11 @@
                 </select>
               </label>
             </div>
-            <div class="menu-field favourite-field"><span class="menu-field__title city-field__title">Закладки</span><a class="favourite-field__value menu-field__value" href="#"><img class="favourite-field__icon" src="./images/src/heart-icon.svg" alt="избранное">
-                <div class="counter">2</div></a></div>
+            <div class="menu-field favourite-field"><span class="menu-field__title city-field__title">Закладки</span>
+              <button class="trigger favourite-field__value menu-field__value" type="button" data-popup-selector=".favourite-popup"><img class="favourite-field__icon" src="./images/src/heart-icon.svg" alt="избранное">
+                <div class="counter">2</div>
+              </button>
+            </div>
             <div class="menu-field city-field"><span class="menu-field__title city-field__title">Личный кабинет</span><a class="menu-field__value" href="#">Войти</a></div>
           </div>
           <ul class="menu-links">
@@ -76,6 +79,208 @@
           <button class="action-btn click-and-hide tel-popup__button" type="button">
             <div class="action-btn__inner"><span class="action-btn__text">Отправить</span></div>
           </button>
+        </div>
+      </div>
+    </div>
+    <div class="popup favourite-popup">
+      <div class="popup__row favourite-popup__row">
+        <div class="popup__content favourite-popup__content">
+          <div class="favourite-popup__top-line"><span class="favourite-popup__title">Избраное</span>
+            <div class="slider-arrows favourite-popup__arrows">
+              <button class="products-arrow favourite-arrow-prev" type="button"><svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
+</svg>
+              </button>
+              <button class="products-arrow favourite-arrow-next" type="button"><svg class="products-arrow-next__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3869 13.0104L3.34735 1.30589C2.58149 0.560961 1.33978 0.560961 0.574286 1.30589C-0.191266 2.05016 -0.191266 3.25729 0.574286 4.0015L11.2274 14.3582L0.574596 24.7145C-0.190956 25.459 -0.190956 26.6661 0.574596 27.4103C1.34015 28.1549 2.5818 28.1549 3.34766 27.4103L15.3872 15.7057C15.77 15.3334 15.9612 14.8459 15.9612 14.3582C15.9612 13.8703 15.7696 13.3825 15.3869 13.0104Z" fill="#956D84"/>
+</svg>
+              </button>
+            </div>
+          </div>
+          <div class="favourite-popup__inner">
+            <div class="swiper favourite-slider">
+              <div class="swiper-wrapper favourite-slider__wrapper">
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">101 красная роза</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">2280 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button>
+                        <div class="trigger product-card__quick-order" href="#" data-popup-selector=".tel-popup">Быстрый заказ</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">25 розовых пионовидных роз</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1680 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button><a class="product-card__quick-order" href="#">Быстрый заказ</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">Влюбленность</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1270 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button><a class="product-card__quick-order" href="#">Быстрый заказ</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">101 красная роза</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">2280 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button>
+                        <div class="trigger product-card__quick-order" href="#" data-popup-selector=".tel-popup">Быстрый заказ</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">25 розовых пионовидных роз</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1680 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button><a class="product-card__quick-order" href="#">Быстрый заказ</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card"><a class="product-card__link" href="#">
+                    <div class="product-card-image-block">
+                      <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span>
+                        <button class="product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>
+                        </button>
+                      </div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="сто одна красная роза">
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div>
+                    </div></a>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"><img class="product-card-text-block-raiting-star" src="./images/src/star-icon.svg"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">Влюбленность</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1270 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button">
+                          <div class="action-btn__inner"><span class="action-btn__text">Заказать</span></div>
+                        </button><a class="product-card__quick-order" href="#">Быстрый заказ</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="pagination favourite-slider-pagination"></div>
+            <button class="click-and-hide favourite-popup__close" type="button">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>
@@ -292,7 +497,9 @@
                 <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/facebook-icon.svg" alt="Facebook"></a></li>
               </ul>
             </nav><a class="other-links__tel" href="tel:380678293030">+38 (067) 829 30 30</a>
-            <div class="other-links__opts"><a class="other-links__link search-link" href="#"><img src="./images/src/search-icon.svg" alt="поиск"></a><a class="other-links__link favourite-link" href="#"><img src="./images/src/heart-icon.svg" alt="избранное"><span class="counter">2</span></a><a class="other-links__link basket-link" href="#"><img src="./images/src/cart-icon.svg" alt="корзина"><span class="counter">1</span></a><span class="other-links__summary">₴ 1 520</span></div>
+            <div class="other-links__opts"><a class="other-links__link search-link" href="#"><img src="./images/src/search-icon.svg" alt="поиск"></a>
+              <button class="trigger other-links__link favourite-link" type="button" data-popup-selector=".favourite-popup"><img src="./images/src/heart-icon.svg" alt="избранное"><span class="counter">2</span></button><a class="other-links__link basket-link" href="#"><img src="./images/src/cart-icon.svg" alt="корзина"><span class="counter">1</span></a><span class="other-links__summary">₴ 1 520</span>
+            </div>
           </div>
         </div>
       </div>
@@ -430,7 +637,7 @@
           <div class="products__row">
             <div class="products__top-line">
               <h2 class="section-title products__title">Акции</h2>
-              <div class="products-1__arrows products__arrows">
+              <div class="slider-arrows products-1__arrows products__arrows">
                 <button class="products-arrow products-1-arrow-prev products-arrow-prev" type="button"><svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
 </svg>
@@ -927,7 +1134,7 @@
           <div class="products__row">
             <div class="products__top-line">
               <h2 class="section-title products__title">Сезонные</h2>
-              <div class="products-2__arrows products__arrows">
+              <div class="slider-arrows products-2__arrows products__arrows">
                 <button class="products-arrow products-2-arrow-prev products-arrow-prev" type="button"><svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
 </svg>
@@ -1423,7 +1630,7 @@
           <div class="products__row">
             <div class="products__top-line">
               <h2 class="section-title products__title">Подарки</h2>
-              <div class="products-3__arrows products__arrows">
+              <div class="slider-arrows products-3__arrows products__arrows">
                 <button class="products-arrow products-3-arrow-prev products-arrow-prev" type="button"><svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
 </svg>

@@ -1,0 +1,229 @@
+.popup.favourite-popup
+  .popup__row.favourite-popup__row
+    .popup__content.favourite-popup__content
+      .favourite-popup__top-line
+        span.favourite-popup__title Избраное
+
+        //- Стрелки для слайдера
+        .slider-arrows.favourite-popup__arrows
+          button(type="button").products-arrow.favourite-arrow-prev
+            <svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
+            </svg>
+          button(type="button").products-arrow.favourite-arrow-next
+            <svg class="products-arrow-next__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.3869 13.0104L3.34735 1.30589C2.58149 0.560961 1.33978 0.560961 0.574286 1.30589C-0.191266 2.05016 -0.191266 3.25729 0.574286 4.0015L11.2274 14.3582L0.574596 24.7145C-0.190956 25.459 -0.190956 26.6661 0.574596 27.4103C1.34015 28.1549 2.5818 28.1549 3.34766 27.4103L15.3872 15.7057C15.77 15.3334 15.9612 14.8459 15.9612 14.3582C15.9612 13.8703 15.7696 13.3825 15.3869 13.0104Z" fill="#956D84"/>
+            </svg>
+
+      .favourite-popup__inner
+        .swiper.favourite-slider
+          .swiper-wrapper.favourite-slider__wrapper
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -19%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title 101 красная роза
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 2280 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    div(href="#" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -10%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title 25 розовых пионовидных роз
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 1680 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    a(href="#").product-card__quick-order Быстрый заказ
+
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -19%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title Влюбленность
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 1270 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    a(href="#").product-card__quick-order Быстрый заказ
+
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -19%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title 101 красная роза
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 2280 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    div(href="#" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -10%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title 25 розовых пионовидных роз
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 1680 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    a(href="#").product-card__quick-order Быстрый заказ
+
+            article.swiper-slide.product-card
+              a(href="#").product-card__link
+                .product-card-image-block
+                  .product-card-image-block__top-line
+                    span.product-card__discount -19%
+                    button(type="button").product-card__to-favourite
+                      <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                      </svg>
+                  
+                  img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
+
+                  .product-card-image-block__bottom-line
+                    .product-card__in-top TOP
+
+              .product-card-text-block
+                .product-card-text-block__inner
+                  .product-card-text-block__raiting
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                    img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+
+                  .product-card-text-block__middle-line
+                    h3.product-card-text-block__title Влюбленность
+                    .product-card-text-block-price
+                      del.product-card-text-block-price__old 2800 грн
+                      ins.product-card-text-block-price__new 1270 грн
+
+                  .product-card-text-block__bottom-line
+                    button(type="button").action-btn.product-card__get-order
+                      .action-btn__inner
+                        span.action-btn__text Заказать
+                    a(href="#").product-card__quick-order Быстрый заказ
+
+        .pagination.favourite-slider-pagination
+
+        button(type="button").click-and-hide.favourite-popup__close Закрыть

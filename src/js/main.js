@@ -130,6 +130,7 @@ function setCorrectSliders() {
       const productsSwiper = new Swiper(productsSlider, {
         allowTouchMove: true,
         grabCursor: true,
+        simulateTouch: false,
         pagination: {
           el: `.products-${i+1}__pagination`
         },
@@ -204,10 +205,36 @@ function setCorrectSliders() {
       }
     });
   };
+  const doFavouriteSlider = () => {
+    const favouriteSlider = document.querySelector('.favourite-slider');
+    const favouriteSwiper = new Swiper(favouriteSlider, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      simulateTouch: false,
+      navigation: {
+        prevEl: '.favourite-arrow-prev',
+        nextEl: '.favourite-arrow-next',
+        disabledClass: 'disable',
+      },
+      pagination: {
+        el: '.favourite-slider-pagination'
+      },
+      breakpoints: {
+        1280: {
+          slidesPerView: 3,
+        },
+
+        510: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  };
 
   doProductsSliders();
   doWelcomeSwiper();
   doForumSlider();
+  doFavouriteSlider();
 
   window.matchMedia('(min-width: 911px)')
     .addEventListener('change', () => {
@@ -280,6 +307,13 @@ function setCorrectPopups() {
         if (event.target !== popup) return;
 
         popup.classList.remove('active');
+
+        // Если ещё остаются открытые попапы - оставляем сайт без скролла
+        if (document.querySelector('.popup.active')) {
+          console.log('123');
+          console.log(document.querySelector('.popup.active'));
+          return;
+        }
         delUnscroll();
       };
 
@@ -290,6 +324,7 @@ function setCorrectPopups() {
             if (requiredInputs.every((input) => input.checkValidity())) {
               requiredInputs.forEach((input) => input.value = '');
               popup.classList.remove('active');
+              delUnscroll();
             } else {
               alert('Введите номер телефона!');
             }
