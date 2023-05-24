@@ -347,6 +347,8 @@ body {
       column-gap: 20px;
 
       .cat-elem {
+        position: relative;
+
         &__title {
           color: vars.$color-accent-2;
           font-weight: 900;
@@ -378,7 +380,7 @@ body {
             border-color: vars.$color-accent-2 transparent transparent transparent;
           }
 
-          &-list {
+          +.dropdown-list {
             width: 240px;
             bottom: -12px;
           }

@@ -22,7 +22,7 @@ html(lang="ru")
     script(defer src="./js/libs/swiped-events.js")
     script(defer src="./js/libs/inputmask.min.js")
     script(defer src="./js/libs/swiper.min.js")
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=8a668916-04d0-4f25-8d4a-b97888776387&lang=ru_RU" type="text/javascript")
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=8a668916-04d0-4f25-8d4a-b97888776387&lang=ru_RU")
 
     script(defer src="./js/main.js")
   body.no-js
@@ -88,7 +88,7 @@ html(lang="ru")
 
                   span.options-enter__title Войти
 
-              span.options-enter__delimiter
+              li.options-enter__delimiter
 
               li.options-enter__elem
                 a(href="#" aria-label="Зарегистрировать аккаунт").options-enter__link.options-enter__register
@@ -96,7 +96,7 @@ html(lang="ru")
         .options__row.mobile
           ul.options__lists.options__links
             li.options-list.options-list-1
-              select#select-valute.options-list__select(name="valute")
+              select#select-valute-mobile.options-list__select(name="valute")
                 option(value="grivens" selected) Грн
                 option(value="rubles") Рбл
                 option(value="dollars") Длр
@@ -114,7 +114,7 @@ html(lang="ru")
                 span.options-link__title Доставка и оплата
 
             li.options-list.options-list-2
-              select#select-language.options-list__select(name="language")
+              select#select-language-mobile.options-list__select(name="language")
                 option(value="ru" selected) RU
                 option(value="ua") UA
                 option(value="en") EN

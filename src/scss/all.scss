@@ -80,7 +80,7 @@
       top: 0;
       left: auto !important;
       bottom: auto !important;
-      right: -250px;
+      right: -210px;
       transform: translate(0, 5%);
 
       .dropdown-item__title {
@@ -93,7 +93,7 @@
     display: none;
   }
 
-  &.active > .dropdown-list {
+  &.active + .dropdown-list {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
@@ -105,6 +105,7 @@
   }
 
   &-item {
+    cursor: pointer;
     padding: 8px 26px 8px 15px;
     transition: padding ease .2s, background ease .2s, font-weight ease .2s, opacity ease .1s;
     white-space: nowrap;
@@ -605,6 +606,9 @@
     position: relative;
     white-space: nowrap;
     transition: opacity ease .2s, color ease .2s;
+    background: none;
+    border: none;
+    appearance: none;
 
     &::before {
       content: "";

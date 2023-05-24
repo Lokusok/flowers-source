@@ -185,28 +185,29 @@ block content
                 .swiper-wrapper.products-slider__wrapper
                   .swiper-slide.products-slider__slide
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
+
                           img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
 
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+                          
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title 101 красная роза
@@ -216,24 +217,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            div(href="#" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -10%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -247,33 +249,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Влюбленность
@@ -283,24 +286,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="корзина все для тебя")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -314,33 +318,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                            
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
+
                           img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
 
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+                          
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title 101 красная роза
@@ -350,24 +355,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -10%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -381,33 +387,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Влюбленность
@@ -417,24 +424,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="корзина все для тебя")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -448,34 +456,35 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                   .swiper-slide.products-slider__slide
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
+
                           img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
 
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+                          
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title 101 красная роза
@@ -485,24 +494,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -10%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -516,33 +526,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Влюбленность
@@ -552,64 +563,66 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                    article.product-card.products-grid__card
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
+                            span.product-card__discount -19%
+
+                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="корзина все для тебя")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+
+                      .product-card-text-block
+                        .product-card-text-block__inner
+                          .product-card-text-block__raiting
+
+                          .product-card-text-block__middle-line
+                            h3.product-card-text-block__title Корзина все для тебя
+                            .product-card-text-block-price
+                              del.product-card-text-block-price__old 2800 грн
+                              ins.product-card-text-block-price__new 2020 грн
+
+                          .product-card-text-block__bottom-line
+                            button(type="button").action-btn.product-card__get-order
+                              span.action-btn__inner
+                                span.action-btn__text Заказать
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
                             
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
-
-                      .product-card-text-block
-                        .product-card-text-block__inner
-                          .product-card-text-block__raiting
-
-                          .product-card-text-block__middle-line
-                            h3.product-card-text-block__title Корзина все для тебя
-                            .product-card-text-block-price
-                              del.product-card-text-block-price__old 2800 грн
-                              ins.product-card-text-block-price__new 2020 грн
-
-                          .product-card-text-block__bottom-line
-                            button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
-                                span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
-                    article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line
-                            span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
                           img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
 
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+                          
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title 101 красная роза
@@ -619,24 +632,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -10%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -650,33 +664,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Влюбленность
@@ -686,24 +701,25 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
+                      .product-card-image-block
+                        a(href="#").product-card__link
                           .product-card-image-block__top-line
                             span.product-card__discount -19%
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="сто одна красная роза")
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-4.png" alt="корзина все для тебя")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -717,10 +733,10 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                                       
     section#products-2.products.products-2
       img.flowers-decor.products__decor.products__decor_1.products-2__decor_1(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_2.products-2__decor_2(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
@@ -752,53 +768,56 @@ block content
                 .swiper-wrapper.products-slider__wrapper
                   .swiper-slide.products-slider__slide
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Мечтательница
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
-                              ins.product-card-text-block-price__new 2280 грн
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 2020 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -812,32 +831,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Цветочная клумба
@@ -847,23 +868,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-8.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="корзина дюймовочка")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -872,63 +894,66 @@ block content
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Корзина Дюймовочка
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 2800 грн
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2020 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Мечтательница
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
-                              ins.product-card-text-block-price__new 2280 грн
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 2020 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -942,32 +967,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Цветочная клумба
@@ -977,23 +1004,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ                              
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-8.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="корзина дюймовочка")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1002,64 +1030,67 @@ block content
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Корзина Дюймовочка
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 2800 грн
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2020 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
                   .swiper-slide.products-slider__slide
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Мечтательница
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
-                              ins.product-card-text-block-price__new 2280 грн
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 2020 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1073,32 +1104,34 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Цветочная клумба
@@ -1108,23 +1141,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-8.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="корзина дюймовочка")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1138,145 +1172,150 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
-                    article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="сто одна красная роза")
-
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
-
-                      .product-card-text-block
-                        .product-card-text-block__inner
-                          .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-
-                          .product-card-text-block__middle-line
-                            h3.product-card-text-block__title Мечтательница
-                            .product-card-text-block-price
-                              del.product-card-text-block-price__old 
-                              ins.product-card-text-block-price__new 2280 грн
-
-                          .product-card-text-block__bottom-line
-                            button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
-                                span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
-                    article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="сто одна красная роза")
-
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
-
-                      .product-card-text-block
-                        .product-card-text-block__inner
-                          .product-card-text-block__raiting
-
-                          .product-card-text-block__middle-line
-                            h3.product-card-text-block__title Корзина солнечного настроения
-                            .product-card-text-block-price
-                              del.product-card-text-block-price__old
-                              ins.product-card-text-block-price__new 1680 грн
-
-                          .product-card-text-block__bottom-line
-                            button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
-                                span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
-                    article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="сто одна красная роза")
-
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
-
-                      .product-card-text-block
-                        .product-card-text-block__inner
-                          .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-
-                          .product-card-text-block__middle-line
-                            h3.product-card-text-block__title Цветочная клумба
-                            .product-card-text-block-price
-                              del.product-card-text-block-price__old
-                              ins.product-card-text-block-price__new 1270 грн
-
-                          .product-card-text-block__bottom-line
-                            button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
-                                span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
-                    article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-8.png" alt="сто одна красная роза")
-
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
-
-                      .product-card-text-block
-                        .product-card-text-block__inner
-                          .product-card-text-block__raiting
-
-                          .product-card-text-block__middle-line
-                            h3.product-card-text-block__title Корзина Дюймовочка
-                            .product-card-text-block-price
-                              del.product-card-text-block-price__old
-                              ins.product-card-text-block-price__new 2020 грн
-
-                          .product-card-text-block__bottom-line
-                            button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
-                                span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
                     
+                    article.product-card.products-grid__card
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
+
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+
+                      .product-card-text-block
+                        .product-card-text-block__inner
+                          .product-card-text-block__raiting
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                          .product-card-text-block__middle-line
+                            h3.product-card-text-block__title Мечтательница
+                            .product-card-text-block-price
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 2020 грн
+
+                          .product-card-text-block__bottom-line
+                            button(type="button").action-btn.product-card__get-order
+                              span.action-btn__inner
+                                span.action-btn__text Заказать
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                    article.product-card.products-grid__card
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
+
+                          img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+
+                      .product-card-text-block
+                        .product-card-text-block__inner
+                          .product-card-text-block__raiting
+
+                          .product-card-text-block__middle-line
+                            h3.product-card-text-block__title Корзина солнечного настроения
+                            .product-card-text-block-price
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 1680 грн
+
+                          .product-card-text-block__bottom-line
+                            button(type="button").action-btn.product-card__get-order
+                              span.action-btn__inner
+                                span.action-btn__text Заказать
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                    article.product-card.products-grid__card
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
+
+                          img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+
+                      .product-card-text-block
+                        .product-card-text-block__inner
+                          .product-card-text-block__raiting
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                          .product-card-text-block__middle-line
+                            h3.product-card-text-block__title Цветочная клумба
+                            .product-card-text-block-price
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 1270 грн
+
+                          .product-card-text-block__bottom-line
+                            button(type="button").action-btn.product-card__get-order
+                              span.action-btn__inner
+                                span.action-btn__text Заказать
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                    article.product-card.products-grid__card
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
+
+                          img.product-card__image(src="./images/src/product-card-image-5.png" alt="корзина дюймовочка")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
+
+                      .product-card-text-block
+                        .product-card-text-block__inner
+                          .product-card-text-block__raiting
+
+                          .product-card-text-block__middle-line
+                            h3.product-card-text-block__title Корзина Дюймовочка
+                            .product-card-text-block-price
+                              del.product-card-text-block-price__old
+                              ins.product-card-text-block-price__new 2020 грн
+
+                          .product-card-text-block__bottom-line
+                            button(type="button").action-btn.product-card__get-order
+                              span.action-btn__inner
+                                span.action-btn__text Заказать
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                 
     section#products-3.products.products-3
       img.flowers-decor.products__decor.products__decor_1.products-3__decor_1(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_2.products-3__decor_2(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_3.products-3__decor_3(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
-
 
       .container.products__container
         .products__row
@@ -1301,55 +1340,58 @@ block content
             .products-grid__inner
               .swiper.products-slider.products-3-slider
                 .swiper-wrapper.products-slider__wrapper
-                  .swiper-slide.products-slider__slide
+                  .swiper-slide.products-slider__slide      
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="торт наполеон")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Наполеон
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2280 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="киевский торт")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1363,32 +1405,33 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="торт левантинер")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Левантинер
@@ -1398,23 +1441,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="Торт на день рождения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1428,58 +1472,61 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                      
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="торт наполеон")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Наполеон
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2280 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="киевский торт")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1493,32 +1540,33 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="торт левантинер")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Левантинер
@@ -1528,23 +1576,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="Торт на день рождения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1558,59 +1607,62 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
-                  .swiper-slide.products-slider__slide
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                      
+                  .swiper-slide.products-slider__slide      
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="торт наполеон")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Наполеон
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2280 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="киевский торт")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1624,32 +1676,33 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="торт левантинер")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Левантинер
@@ -1659,23 +1712,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="Торт на день рождения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1689,58 +1743,61 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                      
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-9.png" alt="торт наполеон")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Наполеон
                             .product-card-text-block-price
-                              del.product-card-text-block-price__old 
+                              del.product-card-text-block-price__old
                               ins.product-card-text-block-price__new 2280 грн
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-10.png" alt="киевский торт")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1754,32 +1811,33 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-11.png" alt="торт левантинер")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
                           .product-card-text-block__raiting
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
-                            img(src="./images/src/star-icon.svg").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                            img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
 
                           .product-card-text-block__middle-line
                             h3.product-card-text-block__title Торт Левантинер
@@ -1789,23 +1847,24 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                    
                     article.product-card.products-grid__card
-                      a(href="#").product-card__link
-                        .product-card-image-block
-                          .product-card-image-block__top-line                              
-                            button(type="button").product-card__to-favourite
-                              <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
-                              </svg>
-                          
-                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="сто одна красная роза")
+                      .product-card-image-block
+                        a(href="#").product-card__link
+                          .product-card-image-block__top-line
 
-                          .product-card-image-block__bottom-line
-                            .product-card__in-top TOP
+                          img.product-card__image(src="./images/src/product-card-image-12.png" alt="Торт на день рождения")
+
+                        .product-card-image-block__bottom-line
+                          .product-card__in-top TOP
+
+                        button(type="button").product-card__to-favourite
+                          <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                          </svg>
 
                       .product-card-text-block
                         .product-card-text-block__inner
@@ -1819,10 +1878,12 @@ block content
 
                           .product-card-text-block__bottom-line
                             button(type="button").action-btn.product-card__get-order
-                              .action-btn__inner
+                              span.action-btn__inner
                                 span.action-btn__text Заказать
-                            a(href="#").product-card__quick-order Быстрый заказ
-                            
+                            button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+                      
+
+
     section#forum.forum
       img.flowers-decor.forum__decor.forum__decor_1(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
 

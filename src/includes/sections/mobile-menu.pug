@@ -1,4 +1,4 @@
-.menu.menu-mobile
+.menu#menu-mobile.menu-mobile.active
   .menu__row
     .menu__header
       span.menu__title Меню
@@ -8,15 +8,15 @@
     .menu__content
       .menu-field.tel-field
         span.menu-field__title.tel-field__number +38 (067) 829 30 30
-        button(type="button").small.action-btn.tel-field__button
-          a(href="tel:380678293030").action-btn__inner.tel-field__link
+        a(href="tel:380678293030").small.action-btn.tel-field__button
+          span.action-btn__inner.tel-field__link
             span.action-btn__text Позвонить
 
       .menu__area
         .menu-field.city-field
           span.menu-field__title.city-field__title Киев
-          label(for="select-city").menu-field__value.city-field__value  Выберите город
-            select#select-city.options-list__select(name="city")
+          label(for="select-city-mobile").menu-field__value.city-field__value  Выберите город
+            select#select-city-mobile.options-list__select(name="city")
               option(value="kiev" selected) Киев
               option(value="lvov") Львов
               option(value="kharkov") Харьков
@@ -25,7 +25,7 @@
           span.menu-field__title.city-field__title Закладки
           button(type="button" data-popup-selector=".favourite-popup").trigger.favourite-field__value.menu-field__value
             img.favourite-field__icon(src="./images/src/heart-icon.svg" alt="избранное")
-            .counter 2
+            span.counter 2
         .menu-field.city-field
           span.menu-field__title.city-field__title Личный кабинет
           a(href="#").menu-field__value Войти
@@ -47,7 +47,7 @@
           .menu-drop.menu-links-item__link
             span.menu-drop__title.menu-links-item__title Информация
 
-              .black.menu-drop__icon
+              i.black.menu-drop__icon
 
             ul.inner-list.menu-link-item__inner-list
               li.inner-list-item

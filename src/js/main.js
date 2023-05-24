@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('no-js');
   document.body.classList.add('yes-js');
   
+  setCorrectPopups();
   setCorrectChoices();
   setCorrectMenuAccordeon();
   setCorrectBurger();
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
-  setCorrectPopups();
   setCorrectInputMasks();
 });
 
@@ -46,8 +46,11 @@ function setCorrectChoices() {
       };
 
       dropdownSelect.addEventListener('click', () => {
+        // Перед открытием нового меню - закрываем все другие
+        dropdownsSelects.forEach((el) => el.classList.remove('active'));
+
         const dropdownTitle = dropdownSelect.querySelector('.dropdown__title');
-        const dropdownItems = dropdownSelect.querySelectorAll('.dropdown-item');
+        const dropdownItems = dropdownSelect.nextElementSibling.querySelectorAll('.dropdown-item');
         
         dropdownSelect.classList
           [window.matchMedia('(pointer: fine)').matches ? 'toggle' : 'add']('active');
@@ -118,6 +121,7 @@ function setCorrectSliders() {
     const welcomeSwiper = new Swiper(welcomeSlider, {
       pagination: {
         el: '.welcome-slider-pagination',
+        clickable: true,
       }
     });
   };
@@ -131,8 +135,11 @@ function setCorrectSliders() {
         allowTouchMove: true,
         grabCursor: true,
         simulateTouch: false,
+        preventClicks: false,
+        preventClicksPropagation: false,
         pagination: {
-          el: `.products-${i+1}__pagination`
+          el: `.products-${i+1}__pagination`,
+          clickable: true,
         },
         navigation: {
           prevEl: `.products-${i+1}-arrow-prev`,
@@ -192,7 +199,8 @@ function setCorrectSliders() {
       spaceBetween: 21,
       simulateTouch: false,
       pagination: {
-        el: '.forum-slider-pagination'
+        el: '.forum-slider-pagination',
+        clickable: true,
       },
       breakpoints: {
         1400: {
@@ -217,7 +225,8 @@ function setCorrectSliders() {
         disabledClass: 'disable',
       },
       pagination: {
-        el: '.favourite-slider-pagination'
+        el: '.favourite-slider-pagination',
+        clickable: true,
       },
       breakpoints: {
         1280: {
@@ -298,20 +307,19 @@ function setCorrectPopups() {
   const delUnscroll = () => document.body.classList.remove('unscroll');
 
   triggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
+    trigger.addEventListener('click', (event) => {
+      event.stopImmediatePropagation();
       const popupSelector = trigger.dataset.popupSelector;
       const popup = document.querySelector(popupSelector);
       const hideButtons = popup.querySelectorAll('.click-and-hide');
       const requiredInputs = Array.from(popup.querySelectorAll('input[required]'));
       const closePopup = (event) => {
-        if (event.target !== popup) return;
+        if (event.target.closest('.popup__content')) return;
 
-        popup.classList.remove('active');
+        event.target.closest('.popup').classList.remove('active');
 
         // Если ещё остаются открытые попапы - оставляем сайт без скролла
         if (document.querySelector('.popup.active')) {
-          console.log('123');
-          console.log(document.querySelector('.popup.active'));
           return;
         }
         delUnscroll();

@@ -18,22 +18,20 @@
   }
   
   &__row {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100vh;
     overflow-y: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
   }
 
   &__content {
+    margin: auto;
     background-color: #fff;
     border: 1px solid vars.$color-accent-1;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     min-width: 0;
+    height: max-content;
   }
 }
 
@@ -118,19 +116,19 @@
   }
 
   @media (max-width: 1020px) {
-    &__row {
+    &__content {
       width: 80%;
     }
   }
 
   @media (max-width: 570px) {
     &__content {
-      padding: 60px 50px 75px 50px;
+      padding: 40px 50px;
     }
   }
 
-  @media (max-width: 420px) {
-    &__row {
+  @media (max-width: 470px) {
+    &__content {
       width: 90%;
     }
 
@@ -172,14 +170,11 @@
 // Попап с избранными товарами
 .favourite-popup {
   z-index: 9999;
-
-  &__row {
-    width: 80%;
-    max-width: 1440px;
-  }
-
+  
   &__content {
     padding: 62px 93px 32px 93px;
+    width: 80%;
+    max-width: 1440px;
   }
 
   &__top-line {
@@ -260,7 +255,7 @@
   }
 
   @media (max-width: 915px) {
-    &__row {
+    &__content {
       width: 90%;
     }
 
@@ -292,7 +287,7 @@
   }
 
   @media (max-width: 650px) {
-    &__row {
+    &__content {
       width: 95%;
     }
   }

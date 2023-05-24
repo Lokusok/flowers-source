@@ -68,6 +68,10 @@
       font-size: 16px;
       line-height: 18px;
     }
+
+    &__button {
+      text-decoration: none;
+    }
   }
 
   &__area {
@@ -147,13 +151,19 @@
 
     &-item {
       display: flex;
+      flex-direction: column;
       position: relative;
+      border-bottom: 1px solid #ccc;
 
       &__title {
         position: relative;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 18px;
       }
       
       &__link {
+        cursor: pointer;
         padding-bottom: 26px;
         border-bottom: 1px solid #ccc;
         text-decoration: none;
@@ -161,6 +171,9 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
+        background: none;
+        border: none;
+        appearance: none;
       }
 
       &__icon {
