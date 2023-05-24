@@ -16,7 +16,7 @@
     <script defer src="./js/main.js"></script>
   </head>
   <body class="no-js">
-    <div class="menu menu-mobile active" id="menu-mobile">
+    <div class="menu menu-mobile" id="menu-mobile">
       <div class="menu__row">
         <div class="menu__header"><span class="menu__title">Меню</span>
           <button class="menu__close" type="button"><img src="./images/src/close-icon.svg" alt="закрыть меню"></button>
@@ -45,8 +45,9 @@
             <li class="menu-links-item"><a class="menu-links-item__link" href="#"><span class="menu-links-item__title">Акции</span></a></li>
             <li class="menu-links-item"><a class="menu-links-item__link" href="#"><span class="menu-links-item__title">Новости</span></a></li>
             <li class="menu-links-item">
-              <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Информация<i class="black menu-drop__icon"></i></span>
-                <ul class="inner-list menu-link-item__inner-list">
+              <div class="menu-dropdown">
+                <button class="menu-drop menu-links-item__link" type="button"><span class="menu-drop__title menu-links-item__title">Информация<i class="black menu-drop__icon"></i></span></button>
+                <ul class="inner-list menu-links-item__inner-list">
                   <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
                   <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
                   <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
@@ -343,9 +344,7 @@
     <header class="header" id="header">
       <div class="container header__container">
         <div class="header__row">
-          <div class="burger header__burger">
-            <div class="burger__inner"><span class="burger__line burger__line_1"></span><span class="burger__line burger__line_2"></span><span class="burger__line burger__line_3"></span></div>
-          </div><a class="logo header__logo" href="./index.html"><img class="logo__image" src="./images/src/logo.svg" alt="Flowers Ukraine"></a>
+          <button class="burger header__burger"><span class="burger__inner"><span class="burger__line burger__line_1"></span><span class="burger__line burger__line_2"></span><span class="burger__line burger__line_3"></span></span></button><a class="logo header__logo" href="./index.html"><img class="logo__image" src="./images/src/logo.svg" alt="Flowers Ukraine"></a>
           <div class="header__advanced searches">
             <ul class="searches-inputs">
               <li class="searches-inputs__input-elem input-elem">
@@ -374,7 +373,7 @@
 </svg>
                       </div>
                       <ul class="dropdown-list">
-                        <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item__title" href="./catalog.html">Цветы в коробке с пироженым Macarons</a></li>
                         <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
                         <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
                       </ul>
@@ -492,31 +491,31 @@
                 <article class="welcome-grid-card welcome-grid-card-1"><a class="welcome-grid-card__row" href="#">
                     <picture>
                       <source type="image/avif" srcset="./images/welcome-card-bg-1.avif">
-                      <source type="image/webp" srcset="./images/welcome-card-bg-1.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-1.png" alt="" aria-hidden="true">
+                      <source type="image/webp" srcset="./images/welcome-card-bg-1.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-1.png" alt="" aria-hidden="true" loading="lazy">
                     </picture>
                     <h3 class="welcome-grid-card__title">Скидки <b>-6%</b>  на все букеты <b>по предзаказу</b> на 8 марта</h3></a></article>
                 <article class="welcome-grid-card welcome-grid-card-2"><a class="welcome-grid-card__row" href="#">
                     <picture>
                       <source type="image/avif" srcset="./images/welcome-card-bg-2.avif">
-                      <source type="image/webp" srcset="./images/welcome-card-bg-2.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-2.png" alt="" aria-hidden="true">
+                      <source type="image/webp" srcset="./images/welcome-card-bg-2.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-2.png" alt="" aria-hidden="true" loading="lazy">
                     </picture>
                     <h3 class="welcome-grid-card__title">Розы</h3></a></article>
                 <article class="welcome-grid-card welcome-grid-card-3"><a class="welcome-grid-card__row" href="#">
                     <picture>
                       <source type="image/avif" srcset="./images/welcome-card-bg-3.avif">
-                      <source type="image/webp" srcset="./images/welcome-card-bg-3.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-3.png" alt="" aria-hidden="true">
+                      <source type="image/webp" srcset="./images/welcome-card-bg-3.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-3.png" alt="" aria-hidden="true" loading="lazy">
                     </picture>
                     <h3 class="welcome-grid-card__title">Подарки</h3></a></article>
                 <article class="welcome-grid-card welcome-grid-card-4"><a class="welcome-grid-card__row" href="#">
                     <picture>
                       <source type="image/avif" srcset="./images/welcome-card-bg-4.avif">
-                      <source type="image/webp" srcset="./images/welcome-card-bg-4.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-4.png" alt="" aria-hidden="true">
+                      <source type="image/webp" srcset="./images/welcome-card-bg-4.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-4.png" alt="" aria-hidden="true" loading="lazy">
                     </picture>
                     <h3 class="welcome-grid-card__title">Подарочные корзины</h3></a></article>
                 <article class="welcome-grid-card welcome-grid-card-5"><a class="welcome-grid-card__row" href="#">
                     <picture>
                       <source type="image/avif" srcset="./images/welcome-card-bg-5.avif">
-                      <source type="image/webp" srcset="./images/welcome-card-bg-5.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-5.png" alt="" aria-hidden="true">
+                      <source type="image/webp" srcset="./images/welcome-card-bg-5.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-5.png" alt="" aria-hidden="true" loading="lazy">
                     </picture>
                     <h3 class="welcome-grid-card__title">Цветы в коробке</h3></a></article>
               </div>
@@ -526,31 +525,31 @@
                     <article class="swiper-slide welcome-slider__slide welcome-grid-card welcome-grid-card-1"><a class="welcome-grid-card__row" href="#">
                         <picture>
                           <source type="image/avif" srcset="./images/welcome-card-bg-1.avif">
-                          <source type="image/webp" srcset="./images/welcome-card-bg-1.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-1.png" alt="" aria-hidden="true">
+                          <source type="image/webp" srcset="./images/welcome-card-bg-1.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-1.png" alt="" aria-hidden="true" loading="lazy">
                         </picture>
                         <h3 class="welcome-grid-card__title">Скидки <b>-6%</b>  на все букеты <b>по предзаказу</b> на 8 марта</h3></a></article>
                     <article class="swiper-slide welcome-slider__slide welcome-grid-card welcome-grid-card-2"><a class="welcome-grid-card__row" href="#">
                         <picture>
                           <source type="image/avif" srcset="./images/welcome-card-bg-2.avif">
-                          <source type="image/webp" srcset="./images/welcome-card-bg-2.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-2.png" alt="" aria-hidden="true">
+                          <source type="image/webp" srcset="./images/welcome-card-bg-2.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-2.png" alt="" aria-hidden="true" loading="lazy">
                         </picture>
                         <h3 class="welcome-grid-card__title">Розы</h3></a></article>
                     <article class="swiper-slide welcome-slider__slide welcome-grid-card welcome-grid-card-3"><a class="welcome-grid-card__row" href="#">
                         <picture>
                           <source type="image/avif" srcset="./images/welcome-card-bg-3.avif">
-                          <source type="image/webp" srcset="./images/welcome-card-bg-3.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-3.png" alt="" aria-hidden="true">
+                          <source type="image/webp" srcset="./images/welcome-card-bg-3.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-3.png" alt="" aria-hidden="true" loading="lazy">
                         </picture>
                         <h3 class="welcome-grid-card__title">Подарки</h3></a></article>
                     <article class="swiper-slide welcome-slider__slide welcome-grid-card welcome-grid-card-4"><a class="welcome-grid-card__row" href="#">
                         <picture>
                           <source type="image/avif" srcset="./images/welcome-card-bg-4.avif">
-                          <source type="image/webp" srcset="./images/welcome-card-bg-4.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-4.png" alt="" aria-hidden="true">
+                          <source type="image/webp" srcset="./images/welcome-card-bg-4.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-4.png" alt="" aria-hidden="true" loading="lazy">
                         </picture>
                         <h3 class="welcome-grid-card__title">Подарочные корзины</h3></a></article>
                     <article class="swiper-slide welcome-slider__slide welcome-grid-card welcome-grid-card-5"><a class="welcome-grid-card__row" href="#">
                         <picture>
                           <source type="image/avif" srcset="./images/welcome-card-bg-5.avif">
-                          <source type="image/webp" srcset="./images/welcome-card-bg-5.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-5.png" alt="" aria-hidden="true">
+                          <source type="image/webp" srcset="./images/welcome-card-bg-5.webp"><img class="welcome-grid-card__bg" src="./images/src/welcome-card-bg-5.png" alt="" aria-hidden="true" loading="lazy">
                         </picture>
                         <h3 class="welcome-grid-card__title">Цветы в коробке</h3></a></article>
                   </div>
@@ -688,7 +687,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -715,7 +714,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -769,7 +768,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -796,7 +795,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -823,7 +822,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -852,7 +851,7 @@
                     <div class="swiper-slide products-slider__slide">
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -879,7 +878,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -906,7 +905,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -933,7 +932,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -960,7 +959,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -987,7 +986,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-10%</span></div><img class="product-card__image" src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1014,7 +1013,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-3.png" alt="букет влюбленность" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1041,7 +1040,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя"></a>
+                            <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-4.png" alt="корзина все для тебя" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1179,7 +1178,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1206,7 +1205,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1233,7 +1232,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1260,7 +1259,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1287,7 +1286,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1316,7 +1315,7 @@
                     <div class="swiper-slide products-slider__slide">
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1343,7 +1342,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1370,7 +1369,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1397,7 +1396,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1424,7 +1423,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1451,7 +1450,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1478,7 +1477,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-7.png" alt="букет мечтательница" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1505,7 +1504,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-5.png" alt="корзина дюймовочка" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1562,7 +1561,7 @@
                     <div class="swiper-slide products-slider__slide">     
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1589,7 +1588,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1616,7 +1615,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1643,7 +1642,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1670,7 +1669,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1697,7 +1696,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1724,7 +1723,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1751,7 +1750,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1780,7 +1779,7 @@
                     <div class="swiper-slide products-slider__slide">     
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1807,7 +1806,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1834,7 +1833,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1861,7 +1860,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1888,7 +1887,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-9.png" alt="торт наполеон" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1915,7 +1914,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-10.png" alt="киевский торт" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1942,7 +1941,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-11.png" alt="торт левантинер" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -1969,7 +1968,7 @@
                       </article>
                       <article class="product-card products-grid__card">
                         <div class="product-card-image-block"><a class="product-card__link" href="#">
-                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения"></a>
+                            <div class="product-card-image-block__top-line"></div><img class="product-card__image" src="./images/src/product-card-image-12.png" alt="Торт на день рождения" loading="lazy"></a>
                           <div class="product-card-image-block__bottom-line">
                             <div class="product-card__in-top">TOP</div>
                           </div>
@@ -2091,14 +2090,16 @@
           <div class="footer__top">
             <div class="footer__logo"><img src="./images/src/logo-light.svg" alt="Flowers Ukraine Логотип"></div>
             <div class="footer__lists">
-              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Информация<i class="black menu-drop__icon"></i></span>
+              <div class="menu-dropdown footer-block">
+                <button class="menu-drop" type="button"><span class="menu-drop__title footer-block__title">Информация<i class="white menu-drop__icon"></i></span></button>
                 <ul class="inner-list footer-list">
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">О нас</a></li>
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Доставка и оплата</a></li>
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Политика конфиденциальности</a></li>
                 </ul>
               </div>
-              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Служба поддержки<i class="black menu-drop__icon"></i></span>
+              <div class="menu-dropdown footer-block">
+                <button class="menu-drop" type="button"><span class="menu-drop__title footer-block__title">Служба поддержки<i class="white menu-drop__icon"></i></span></button>
                 <ul class="inner-list footer-list">
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Карта сайта</a></li>
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Возврат товара</a></li>
@@ -2106,7 +2107,8 @@
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Для сотрудничества</a></li>
                 </ul>
               </div>
-              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Личный кабинет<i class="black menu-drop__icon"></i></span>
+              <div class="menu-dropdown footer-block">
+                <button class="menu-drop" type="button"><span class="menu-drop__title footer-block__title">Личный кабинет<i class="white menu-drop__icon"></i></span></button>
                 <ul class="inner-list footer-list">
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Личный кабинет</a></li>
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">История заказа</a></li>
@@ -2114,7 +2116,8 @@
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Список новостей</a></li>
                 </ul>
               </div>
-              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Дополнительно<i class="black menu-drop__icon"></i></span>
+              <div class="menu-dropdown footer-block">
+                <button class="menu-drop" type="button"><span class="menu-drop__title footer-block__title">Дополнительно<i class="white menu-drop__icon"></i></span></button>
                 <ul class="inner-list footer-list">
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Подарочные</a></li>
                   <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Сертификаты</a></li>

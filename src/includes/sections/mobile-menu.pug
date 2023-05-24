@@ -1,4 +1,4 @@
-.menu#menu-mobile.menu-mobile.active
+.menu#menu-mobile.menu-mobile
   .menu__row
     .menu__header
       span.menu__title Меню
@@ -44,12 +44,13 @@
           a(href="#").menu-links-item__link
             span.menu-links-item__title Новости
         li.menu-links-item
-          .menu-drop.menu-links-item__link
-            span.menu-drop__title.menu-links-item__title Информация
+          .menu-dropdown
+            button(type="button").menu-drop.menu-links-item__link
+              span.menu-drop__title.menu-links-item__title Информация
 
-              i.black.menu-drop__icon
+                i.black.menu-drop__icon
 
-            ul.inner-list.menu-link-item__inner-list
+            ul.inner-list.menu-links-item__inner-list
               li.inner-list-item
                 a(href="#").inner-list-item__link
                   span.inner-list-item__title Белые розы

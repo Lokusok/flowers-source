@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('no-js');
   document.body.classList.add('yes-js');
   
+  setCorrectMap();
   setCorrectPopups();
   setCorrectChoices();
   setCorrectMenuAccordeon();
   setCorrectBurger();
   setCorrectSliders();
   setCorrectFavourites();
-  setCorrectMap();
   setCorrectInputMasks();
 });
 
@@ -47,7 +47,11 @@ function setCorrectChoices() {
 
       dropdownSelect.addEventListener('click', () => {
         // Перед открытием нового меню - закрываем все другие
-        dropdownsSelects.forEach((el) => el.classList.remove('active'));
+        dropdownsSelects.forEach((el) => {
+          if (el !== dropdownSelect) {
+            el.classList.remove('active')
+          }
+        });
 
         const dropdownTitle = dropdownSelect.querySelector('.dropdown__title');
         const dropdownItems = dropdownSelect.nextElementSibling.querySelectorAll('.dropdown-item');
@@ -75,7 +79,7 @@ function setCorrectChoices() {
 
 // Аккордеон в меню
 function setCorrectMenuAccordeon() {
-  const accordeons = document.querySelectorAll('.menu-drop');
+  const accordeons = document.querySelectorAll('.menu-dropdown');
 
   accordeons.forEach((accordeon) => {
     const accordeonItems = accordeon.querySelectorAll('.inner-list-item');

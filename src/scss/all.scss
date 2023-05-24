@@ -188,11 +188,15 @@
   align-self: center;
   cursor: pointer;
   padding: 10px;
+  background: none;
+  border: none;
+  appearance: none;
 
   &__inner {
     position: relative;
     width: 30px;
     height: 15px;
+    display: block;
   }
 
   &__line {
@@ -201,6 +205,7 @@
     height: 2px;
     border-radius: 10px;
     background-color: vars.$color-accent-1;
+    left: 0;
 
     &_1 {
       top: 0;
@@ -344,27 +349,36 @@
 }
 
 // Выпадающее меню
-.menu-drop {
-  position: relative;
-
-  &__title {
+.menu-dropdown {
+  .menu-drop {
+    width: 100%;
     position: relative;
-  }
+    background: none;
+    border: none;
+    appearance: none;
 
-  &__icon {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 7px;
-    height: 14px;
-    background-image: url(../images/src/menu-drop-icon-black.svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    &.white {
-      background-image: url(../images/src/menu-drop-icon-white.svg);
+    &__title {
+      display: block;
+      width: 100%;
+      text-align: left;
+      position: relative;
+    }
+
+    &__icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 7px;
+      height: 14px;
+      background-image: url(../images/src/menu-drop-icon-black.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+      &.white {
+        background-image: url(../images/src/menu-drop-icon-white.svg);
+      }
     }
   }
 
@@ -396,6 +410,10 @@
   }
 
   &.active {
+    .menu-drop {
+      padding-bottom: 10px;
+    }
+
     .menu-drop__title {
       font-weight: 700;
       color: vars.$color-accent-1;
@@ -407,7 +425,8 @@
     }
 
     .inner-list {
-      display: block !important;
+      display: flex !important;
+      flex-direction: column;
     }
   }
 }
