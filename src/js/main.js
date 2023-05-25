@@ -47,7 +47,10 @@ function setCorrectChoices() {
 
       dropdownSelect.addEventListener('click', () => {
         // Перед открытием нового меню - закрываем все другие
-        dropdownsSelects.forEach((el) => el.classList.remove('active'));
+        dropdownsSelects.forEach((el) => {
+          if (el === dropdownSelect) return;
+          el.classList.remove('active');
+        });
 
         const dropdownTitle = dropdownSelect.querySelector('.dropdown__title');
         const dropdownItems = dropdownSelect.nextElementSibling.querySelectorAll('.dropdown-item');

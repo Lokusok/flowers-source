@@ -1697,11 +1697,17 @@ body {
     flex-direction: column;
     row-gap: 40px;
     text-transform: uppercase;
+    position: relative;
 
     &__title {
       font-weight: 700;
       font-size: 18px;
       line-height: 18px;
+    }
+
+    .inner-list {
+      position: static;
+      left: auto;
     }
   }
 
@@ -1847,7 +1853,9 @@ body {
       }
 
       .inner-list {
-        display: none;
+        position: absolute;
+        left: -9999px;
+        row-gap: 5px;
 
         &-item {
           justify-content: flex-start;

@@ -63,8 +63,7 @@
 
   &-list {
     opacity: 0;
-    visibility: hidden;
-    transition: opacity ease .2s, visibility ease .2s;
+    transition: opacity ease .2s;
     pointer-events: none;
     position: absolute;
     background: #fff;
@@ -95,7 +94,6 @@
 
   &.active + .dropdown-list {
     opacity: 1;
-    visibility: visible;
     pointer-events: initial;
   }
 
@@ -188,8 +186,12 @@
   align-self: center;
   cursor: pointer;
   padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
 
   &__inner {
+    display: block;
     position: relative;
     width: 30px;
     height: 15px;
@@ -197,6 +199,7 @@
 
   &__line {
     position: absolute;
+    left: 0;
     width: 30px;
     height: 2px;
     border-radius: 10px;
@@ -370,7 +373,9 @@
 
   .inner-list {
     margin-top: 25px;
-    display: none;
+    // display: none;
+    position: absolute;
+    left: -9999px;
 
     &-item {
       display: flex;
@@ -407,7 +412,9 @@
     }
 
     .inner-list {
-      display: block !important;
+      // display: block !important;
+      position: static !important;
+      left: auto;
     }
   }
 }
@@ -798,7 +805,7 @@
     }
   }
 
-  @media (max-width: 365px) {
+  @media (max-width: 395px) {
     .product-card {
       &-text-block {
         &__bottom-line {
