@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectFavourites();
   setCorrectMap();
   setCorrectInputMasks();
+  setCorrectCatalogFilters();
 });
 
 
@@ -17,8 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function setCorrectChoices() {
   // Библиотечные выпадашки для <select>
   const doChoicesLib = () => {
-    const selects = document.querySelectorAll('select');
-    selects.forEach((select) => {
+    const selectsTop = document.querySelectorAll('.options select');
+    const selectsCatalog = document.querySelectorAll('.catalog-cards__top-line select');
+
+    selectsTop.forEach((select) => {
       new Choices(select, {
         searchEnabled: false,
         itemSelectText: '',
@@ -28,6 +31,18 @@ function setCorrectChoices() {
         }
       });
     });
+
+    selectsCatalog.forEach((select) => {
+      new Choices(select, {
+        searchEnabled: false,
+        itemSelectText: '',
+        classNames: {
+          item: 'catalog-cards__elem',
+          itemChoice: 'catalog-cards__elem_choice',
+          itemSelectable: 'catalog-cards__elem_active'
+        }
+      })
+    })
   };
 
   // Кастомные многоуровневые выпадашки
@@ -84,6 +99,14 @@ function setCorrectMenuAccordeon() {
     const accordeonItems = accordeon.querySelectorAll('.inner-list-item');
 
     accordeon.addEventListener('click', () => {
+      // Перед открытием нового - закрываем остальные
+      // if (accordeon.closest('.accordeon')) {
+        accordeons.forEach((el) => {
+          if (el === accordeon) return;
+          el.classList.remove('active');        
+        });
+      // }
+
       accordeon.classList.toggle('active');
     });
 
@@ -352,10 +375,21 @@ function setCorrectPopups() {
 
 // Маски на инпуты
 function setCorrectInputMasks() {
-  const telMask = new Inputmask('8-(999)-999-99-99');
+  const telMask = new Inputmask('8-(999)-999-99-99', { clearMaskOnLostFocus: true });
   const inputsTel = document.querySelectorAll('input[type="tel"]');
 
   inputsTel.forEach((inputTel) => {
     telMask.mask(inputTel);
   });
+}
+
+// Фильтры в каталоге
+function setCorrectCatalogFilters() {
+  const sideFilters = document.querySelectorAll('.catalog-opts__inner-item');
+
+  sideFilters.forEach((sideFilter) => {
+    sideFilter.addEventListener('click', () => {
+      sideFilter.classList.toggle('active');
+    });
+  })
 }

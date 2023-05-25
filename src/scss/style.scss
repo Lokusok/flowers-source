@@ -29,7 +29,9 @@ html {
 
 body {
   font-family: 'Museo Sans Cyrl', Arial, sans-serif;
-  // overflow-x: hidden; // to prod
+  overflow-x: hidden; // to prod
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -1187,11 +1189,16 @@ body {
 
   // Слайдер
   &-slider {
-    &__slide {
+    &__slide,
+    .product-cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, auto);
       grid-gap: 20px;
+
+      &.grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
   
@@ -1907,3 +1914,290 @@ body {
   }
 }
 
+// === Каталог ===
+.catalog {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 125px;
+  }
+
+  &__content {
+    padding-top: 99px;
+  }
+
+  // Левая панель
+  &-opts {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin-top: -15px;
+      position: sticky;
+      top: 35px;
+    }
+
+    .menu-drop {
+      &__icon {
+        transform: translate(0, -50%) rotate(90deg);
+      }
+
+      &__title {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 20px;
+        color: #333;
+        padding: 15px 0;
+      }
+
+      .inner-list {
+        margin-top: 5px;
+        padding-left: 50px;
+      }
+
+      .inner-list-item {
+        transition: opacity ease .2s;
+
+        &__title {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 38px;
+          color: vars.$color-accent-1;
+        }
+
+        &:hover {
+          background: initial;
+          opacity: .7;
+        }
+
+        &:active {
+          opacity: .4;
+        }
+      }
+
+      .inner-list-item.active {
+        .inner-list-item__title {
+          font-weight: 900;
+          position: relative;
+
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_40_4710)'%3E%3Cpath d='M6.00006 10.8001L3.20006 8.00006L2.26672 8.9334L6.00006 12.6667L14.0001 4.66673L13.0667 3.7334L6.00006 10.8001Z' fill='%23956D84'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_40_4710'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translate(0, -55%);
+          }
+        }
+      }
+    }
+
+    .menu-drop.active {
+      .menu-drop__title {
+        font-weight: 300;
+        color: #333;
+      }
+
+      .menu-drop__icon {
+        transform: translate(0, -10%) rotate(270deg);
+      }
+    }
+  }
+
+  // Основное содержимое
+  &-cards {
+    // Верхние выпадающие списки
+    &__top-line {
+      display: flex;
+      column-gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    &__select-label {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &-text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        color: #828282;
+      }
+    }
+
+    &__select-label:last-child {
+      margin-left: auto;
+    }
+
+    // Выпадающий список
+    .choices {
+      padding: 0;
+      padding-left: 15px;
+      padding-right: 21px;
+
+      &::after {
+        border-color: #333 rgba(0,0,0,0) rgba(0,0,0,0) !important;
+      }
+
+      &__list--dropdown {
+        border: 1px solid vars.$color-accent-1;
+      }
+    }
+
+    &__elem {
+      color: vars.$color-accent-1;
+
+      &_active {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        color: #333;
+        padding: 0;
+        text-decoration: underline;
+      }
+
+      &_choice {
+        padding: 3px 7px !important;
+        text-decoration: none;
+        transition: background ease .2s;
+
+        &:hover {
+          background: vars.$color-accent-1;
+          color: #fff;
+        }
+      }
+    }
+
+    // Пагинация внизу с кнопкой "ещё"
+    &__bottom-line {
+      margin-top: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__more {
+      padding: 22px 51px;
+      font-family: 'Euclid Circular', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &__pagination {
+      margin-top: 89px;
+    }
+
+    .cards-pagination {
+      position: relative;
+
+      &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: none;
+        border: none;
+        appearance: none;
+        cursor: pointer;
+
+        &.disable {
+          opacity: .4;
+          cursor: default;
+          
+          .help-text {
+            display: none; // Для отключения прочитки от скринридера
+          }
+        }
+
+        &_prev {
+          left: -100px;
+        }
+
+        &_next {
+          right: -100px;
+        }
+      }
+
+      &__list {
+        display: flex;
+        column-gap: 28px;
+      }
+
+      &__item.active {        
+        .cards-pagination__link {          
+          border-radius: 4px;
+          color: #fff;
+          background-color: vars.$color-accent-1;
+          padding: 18px 28px;
+          text-decoration: none;
+          opacity: .3;
+          box-shadow: 0px 4px 10px rgba(53, 68, 117, 0.7);
+        }
+      }
+
+      &__link {
+        font-family: 'Euclid Circular', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 18px;
+        text-decoration: none;
+        color: #B0B9C0;
+      }
+    }
+  }
+}
+
+// === Статья о букете роз ===
+.promotion {
+  &__row {
+    padding-top: 113px;
+  }
+
+  // Карточка со статьёй
+  &-card {
+    background-color: #FBF9FA;
+
+    &__inner {
+      padding: 105px 98px;
+    }
+
+    &__text {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 30px;
+      color: #333;
+    }
+
+    &__title {
+      text-align: center;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 18px;
+      color: vars.$color-accent-1;
+      margin: 98px 0 78px 0;
+    }
+
+    &__link-block {
+      margin-top: 78px;
+      text-align: center;
+    }
+    
+    &__read-more {
+      font-family: 'Euclid Circular', sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+      color: vars.$color-accent-1;
+      transition: opacity ease .2s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        opacity: .4;
+      }
+    }
+  }
+}

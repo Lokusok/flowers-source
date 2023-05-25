@@ -2,33 +2,43 @@
   font-family: 'Museo Sans Cyrl';
   font-weight: 300;
   font-display: swap;
-  src: url(../fonts/Museo-Sans-Cyrl-300.ttf) format("truetype");
+  src: url(../fonts/Museo-Sans-Cyrl-300.woff2) format('woff2'),
+       url(../fonts/Museo-Sans-Cyrl-300.woff) format('woff'),
+       url(../fonts/Museo-Sans-Cyrl-300.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-weight: 700;
   font-display: swap;
-  src: url(../fonts/Museo-Sans-Cyrl-700.ttf) format("truetype");
+  src: url(../fonts/Museo-Sans-Cyrl-700.woff2) format('woff2'),
+       url(../fonts/Museo-Sans-Cyrl-700.woff) format('woff'),
+       url(../fonts/Museo-Sans-Cyrl-700.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-weight: 900;
   font-display: swap;
-  src: url(../fonts/Museo-Sans-Cyrl-900.ttf) format("truetype");
+  src: url(../fonts/Museo-Sans-Cyrl-900.woff2) format('woff2'),
+       url(../fonts/Museo-Sans-Cyrl-900.woff) format('woff'),
+       url(../fonts/Museo-Sans-Cyrl-900.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Euclid Circular';
   font-weight: 400;
   font-display: swap;
-  src: url(../fonts/EuclidCircularB-400.ttf) format("truetype");
+  src: url(../fonts/EuclidCircularB-400.woff2) format('woff2'),
+       url(../fonts/EuclidCircularB-400.woff) format('woff'),
+       url(../fonts/EuclidCircularB-400.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'PT Sans';
   font-weight: 700;
   font-display: swap;
-  src: url(../fonts/PTSans-Bold.ttf) format("truetype");
+  src: url(../fonts/PTSans-Bold.woff2) format('woff2'),
+       url(../fonts/PTSans-Bold.woff) format('woff'),
+       url(../fonts/PTSans-Bold.ttf) format('truetype');
 }

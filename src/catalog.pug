@@ -1,0 +1,721 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Каталог'
+
+block content
+  main#main.main
+    section.section.catalog
+      .container.section__container.catalog__container
+        .section__row.catalog__row
+          header.section__header.catalog__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="#").bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a().bread-crumbs__link Каталог
+
+            h2.section__title.catalog__title Каталог товаров
+
+
+          .section__content.catalog__content
+            .catalog__grid
+              .accordeon.catalog-opts
+                ul.catalog-opts__list
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Букеты
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list.catalog-opts__inner
+                        li.inner-list-item.catalog-opts__inner-item.active
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item.active
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из гербер
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из ирисов
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из пионов
+                        li.inner-list-item.catalog-opts__inner-item.active
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из эустомы
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из тюльпанов
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из фрезий
+                        li.inner-list-item.catalog-opts__inner-item.active
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из орхидей
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из гортензии
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из лилий
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из гвоздик
+                        li.inner-list-item.catalog-opts__inner-item.active
+                          .inner-list-item__inner
+                            span.inner-list-item__title Дизайнерские букеты
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Бизнес букеты
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты любимой
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты для мужчины
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Весенние букеты
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Летние букеты
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Розы
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Цветы в коробке
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Композиции
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Подарки
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Подарочные корзины
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Букеты невесты
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+                  li.catalog-opts__item
+                    .menu-drop
+                      span.menu-drop__title Вкусные букеты
+
+                        i.black.menu-drop__icon
+
+                      ul.inner-list
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из роз
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из хризантем
+                        li.inner-list-item.catalog-opts__inner-item
+                          .inner-list-item__inner
+                            span.inner-list-item__title Букеты из альтромерии
+
+
+              .catalog-cards
+                .catalog-cards__top-line
+                  label.catalog-cards__select-label
+                    span.catalog-cards__select-label-text Кому:
+                    select.catalog-cards__select(name="for-who")
+                      option(value="value-1") Маме
+                      option(value="value-2") Папе
+                      option(value="value-3") Бабушке
+                      option(value="value-4") Дедушке
+
+                  label.catalog-cards__select-label
+                    span.catalog-cards__select-label-text По цвету:
+                    select.catalog-cards__select(name="flowers-color")
+                      option(value="value-1") Розовые букеты
+                      option(value="value-2") Красные букеты
+                      option(value="value-3") Фиолетовые букеты
+                      option(value="value-4") Оранжевые букеты
+
+                  label.catalog-cards__select-label
+                    span.catalog-cards__select-label-text Повод:
+                    select.catalog-cards__select(name="reason")
+                      option(value="value-1") 8 марта
+                      option(value="value-2") 23 февраля
+                      option(value="value-3") 9 мая
+                      option(value="value-4") День рождения
+
+                  label.catalog-cards__select-label
+                    span.catalog-cards__select-label-text Сортировка:
+                    select.catalog-cards__select(name="for-sort")
+                      option(value="value-1") Популярность
+                      option(value="value-2") Пышность
+                      option(value="value-3") Количество
+
+                .products-slider__slide.grid-3
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -19%
+
+                        img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+                        
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title 101 красная роза
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 2280 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -10%
+
+                        img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title 25 розовых пионовидных роз
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 1680 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -19%
+
+                        img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Влюбленность
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 1270 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Мечтательница
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 2020 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Корзина солнечного настроения
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 1680 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Цветочная клумба
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 1270 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -19%
+
+                        img.product-card__image(src="./images/src/product-card-image-1.png" alt="сто одна красная роза")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+                        
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title 101 красная роза
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 2280 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -10%
+
+                        img.product-card__image(src="./images/src/product-card-image-2.png" alt="25 розовых пионовидных роз")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title 25 розовых пионовидных роз
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 1680 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+                          span.product-card__discount -19%
+
+                        img.product-card__image(src="./images/src/product-card-image-3.png" alt="букет влюбленность")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Влюбленность
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old 2800 грн
+                            ins.product-card-text-block-price__new 1270 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-5.png" alt="букет мечтательница")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Мечтательница
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 2020 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-6.png" alt="букет корзина солнечного настроения")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Корзина солнечного настроения
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 1680 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                  article.product-card.products-grid__card
+                    .product-card-image-block
+                      a(href="#").product-card__link
+                        .product-card-image-block__top-line
+
+                        img.product-card__image(src="./images/src/product-card-image-7.png" alt="букет мечтательница")
+
+                      .product-card-image-block__bottom-line
+                        .product-card__in-top TOP
+
+                      button(type="button").product-card__to-favourite
+                        <svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                        </svg>
+
+                    .product-card-text-block
+                      .product-card-text-block__inner
+                        .product-card-text-block__raiting
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+                          img(src="./images/src/star-icon.svg" alt="" aria-hidden="true").product-card-text-block-raiting-star
+
+
+                        .product-card-text-block__middle-line
+                          h3.product-card-text-block__title Цветочная клумба
+                          .product-card-text-block-price
+                            del.product-card-text-block-price__old
+                            ins.product-card-text-block-price__new 1270 грн
+
+                        .product-card-text-block__bottom-line
+                          button(type="button").action-btn.product-card__get-order
+                            span.action-btn__inner
+                              span.action-btn__text Заказать
+                          button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
+
+                .catalog-cards__bottom-line
+                  button(type="button").action-btn.catalog-cards__more Еще 16 товаров
+
+                  .catalog-cards__pagination
+                    .cards-pagination
+                      button(type="button").cards-pagination__arrow.cards-pagination__arrow_prev.disable
+                        span.help-text.visually-hidden На предыдущую страницу
+                      
+                        img(src="./images/src/arrow-prev-icon.svg" alt="" aria-hidden="true")
+                      button(type="button").cards-pagination__arrow.cards-pagination__arrow_next
+                        span.help-text.visually-hidden На следующую страницу
+                        img(src="./images/src/arrow-next-icon.svg" alt="" aria-hidden="true")
+                        
+
+                      ul.cards-pagination__list
+                        li.cards-pagination__item.active
+                          a(href="#").cards-pagination__link 1
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 2
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 3
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 4
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 5
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 6
+                        li.cards-pagination__item
+                          a(href="#").cards-pagination__link 7
+
+    section.promotion
+      h2.visually-hidden.promotion__title Статья о букете роз
+
+      .container.promotion__container
+        .promotion__row
+          article.promotion-card
+            .promotion-card__inner
+              p.promotion-card__text Как же прекрасна роза! Несмотря на существование огромного количества сортов декоративных растений, «королева» остаётся самой востребованной и любимой. Букет из роз – однозначно беспроигрышный вариант. Он покорит сердце как девушки, так и зрелой женщины. Чем больше единиц в композиции, тем сильнее эмоции у представительниц прекрасного пола! Оформление и внешний вид растений играют тоже не последнюю роль. Всегда чувствуется, когда букет составлен профессионально и с любовь. Хотите сделать приятный сюрприз и вызвать бурный восторг? Смело заказывайте букет из роз с доставкой к порогу любимой женщины. Наши флористы с любовью создают композиции, вкладывая частичку своего сердца и души. Цветочный подарок от компании Flowers-Ukraine состоит только из свежесрезанных растений и излучает положительную энергетику.
+
+              h3.promotion-card__title Когда уместно заказать букет роз?
+
+              p.promotion-card__text то может быть лучше момента, когда курьер стоит у порога с огромным букетом роз? В такой ситуации на лице возникает удивление, а в голове – вопрос: «Кто же заказал на дом эти прекрасные цветы?». Радость – вот внутреннее состояние получателя. Заказать букет роз с доставкой на конкретный адрес в том или ином городе Украины можно с поводом или без. Он станет красивым жестом от мужчины, подтверждением знаменательности даты и величия торжества. 
+
+              .promotion-card__link-block
+                a(href="#").promotion-card__read-more Читать далее
+
+    include includes/sections/map
+
+
+
+
+
+
+
+
