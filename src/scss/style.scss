@@ -29,11 +29,9 @@ html {
 
 body {
   font-family: 'Museo Sans Cyrl', Arial, sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden; // to prod
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
 
   main {
     flex-grow: 1;
@@ -1704,12 +1702,6 @@ body {
       font-weight: 700;
       font-size: 18px;
       line-height: 18px;
-      color: #fff;
-      text-transform: uppercase;
-    }
-
-    .menu-drop {
-      padding: 0;
     }
   }
 
@@ -1724,7 +1716,6 @@ body {
       font-weight: 300;
       font-size: 16px;
       line-height: 18px;
-      width: 100%;
     }
 
     &__link:hover {
@@ -1741,11 +1732,9 @@ body {
   }
 
   // Зануление выпадающего меню
-  .menu-dropdown {
-    .menu-drop {
-      &__icon {
-        display: none;
-      }
+  .menu-drop {
+    &__icon {
+      display: none;
     }
 
     .inner-list {
@@ -1807,12 +1796,6 @@ body {
   @media (max-width: 690px) {
     &-block {
       text-align: center;
-      
-      .menu-drop {
-        &__title {
-          text-align: center;
-        }
-      }
     }
 
     .pay-methods {
@@ -1822,7 +1805,7 @@ body {
       }
     }
 
-    .menu-dropdown {
+    .menu-drop {
       .inner-list-item {
         justify-content: center;
       }
@@ -1845,31 +1828,22 @@ body {
     
     &-block {
       text-align: left;
-      row-gap: 5px;
-      
-      .menu-drop {
-        &__title {
-          text-align: left;
-          font-weight: 900 !important;
-          font-size: 14px !important;
-        }
+      row-gap: 20px;
+
+      &__title {
+        font-weight: 900 !important;
       }
     }
 
     &-list {
       &__link {
         padding: 10px 0 10px 0;
-        font-size: 14px;
       }
-
-      row-gap: 5px;
     }
 
-    .menu-dropdown {
-      .menu-drop {
-        &__icon {
-          display: block;
-        }
+    .menu-drop {
+      &__icon {
+        display: block;
       }
 
       .inner-list {
