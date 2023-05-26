@@ -7,6 +7,9 @@ block variables
 block content
   main#main.main
     include includes/sections/filter-menu
+    include includes/sections/options-for-who
+    include includes/sections/options-color
+    include includes/sections/options-reason
 
     section.section.catalog
       img.flowers-decor.catalog__decor.catalog__decor_1(src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true")
@@ -269,8 +272,6 @@ block content
                       span.mobile-buttons__button-text Фильтр
 
                   .mobile-buttons__block
-                    //- button(type="button").sort-button.mobile-buttons__button                      
-                    //-   span.mobile-buttons__button-text По популярности
                     select(name="order-by").sort-button.mobile-buttons__button
                       option(value="value-1") По популярности
                       option(value="value-2") По пышности

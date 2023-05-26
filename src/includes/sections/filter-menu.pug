@@ -1,4 +1,4 @@
-.menu#menu-mobile.menu-mobile.menu-filter
+.menu#menu-mobile.menu-mobile.menu-filter.active
   .menu__row
     .menu__header
       span.menu__title Фильтр
@@ -12,31 +12,16 @@
       .menu__area
         .menu-field.menu-filter__option.for-who-field
           span.menu-field__title.for-who-field__title Кому
-          label(for="select-city-mobile").menu-field__value.for-who-field__value 
+          button(type="button" data-options-popup=".filter-options-recipient").menu-filter__button.menu-field__value.for-who-field__value 
             span.menu-field__value-label Выберите
-            select.filter-select#select-for-who-mobile.options-list__select(name="for-who")
-              option(value="value-1" selected) Маме
-              option(value="value-2") Папе
-              option(value="value-3") Бабушке
-              option(value="value-4") Дедушке
         .menu-field.menu-filter__option.color-field
           span.menu-field__title.color-field__title По цвету
-          label(for="select-city-mobile").menu-field__value.color-field__value
+          button(type="button" data-options-popup=".filter-options-color").menu-filter__button.menu-field__value.color-field__value
             span.menu-field__value-label Выберите
-            select.filter-select#select-color-mobile.options-list__select(name="color")
-              option(value="value-1" selected) Розовые розы
-              option(value="value-2") Красные розы
-              option(value="value-3") Фиолетовые розы
-              option(value="value-4") Оранжевые розы
         .menu-field.menu-filter__option.reason-field
           span.menu-field__title.reason-field__title Повод
-          label(for="select-city-mobile").menu-field__value.reason-field__value
+          button(type="button" data-options-popup=".filter-options-reason").menu-filter__button.menu-field__value.reason-field__value
             span.menu-field__value-label Выберите
-            select.filter-select#select-reason-mobile.options-list__select(name="event")
-              option(value="value-1" selected) 8 марта
-              option(value="value-2") 23 февраля
-              option(value="value-3") 9 мая
-              option(value="value-4") День рождения
 
 
       ul.menu-links

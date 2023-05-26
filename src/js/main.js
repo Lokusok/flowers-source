@@ -427,38 +427,44 @@ function setCorrectCatalogFilters() {
   const doMobileFilters = () => {
     if (!window.matchMedia('(max-width: 550px)').matches) return;
 
-    const filterMenuBtn = document.querySelector('.filter-button ');
+    const filterMenuBtn = document.querySelector('.filter-button');
     const filterMenuBlock = document.querySelector('.menu-filter');
-    const allOptions = filterMenuBlock.querySelectorAll('.filter-select');
-    const resetFilters = filterMenuBlock.querySelector('.menu-filter__reset');
+    const filterButtons = filterMenuBlock.querySelectorAll('.menu-filter__button');
+    const resetButton = filterMenuBlock.querySelector('.menu-filter__reset');
 
     filterMenuBtn.addEventListener('click', () => {
       filterMenuBlock.classList.toggle('active');
     });
 
-    console.log(allOptions);
-    allOptions.forEach((option) => {
-      const choice = new Choices(option, {
-        searchEnabled: false,
-        shouldSort: false,
-        itemSelectText: '',
-        classNames: {
-          item: 'options-link__elem',
-          itemSelectable: 'options-link__elem_active',
+    filterButtons.forEach((filterButton) => {
+      const popupOptsSelector = filterButton.dataset.optionsPopup;
+      const popupOpts = document.querySelector(popupOptsSelector);
+      const valueTitle = filterButton.querySelector('.menu-field__value-label');
+      const oldValueOfTitle = valueTitle.innerText;
+
+      filterButton.addEventListener('click', () => {
+        popupOpts.classList.toggle('active');
+      });
+
+      popupOpts.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        if (event.target.closest('.filter-options__close') ||
+            event.target.classList.contains('filter-options__row') ) {
+          popupOpts.classList.remove('active');
+          return;
         }
+
+        const clickedElem = event.target.closest('.filter-options-list__item');
+        if (!clickedElem) return;
+
+        const clickedValue = clickedElem.innerText;
+        valueTitle.innerText = clickedValue;
+        popupOpts.classList.remove('active');
       });
 
-      const activeTitle = option.closest('.menu-filter__option').querySelector('.menu-field__value-label');
-      const oldValueOfTitle = activeTitle.innerText === '' ? 'Выберите' : activeTitle.innerText;
-
-      choice.passedElement.element.addEventListener('change', () => {
-        const activeLabel = choice.getValue().label;
-        activeTitle.innerText = activeLabel;
-      });
-
-      resetFilters.addEventListener('click', () => {
-        activeTitle.innerText = oldValueOfTitle;
-        choice.clearInput();
+      resetButton.addEventListener('click', () => {
+        valueTitle.innerText = oldValueOfTitle;
       });
     });
   };

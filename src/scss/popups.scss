@@ -303,3 +303,63 @@
   }
 }
 
+// Попап для настроек
+.filter-options {
+  display: none;
+  z-index: 9999;
+
+  &__content {
+    // top: 70px;
+    top: 10px;
+    color: #000;
+    // min-height: 90%;
+    width: 90%;
+    padding: 20px 40px 15px;
+    position: relative;
+    border: 1px solid vars.$color-accent-1;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    appearance: none;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    color: vars.$color-accent-1;
+  }
+  
+  &__head {
+    margin-bottom: 16.5px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch !important;
+
+    &__item {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 12.5px 0;
+      cursor: pointer;
+
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    display: block;
+  }
+}

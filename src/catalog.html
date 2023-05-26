@@ -481,7 +481,7 @@
       </div>
     </header>
     <main class="main" id="main">
-      <div class="menu menu-mobile menu-filter" id="menu-mobile">
+      <div class="menu menu-mobile menu-filter active" id="menu-mobile">
         <div class="menu__row">
           <div class="menu__header"><span class="menu__title">Фильтр</span>
             <button class="menu__close" type="button"><img src="./images/src/close-icon.svg" alt="закрыть меню"></button>
@@ -492,34 +492,13 @@
             </div>
             <div class="menu__area">
               <div class="menu-field menu-filter__option for-who-field"><span class="menu-field__title for-who-field__title">Кому</span>
-                <label class="menu-field__value for-who-field__value" for="select-city-mobile"> <span class="menu-field__value-label">Выберите</span>
-                  <select class="filter-select options-list__select" id="select-for-who-mobile" name="for-who">
-                    <option value="value-1" selected>Маме</option>
-                    <option value="value-2">Папе</option>
-                    <option value="value-3">Бабушке</option>
-                    <option value="value-4">Дедушке</option>
-                  </select>
-                </label>
+                <button class="menu-filter__button menu-field__value for-who-field__value" type="button" data-options-popup=".filter-options-recipient"> <span class="menu-field__value-label">Выберите</span></button>
               </div>
               <div class="menu-field menu-filter__option color-field"><span class="menu-field__title color-field__title">По цвету</span>
-                <label class="menu-field__value color-field__value" for="select-city-mobile"><span class="menu-field__value-label">Выберите</span>
-                  <select class="filter-select options-list__select" id="select-color-mobile" name="color">
-                    <option value="value-1" selected>Розовые розы</option>
-                    <option value="value-2">Красные розы</option>
-                    <option value="value-3">Фиолетовые розы</option>
-                    <option value="value-4">Оранжевые розы</option>
-                  </select>
-                </label>
+                <button class="menu-filter__button menu-field__value color-field__value" type="button" data-options-popup=".filter-options-color"><span class="menu-field__value-label">Выберите</span></button>
               </div>
               <div class="menu-field menu-filter__option reason-field"><span class="menu-field__title reason-field__title">Повод</span>
-                <label class="menu-field__value reason-field__value" for="select-city-mobile"><span class="menu-field__value-label">Выберите</span>
-                  <select class="filter-select options-list__select" id="select-reason-mobile" name="event">
-                    <option value="value-1" selected>8 марта</option>
-                    <option value="value-2">23 февраля</option>
-                    <option value="value-3">9 мая</option>
-                    <option value="value-4">День рождения</option>
-                  </select>
-                </label>
+                <button class="menu-filter__button menu-field__value reason-field__value" type="button" data-options-popup=".filter-options-reason"><span class="menu-field__value-label">Выберите</span></button>
               </div>
             </div>
             <ul class="menu-links">
@@ -595,6 +574,55 @@
                   </ul>
                 </div>
               </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup filter-options filter-options-recipient">
+        <div class="popup__row filter-options__row">
+          <div class="popup__content filter-options__content">
+            <div class="filter-options__head"><span class="filter-options__title">Кому</span></div>
+            <button class="filter-options__close" type="button"><span class="visually-hidden">Закрыть попап</span><img src="./images/src/close-icon-grey.svg" alt="" aria-hidden="true"></button>
+            <ul class="filter-options-list">
+              <li class="filter-options-list__item">Бабушке</li>
+              <li class="filter-options-list__item">Коллеге</li>
+              <li class="filter-options-list__item">Начальнице</li>
+              <li class="filter-options-list__item">Ребенку</li>
+              <li class="filter-options-list__item">Бизнес партнеру</li>
+              <li class="filter-options-list__item">Маме</li>
+              <li class="filter-options-list__item">Папе</li>
+              <li class="filter-options-list__item">Учителю</li>
+              <li class="filter-options-list__item">Девушке</li>
+              <li class="filter-options-list__item">Начальнику</li>
+              <li class="filter-options-list__item">Подруге</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup filter-options filter-options-color">
+        <div class="popup__row filter-options__row">
+          <div class="popup__content filter-options__content">
+            <div class="filter-options__head"><span class="filter-options__title">По цвету</span></div>
+            <button class="filter-options__close" type="button"><span class="visually-hidden">Закрыть попап</span><img src="./images/src/close-icon-grey.svg" alt="" aria-hidden="true"></button>
+            <ul class="filter-options-list">
+              <li class="filter-options-list__item">Розовые розы</li>
+              <li class="filter-options-list__item">Красные розы</li>
+              <li class="filter-options-list__item">Фиолетовые розы</li>
+              <li class="filter-options-list__item">Оранжевые розы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="popup filter-options filter-options-reason">
+        <div class="popup__row filter-options__row">
+          <div class="popup__content filter-options__content">
+            <div class="filter-options__head"><span class="filter-options__title">Повод</span></div>
+            <button class="filter-options__close" type="button"><span class="visually-hidden">Закрыть попап</span><img src="./images/src/close-icon-grey.svg" alt="" aria-hidden="true"></button>
+            <ul class="filter-options-list">
+              <li class="filter-options-list__item">8 марта</li>
+              <li class="filter-options-list__item">23 февраля</li>
+              <li class="filter-options-list__item">9 мая</li>
+              <li class="filter-options-list__item">День рождения</li>
             </ul>
           </div>
         </div>
