@@ -481,6 +481,124 @@
       </div>
     </header>
     <main class="main" id="main">
+      <div class="menu menu-mobile menu-filter" id="menu-mobile">
+        <div class="menu__row">
+          <div class="menu__header"><span class="menu__title">Фильтр</span>
+            <button class="menu__close" type="button"><img src="./images/src/close-icon.svg" alt="закрыть меню"></button>
+          </div>
+          <div class="menu__content">
+            <div class="menu-field reset-field">
+              <button class="action-btn menu-filter__reset" type="button">Скинуть фильтр</button>
+            </div>
+            <div class="menu__area">
+              <div class="menu-field menu-filter__option for-who-field"><span class="menu-field__title for-who-field__title">Кому</span>
+                <label class="menu-field__value for-who-field__value" for="select-city-mobile"> <span class="menu-field__value-label">Выберите</span>
+                  <select class="filter-select options-list__select" id="select-for-who-mobile" name="for-who">
+                    <option value="value-1" selected>Маме</option>
+                    <option value="value-2">Папе</option>
+                    <option value="value-3">Бабушке</option>
+                    <option value="value-4">Дедушке</option>
+                  </select>
+                </label>
+              </div>
+              <div class="menu-field menu-filter__option color-field"><span class="menu-field__title color-field__title">По цвету</span>
+                <label class="menu-field__value color-field__value" for="select-city-mobile"><span class="menu-field__value-label">Выберите</span>
+                  <select class="filter-select options-list__select" id="select-color-mobile" name="color">
+                    <option value="value-1" selected>Розовые розы</option>
+                    <option value="value-2">Красные розы</option>
+                    <option value="value-3">Фиолетовые розы</option>
+                    <option value="value-4">Оранжевые розы</option>
+                  </select>
+                </label>
+              </div>
+              <div class="menu-field menu-filter__option reason-field"><span class="menu-field__title reason-field__title">Повод</span>
+                <label class="menu-field__value reason-field__value" for="select-city-mobile"><span class="menu-field__value-label">Выберите</span>
+                  <select class="filter-select options-list__select" id="select-reason-mobile" name="event">
+                    <option value="value-1" selected>8 марта</option>
+                    <option value="value-2">23 февраля</option>
+                    <option value="value-3">9 мая</option>
+                    <option value="value-4">День рождения</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <ul class="menu-links">
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Букеты<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Розы<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Цветы в коробке<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Композиции<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Подарки<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Подарочные корзины<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Букеты невесты<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-links-item">
+                <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Вкусные букеты<i class="black menu-drop__icon"></i></span>
+                  <ul class="inner-list menu-link-item__inner-list">
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                    <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <section class="section catalog"><img class="flowers-decor catalog__decor catalog__decor_1" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_2" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_3" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_4" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="big flowers-decor catalog__decor catalog__decor_5" src="./images/src/flowers-decor-3.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_6" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_7" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true">
         <div class="container section__container catalog__container">
           <div class="section__row catalog__row">
@@ -696,8 +814,32 @@
                         <option value="value-1">Популярность</option>
                         <option value="value-2">Пышность</option>
                         <option value="value-3">Количество</option>
+                        <option value="value-4">Цена</option>
                       </select>
                     </label>
+                  </div>
+                  <div class="mobile-buttons catalog-cards__mobile-buttons">
+                    <div class="mobile-buttons__block">
+                      <button class="filter-button mobile-buttons__button" type="button"><svg class="mobile-buttons__button-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_129_545)">
+<path d="M14.1935 1.12946e-06H0.82024C0.584372 -0.000445029 0.368134 0.13132 0.260313 0.341162C0.151005 0.55383 0.170189 0.809924 0.309836 1.00415L5.20923 7.9059C5.21087 7.90828 5.21265 7.91051 5.21429 7.91289C5.3923 8.15322 5.48853 8.44426 5.48912 8.74348V14.3704C5.48808 14.5371 5.55352 14.6971 5.671 14.8154C5.78849 14.9336 5.94822 14.9999 6.11478 14.9999C6.19955 14.9999 6.28328 14.983 6.36151 14.9506L9.11459 13.9008C9.36131 13.8255 9.52505 13.5928 9.52505 13.3124V8.74348C9.5255 8.44441 9.62187 8.15322 9.79974 7.91289C9.80137 7.91051 9.80316 7.90828 9.80479 7.9059L14.704 1.00385C14.8437 0.809775 14.8629 0.55383 14.7536 0.341162C14.6457 0.13132 14.4295 -0.000445029 14.1935 1.12946e-06ZM9.18583 7.46182C8.91218 7.83317 8.76421 8.28215 8.76332 8.74348V13.2199L6.25056 14.178V8.74348C6.24967 8.28215 6.10169 7.83317 5.8279 7.46182L1.07143 0.761442H13.9424L9.18583 7.46182Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_129_545">
+<rect width="15" height="15" fill="white"/>
+</clipPath>
+</defs>
+</svg><span class="mobile-buttons__button-text">Фильтр</span>
+                      </button>
+                    </div>
+                    <div class="mobile-buttons__block">
+                      <select class="sort-button mobile-buttons__button" name="order-by">
+                        <option value="value-1">По популярности</option>
+                        <option value="value-2">По пышности</option>
+                        <option value="value-3">По количеству</option>
+                        <option value="value-4">По цене</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="products-cards grid-3">
                     <article class="product-card products-grid__card">

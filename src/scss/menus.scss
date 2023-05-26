@@ -218,10 +218,35 @@
   }
 }
 
+// Общие стили для мобильного меню
 .menu-mobile {
   display: none;
 
+  .choices__list--dropdown {
+    left: 0;
+    transform: translate(-50%, 0);
+  }
+
   @media (max-width: 750px) {
     display: block;
+  }
+}
+
+// Меню с фильтрами (мобильное)
+.menu-filter {
+  &__reset {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px 13px;
+  }
+
+  .menu__area {
+    margin-top: 40px;
+  }
+
+  .menu-links {
+    margin-top: 40px;
   }
 }

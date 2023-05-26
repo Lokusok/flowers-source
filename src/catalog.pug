@@ -6,6 +6,8 @@ block variables
 
 block content
   main#main.main
+    include includes/sections/filter-menu
+
     section.section.catalog
       img.flowers-decor.catalog__decor.catalog__decor_1(src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true")
       img.flowers-decor.catalog__decor.catalog__decor_2(src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true")
@@ -216,7 +218,6 @@ block content
                           .inner-list-item__inner
                             span.inner-list-item__title Букеты из альтромерии
 
-
               .catalog-cards
                 .catalog-cards__top-line
                   label.catalog-cards__select-label
@@ -249,6 +250,32 @@ block content
                       option(value="value-1") Популярность
                       option(value="value-2") Пышность
                       option(value="value-3") Количество
+                      option(value="value-4") Цена
+
+                .mobile-buttons.catalog-cards__mobile-buttons
+                  .mobile-buttons__block
+                    button(type="button").filter-button.mobile-buttons__button
+                      <svg class="mobile-buttons__button-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_129_545)">
+                        <path d="M14.1935 1.12946e-06H0.82024C0.584372 -0.000445029 0.368134 0.13132 0.260313 0.341162C0.151005 0.55383 0.170189 0.809924 0.309836 1.00415L5.20923 7.9059C5.21087 7.90828 5.21265 7.91051 5.21429 7.91289C5.3923 8.15322 5.48853 8.44426 5.48912 8.74348V14.3704C5.48808 14.5371 5.55352 14.6971 5.671 14.8154C5.78849 14.9336 5.94822 14.9999 6.11478 14.9999C6.19955 14.9999 6.28328 14.983 6.36151 14.9506L9.11459 13.9008C9.36131 13.8255 9.52505 13.5928 9.52505 13.3124V8.74348C9.5255 8.44441 9.62187 8.15322 9.79974 7.91289C9.80137 7.91051 9.80316 7.90828 9.80479 7.9059L14.704 1.00385C14.8437 0.809775 14.8629 0.55383 14.7536 0.341162C14.6457 0.13132 14.4295 -0.000445029 14.1935 1.12946e-06ZM9.18583 7.46182C8.91218 7.83317 8.76421 8.28215 8.76332 8.74348V13.2199L6.25056 14.178V8.74348C6.24967 8.28215 6.10169 7.83317 5.8279 7.46182L1.07143 0.761442H13.9424L9.18583 7.46182Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_129_545">
+                        <rect width="15" height="15" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+
+                      span.mobile-buttons__button-text Фильтр
+
+                  .mobile-buttons__block
+                    //- button(type="button").sort-button.mobile-buttons__button                      
+                    //-   span.mobile-buttons__button-text По популярности
+                    select(name="order-by").sort-button.mobile-buttons__button
+                      option(value="value-1") По популярности
+                      option(value="value-2") По пышности
+                      option(value="value-3") По количеству
+                      option(value="value-4") По цене
 
                 .products-cards.grid-3
                   article.product-card.products-grid__card

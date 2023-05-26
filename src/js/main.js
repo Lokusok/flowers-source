@@ -3,14 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('yes-js');
   
   setCorrectPopups();
+  setCorrectCatalogFilters();
   setCorrectChoices();
   setCorrectMenuAccordeon();
   setCorrectBurger();
+  setCorrectMobileMenus();
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
   setCorrectInputMasks();
-  setCorrectCatalogFilters();
 });
 
 
@@ -24,6 +25,7 @@ function setCorrectChoices() {
     selectsDefault.forEach((select) => {
       const choices = new Choices(select, {
         searchEnabled: false,
+        shouldSort: false,
         itemSelectText: '',
         classNames: {
           item: 'options-link__elem',
@@ -44,6 +46,7 @@ function setCorrectChoices() {
 
     new Choices(document.querySelector('.menu-mobile select'), {
       searchEnabled: false,
+      shouldSort: false,
       itemSelectText: '',
       classNames: {
         item: 'options-link__elem',
@@ -141,21 +144,29 @@ function setCorrectMenuAccordeon() {
 function setCorrectBurger() {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.menu-mobile');
-  const closeMenu = menu.querySelector('.menu__close');
-
-  document.addEventListener('swiped-left', () => {
-    menu.classList.remove('active'); 
-    document.body.classList.remove('unscroll'); 
-  });
 
   burger.addEventListener('click', () => {
     menu.classList.add('active');
     document.body.classList.add('unscroll');
   });
+}
 
-  closeMenu.addEventListener('click', () => {
-    menu.classList.remove('active');
-    document.body.classList.remove('unscroll');
+// Логика всех мобильных меню
+function setCorrectMobileMenus() {
+  const mobileMenus = document.querySelectorAll('.menu-mobile');
+
+  mobileMenus.forEach((mobileMenu) => {
+    const closeBtn = mobileMenu.querySelector('.menu__close');
+
+    mobileMenu.addEventListener('swiped-left', () => {
+      mobileMenu.classList.remove('active');
+      document.body.classList.remove('unscroll');
+    });
+    
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      document.body.classList.remove('unscroll');
+    });
   });
 }
 
@@ -404,11 +415,54 @@ function setCorrectInputMasks() {
 
 // Фильтры в каталоге
 function setCorrectCatalogFilters() {
-  const sideFilters = document.querySelectorAll('.catalog-opts__inner-item');
-
-  sideFilters.forEach((sideFilter) => {
-    sideFilter.addEventListener('click', () => {
-      sideFilter.classList.toggle('active');
+  const doClickableAside = () => {
+    const sideFilters = document.querySelectorAll('.catalog-opts__inner-item');
+  
+    sideFilters.forEach((sideFilter) => {
+      sideFilter.addEventListener('click', () => {
+        sideFilter.classList.toggle('active');
+      });
     });
-  })
+  };
+  const doMobileFilters = () => {
+    if (!window.matchMedia('(max-width: 550px)').matches) return;
+
+    const filterMenuBtn = document.querySelector('.filter-button ');
+    const filterMenuBlock = document.querySelector('.menu-filter');
+    const allOptions = filterMenuBlock.querySelectorAll('.filter-select');
+    const resetFilters = filterMenuBlock.querySelector('.menu-filter__reset');
+
+    filterMenuBtn.addEventListener('click', () => {
+      filterMenuBlock.classList.toggle('active');
+    });
+
+    console.log(allOptions);
+    allOptions.forEach((option) => {
+      const choice = new Choices(option, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: '',
+        classNames: {
+          item: 'options-link__elem',
+          itemSelectable: 'options-link__elem_active',
+        }
+      });
+
+      const activeTitle = option.closest('.menu-filter__option').querySelector('.menu-field__value-label');
+      const oldValueOfTitle = activeTitle.innerText === '' ? 'Выберите' : activeTitle.innerText;
+
+      choice.passedElement.element.addEventListener('change', () => {
+        const activeLabel = choice.getValue().label;
+        activeTitle.innerText = activeLabel;
+      });
+
+      resetFilters.addEventListener('click', () => {
+        activeTitle.innerText = oldValueOfTitle;
+        choice.clearInput();
+      });
+    });
+  };
+
+  doClickableAside();
+  doMobileFilters();
 }
