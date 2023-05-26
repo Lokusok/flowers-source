@@ -30,7 +30,6 @@ html {
 body {
   font-family: 'Museo Sans Cyrl', Arial, sans-serif;
   overflow-x: hidden; // to prod
-  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -694,7 +693,7 @@ body {
       position: absolute !important;
       left: 50% !important;
       transform: translate(-50%, -10px) !important;
-      z-index: 1000;
+      z-index: 10;
 
       .swiper-pagination-bullet {
         color: #fff;
@@ -1189,40 +1188,7 @@ body {
 
   // Слайдер
   &-slider {
-    &__slide,
-    .product-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, auto);
-      grid-gap: 20px;
-
-      &.grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-  
-
-  @media (max-width: 1470px) {
-    &-slider {
-      &__slide {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-gap: 20px;
-      }
-    }
-  }
-
-  @media (max-width: 910px) {
-    &-slider {
-      &__slide {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-gap: 20px;
-      }
-    }
+    
   }
 
   @media (max-width: 640px) {
@@ -1240,14 +1206,6 @@ body {
 
     &__pagination {
       display: flex !important;
-    }
-  }
-
-  @media (max-width: 470px) {
-    &-slider {
-      &__slide {
-        grid-gap: 9px;
-      }
     }
   }
 }
@@ -1504,7 +1462,7 @@ body {
       width: 100%;
       height: 100%;
       background: rgba(vars.$color-accent-1, .3);
-      z-index: 10;
+      z-index: 101;
       pointer-events: none;
     }
   }
@@ -1516,6 +1474,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: 100;
 
     [class*='copyright'] {
       display: none !important;
@@ -1528,7 +1487,7 @@ body {
     margin-right: 219px;
     filter: drop-shadow(-4px 0px 10px rgba(0, 0, 0, 0.15)) drop-shadow(4px 0px 10px rgba(0, 0, 0, 0.15));
     position: relative;
-    z-index: 100;
+    z-index: 102;
     background: url(../images/src/card-bg.png) center / cover no-repeat;
 
     &__logo {
@@ -1916,9 +1875,53 @@ body {
 
 // === Каталог ===
 .catalog {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: translate(0, -15%) scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 330px;
+    }
+
+    &_3 {
+      left: 0;
+      top: 880px;
+      transform: scale(-1, 1);
+    }
+
+    &_4 {
+      right: 0;
+      top: 1500px;
+    }
+
+    &_5 {
+      left: 0;
+      top: 1900px;
+    }
+
+    &_6 {
+      right: 0;
+      top: 2100px;
+    }
+
+    &_7 {
+      left: 0;
+      bottom: -250px;
+      transform: scale(-1, 1);
+    }
+  }
+
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    // grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 1061px;
     grid-column-gap: 125px;
   }
 
@@ -1952,15 +1955,21 @@ body {
       .inner-list {
         margin-top: 5px;
         padding-left: 50px;
+        max-height: 90vh;
+        overflow: auto;
       }
 
       .inner-list-item {
         transition: opacity ease .2s;
 
+        &:not(:last-child) {
+          margin-bottom: 27px;
+        }
+
         &__title {
           font-weight: 300;
           font-size: 16px;
-          line-height: 38px;
+          line-height: 18px;
           color: vars.$color-accent-1;
         }
 
@@ -1981,8 +1990,8 @@ body {
 
           &::before {
             content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_40_4710)'%3E%3Cpath d='M6.00006 10.8001L3.20006 8.00006L2.26672 8.9334L6.00006 12.6667L14.0001 4.66673L13.0667 3.7334L6.00006 10.8001Z' fill='%23956D84'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_40_4710'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-            width: 30px;
-            height: 30px;
+            width: 15px;
+            height: 15px;
             position: absolute;
             left: -30px;
             top: 50%;
@@ -2122,7 +2131,6 @@ body {
 
       &__list {
         display: flex;
-        column-gap: 28px;
       }
 
       &__item.active {        
@@ -2130,7 +2138,7 @@ body {
           border-radius: 4px;
           color: #fff;
           background-color: vars.$color-accent-1;
-          padding: 18px 28px;
+          // padding: 18px 28px;
           text-decoration: none;
           opacity: .3;
           box-shadow: 0px 4px 10px rgba(53, 68, 117, 0.7);
@@ -2144,13 +2152,30 @@ body {
         line-height: 18px;
         text-decoration: none;
         color: #B0B9C0;
+        padding: 18px 28px;
       }
+    }
+  }
+
+  @media (max-width: 1615px) {
+    &__grid {
+      grid-column-gap: 50px;
     }
   }
 }
 
 // === Статья о букете роз ===
 .promotion {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      right: 0;
+      top: 200px;
+    }
+  }
+
   &__row {
     padding-top: 113px;
   }

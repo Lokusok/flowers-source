@@ -26,7 +26,7 @@
           <div class="menu__area">
             <div class="menu-field city-field"><span class="menu-field__title city-field__title">Киев</span>
               <label class="menu-field__value city-field__value" for="select-city-mobile"> Выберите город
-                <select class="options-list__select" id="select-city-mobile" name="city">
+                <select class="default-select options-list__select" id="select-city-mobile" name="city">
                   <option value="kiev" selected>Киев</option>
                   <option value="lvov">Львов</option>
                   <option value="kharkov">Харьков</option>
@@ -269,7 +269,7 @@
           <ul class="options__lists">
             <li class="options-list">
               <label class="options-list__title" for="select-valute">Валюта</label>
-              <select class="options-list__select" id="select-valute" name="valute">
+              <select class="default-select options-list__select" id="select-valute" name="valute">
                 <option value="grivens" selected>Грн</option>
                 <option value="rubles">Рбл</option>
                 <option value="dollars">Длр</option>
@@ -278,7 +278,7 @@
             </li>
             <li class="options-list">
               <label class="options-list__title" for="select-language">Язык</label>
-              <select class="options-list__select" id="select-language" name="language">
+              <select class="default-select options-list__select" id="select-language" name="language">
                 <option value="ru" selected>RU</option>
                 <option value="ua">UA</option>
                 <option value="en">EN</option>
@@ -286,7 +286,7 @@
             </li>
             <li class="options-list">
               <label class="options-list__title" for="select-city">Город</label>
-              <select class="options-list__select" id="select-city" name="city">
+              <select class="default-select options-list__select" id="select-city" name="city">
                 <option value="kiev" selected>Киев</option>
                 <option value="lvov">Львов</option>
                 <option value="kharkov">Харьков</option>
@@ -315,7 +315,7 @@
         <div class="options__row mobile">
           <ul class="options__lists options__links">
             <li class="options-list options-list-1">
-              <select class="options-list__select" id="select-valute-mobile" name="valute">
+              <select class="default-select options-list__select" id="select-valute-mobile" name="valute">
                 <option value="grivens" selected>Грн</option>
                 <option value="rubles">Рбл</option>
                 <option value="dollars">Длр</option>
@@ -330,7 +330,7 @@
 </svg>
                 </div><span class="options-link__title">Доставка и оплата</span></a></li>
             <li class="options-list options-list-2">
-              <select class="options-list__select" id="select-language-mobile" name="language">
+              <select class="default-select options-list__select" id="select-language-mobile" name="language">
                 <option value="ru" selected>RU</option>
                 <option value="ua">UA</option>
                 <option value="en">EN</option>
@@ -481,12 +481,12 @@
       </div>
     </header>
     <main class="main" id="main">
-      <section class="section catalog">
+      <section class="section catalog"><img class="flowers-decor catalog__decor catalog__decor_1" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_2" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_3" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_4" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="big flowers-decor catalog__decor catalog__decor_5" src="./images/src/flowers-decor-3.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_6" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true"><img class="flowers-decor catalog__decor catalog__decor_7" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true">
         <div class="container section__container catalog__container">
           <div class="section__row catalog__row">
             <header class="section__header catalog__header">
               <ul class="bread-crumbs section__bread-crumbs">
-                <li class="bread-crumbs__item"><a class="bread-crumbs__link" href="#">Главная</a></li>
+                <li class="bread-crumbs__item"><a class="bread-crumbs__link" href="./index.html">Главная</a></li>
                 <li class="bread-crumbs__item"><a class="bread-crumbs__link">Каталог</a></li>
               </ul>
               <h2 class="section__title catalog__title">Каталог товаров</h2>
@@ -496,7 +496,7 @@
                 <div class="accordeon catalog-opts">
                   <ul class="catalog-opts__list">
                     <li class="catalog-opts__item">
-                      <div class="menu-drop"><span class="menu-drop__title">Букеты<i class="black menu-drop__icon"></i></span>
+                      <div class="menu-drop active"><span class="menu-drop__title">Букеты<i class="black menu-drop__icon"></i></span>
                         <ul class="inner-list catalog-opts__inner">
                           <li class="inner-list-item catalog-opts__inner-item active">
                             <div class="inner-list-item__inner"><span class="inner-list-item__title">Букеты из роз</span></div>
@@ -699,7 +699,7 @@
                       </select>
                     </label>
                   </div>
-                  <div class="products-slider__slide grid-3">
+                  <div class="products-cards grid-3">
                     <article class="product-card products-grid__card">
                       <div class="product-card-image-block"><a class="product-card__link" href="#">
                           <div class="product-card-image-block__top-line"><span class="product-card__discount">-19%</span></div><img class="product-card__image" src="./images/src/product-card-image-1.png" alt="сто одна красная роза"></a>
@@ -1049,7 +1049,7 @@
           </div>
         </div>
       </section>
-      <section class="promotion">
+      <section class="promotion"><img class="flowers-decor promotion__decor promotion__decor_1" src="./images/src/flowers-decor-4.png" alt="" aria-hidden="true">
         <h2 class="visually-hidden promotion__title">Статья о букете роз</h2>
         <div class="container promotion__container">
           <div class="promotion__row">
@@ -1057,7 +1057,7 @@
               <div class="promotion-card__inner">
                 <p class="promotion-card__text">Как же прекрасна роза! Несмотря на существование огромного количества сортов декоративных растений, «королева» остаётся самой востребованной и любимой. Букет из роз – однозначно беспроигрышный вариант. Он покорит сердце как девушки, так и зрелой женщины. Чем больше единиц в композиции, тем сильнее эмоции у представительниц прекрасного пола! Оформление и внешний вид растений играют тоже не последнюю роль. Всегда чувствуется, когда букет составлен профессионально и с любовь. Хотите сделать приятный сюрприз и вызвать бурный восторг? Смело заказывайте букет из роз с доставкой к порогу любимой женщины. Наши флористы с любовью создают композиции, вкладывая частичку своего сердца и души. Цветочный подарок от компании Flowers-Ukraine состоит только из свежесрезанных растений и излучает положительную энергетику.</p>
                 <h3 class="promotion-card__title">Когда уместно заказать букет роз?</h3>
-                <p class="promotion-card__text">то может быть лучше момента, когда курьер стоит у порога с огромным букетом роз? В такой ситуации на лице возникает удивление, а в голове – вопрос: «Кто же заказал на дом эти прекрасные цветы?». Радость – вот внутреннее состояние получателя. Заказать букет роз с доставкой на конкретный адрес в том или ином городе Украины можно с поводом или без. Он станет красивым жестом от мужчины, подтверждением знаменательности даты и величия торжества. </p>
+                <p class="promotion-card__text">Что может быть лучше момента, когда курьер стоит у порога с огромным букетом роз? В такой ситуации на лице возникает удивление, а в голове – вопрос: «Кто же заказал на дом эти прекрасные цветы?». Радость – вот внутреннее состояние получателя. Заказать букет роз с доставкой на конкретный адрес в том или ином городе Украины можно с поводом или без. Он станет красивым жестом от мужчины, подтверждением знаменательности даты и величия торжества. </p>
                 <div class="promotion-card__link-block"><a class="promotion-card__read-more" href="#">Читать далее</a></div>
               </div>
             </article>

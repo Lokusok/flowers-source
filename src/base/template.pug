@@ -36,7 +36,7 @@ html(lang="ru")
           ul.options__lists
             li.options-list
               label(for="select-valute").options-list__title Валюта
-              select#select-valute.options-list__select(name="valute")
+              select.default-select#select-valute.options-list__select(name="valute")
                 option(value="grivens" selected) Грн
                 option(value="rubles") Рбл
                 option(value="dollars") Длр
@@ -44,14 +44,14 @@ html(lang="ru")
 
             li.options-list
               label(for="select-language").options-list__title Язык
-              select#select-language.options-list__select(name="language")
+              select.default-select#select-language.options-list__select(name="language")
                 option(value="ru" selected) RU
                 option(value="ua") UA
                 option(value="en") EN
 
             li.options-list
               label(for="select-city").options-list__title Город
-              select#select-city.options-list__select(name="city")
+              select.default-select#select-city.options-list__select(name="city")
                 option(value="kiev" selected) Киев
                 option(value="lvov") Львов
                 option(value="kharkov") Харьков
@@ -96,7 +96,7 @@ html(lang="ru")
         .options__row.mobile
           ul.options__lists.options__links
             li.options-list.options-list-1
-              select#select-valute-mobile.options-list__select(name="valute")
+              select.default-select#select-valute-mobile.options-list__select(name="valute")
                 option(value="grivens" selected) Грн
                 option(value="rubles") Рбл
                 option(value="dollars") Длр
@@ -114,7 +114,7 @@ html(lang="ru")
                 span.options-link__title Доставка и оплата
 
             li.options-list.options-list-2
-              select#select-language-mobile.options-list__select(name="language")
+              select.default-select#select-language-mobile.options-list__select(name="language")
                 option(value="ru" selected) RU
                 option(value="ua") UA
                 option(value="en") EN

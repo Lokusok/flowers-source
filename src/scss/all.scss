@@ -110,7 +110,6 @@
 
   &-item {
     cursor: pointer;
-    padding: 8px 26px 8px 15px;
     transition: padding ease .2s, background ease .2s, font-weight ease .2s, opacity ease .1s;
     white-space: nowrap;
     position: relative;
@@ -166,6 +165,7 @@
       transition: transform ease .2s;
       display: block;
       text-decoration: none;
+      padding: 8px 26px 8px 15px;
     }
     
     &:hover {
@@ -326,6 +326,13 @@
   @media (max-width: 1700px) {
     display: none;
   }
+
+  @media (max-width: 2030px) {
+    &.big {
+      // display: none;
+      translate: -50% 0;
+    }
+  }
 }
 
 // Скрытые элементы
@@ -426,6 +433,36 @@
       left: auto;
       top: auto;
     }
+  }
+}
+
+// Сетка товаров
+.products-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 20px;
+
+  &.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1520px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 910px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 470px) {
+    grid-gap: 9px;
   }
 }
 
@@ -857,7 +894,7 @@
   }
 }
 
-
+// Стили главных секций на страницах кроме главной
 .section {
   &__row {
     padding-top: 65px;

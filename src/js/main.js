@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function setCorrectChoices() {
   // Библиотечные выпадашки для <select>
   const doChoicesLib = () => {
-    const selectsTop = document.querySelectorAll('.options select');
+    const selectsDefault = document.querySelectorAll('.default-select');
     const selectsCatalog = document.querySelectorAll('.catalog-cards__top-line select');
 
-    selectsTop.forEach((select) => {
-      new Choices(select, {
+    selectsDefault.forEach((select) => {
+      const choices = new Choices(select, {
         searchEnabled: false,
         itemSelectText: '',
         classNames: {
@@ -30,6 +30,25 @@ function setCorrectChoices() {
           itemSelectable: 'options-link__elem_active',
         }
       });
+
+      // Постановка выбранного города в нужное место
+      if (select.id === 'select-city-mobile') {
+        select.addEventListener('change', () => {
+          const activeLabel = choices.getValue().label;
+          const titleCity = select.closest('.menu-field')?.querySelector('.menu-field__title');
+
+          titleCity.innerText = activeLabel;
+        });
+      }
+    });
+
+    new Choices(document.querySelector('.menu-mobile select'), {
+      searchEnabled: false,
+      itemSelectText: '',
+      classNames: {
+        item: 'options-link__elem',
+        itemSelectable: 'options-link__elem_active',
+      }
     });
 
     selectsCatalog.forEach((select) => {
@@ -189,7 +208,7 @@ function setCorrectSliders() {
 
             if (slide === undefined) {
               const slideSwiper = document.createElement('div');
-              slideSwiper.classList.add('swiper-slide', 'products-slider__slide');
+              slideSwiper.classList.add('swiper-slide', 'products-cards', 'products-slider__slide');
               allSlides.push(slideSwiper);
               slidesWrapper.append(slideSwiper);
             }
