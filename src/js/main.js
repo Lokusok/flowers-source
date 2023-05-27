@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectFavourites();
   setCorrectMap();
   setCorrectInputMasks();
+  setCorrectLoadMoreCatalog();
 });
 
 
@@ -314,6 +315,7 @@ function setCorrectFavourites() {
   favouriteBtns.forEach((btn) => {
     btn.addEventListener('click', (event) => {
       event.preventDefault();
+      console.log(btn);
       btn.classList.toggle('active');
     });
   });
@@ -359,8 +361,21 @@ function setCorrectMap() {
 // Попапы
 function setCorrectPopups() {
   const triggers = document.querySelectorAll('.trigger');
-  const setUnscroll = () => document.body.classList.add('unscroll');
-  const delUnscroll = () => document.body.classList.remove('unscroll');
+  const needToFreeze = ['.options', '.header', '.main', '.footer'];
+  const setUnscroll = () => {
+    document.body.classList.add('unscroll');
+    freezeFocus();
+  };
+  const delUnscroll = () => {
+    document.body.classList.remove('unscroll');
+    unfreezeFocus();
+  };
+  const freezeFocus = () => needToFreeze.forEach((selector) => {
+    document.querySelector(selector).inert = true;
+  });
+  const unfreezeFocus = () => needToFreeze.forEach((selector) => {
+    document.querySelector(selector).inert = false;
+  });
 
   triggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
@@ -417,7 +432,8 @@ function setCorrectInputMasks() {
 function setCorrectCatalogFilters() {
   const doClickableAside = () => {
     const sideFilters = document.querySelectorAll('.catalog-opts__inner-item');
-  
+    if (!sideFilters) return;
+
     sideFilters.forEach((sideFilter) => {
       sideFilter.addEventListener('click', () => {
         sideFilter.classList.toggle('active');
@@ -425,9 +441,8 @@ function setCorrectCatalogFilters() {
     });
   };
   const doMobileFilters = () => {
-    if (!window.matchMedia('(max-width: 550px)').matches) return;
-
     const filterMenuBtn = document.querySelector('.filter-button');
+    if (!filterMenuBtn) return;
     const filterMenuBlock = document.querySelector('.menu-filter');
     const filterButtons = filterMenuBlock.querySelectorAll('.menu-filter__button');
     const resetButton = filterMenuBlock.querySelector('.menu-filter__reset');
@@ -472,3 +487,50 @@ function setCorrectCatalogFilters() {
   doClickableAside();
   doMobileFilters();
 }
+
+// Подгрузка товаров в каталоге
+function setCorrectLoadMoreCatalog() {
+  const loadMoreBtn = document.querySelector('.load-more');
+  if (!loadMoreBtn) return;
+  const hidesCount = loadMoreBtn.querySelector('.load-more__count');
+  const hidesProducts = document.getElementsByClassName('hide');
+  const getNoun = (number, one, two, five) => {
+    let n = Math.abs(number);
+    n %= 100;
+    if (n >= 5 && n <= 20) {
+      return five;
+    }
+    n %= 10;
+    if (n === 1) {
+      return one;
+    }
+    if (n >= 2 && n <= 4) {
+      return two;
+    }
+    return five;
+  };
+  const updateCountState = (count) => {
+    if (count === 0) hideLoadBtn();
+    hidesCount.innerText = count + ' ' + getNoun(count, 'товар', 'товара', 'товаров');
+  };
+  const hideLoadBtn = () => {
+    loadMoreBtn.style.display = 'none';
+  };
+  let onOneRow = 3;
+  if (window.matchMedia('(max-width: 910px)').matches) onOneRow = 2;
+  let lastAmount = 0;
+
+  updateCountState(hidesProducts.length);
+  
+  loadMoreBtn.addEventListener('click', () => {
+    const needRemoveHide = Array.from(hidesProducts).slice(lastAmount, onOneRow);
+
+    needRemoveHide.forEach((productCard) => {
+      productCard.classList.remove('hide');
+    });
+
+    updateCountState(hidesProducts.length);
+  });
+}
+
+

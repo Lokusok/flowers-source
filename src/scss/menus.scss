@@ -252,4 +252,8 @@
   .menu__area {
     margin-top: 40px;
   }
+
+  @media (max-width: 1270px) {
+    display: block;
+  }
 }

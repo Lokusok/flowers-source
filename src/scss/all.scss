@@ -474,6 +474,10 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: default;
+
+  &.hide {
+    display: none;
+  }
   
   @media (pointer: fine) {
     &:hover {
@@ -484,6 +488,10 @@
   &__link {
     color: vars.$color-accent-2;
     text-decoration: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   @media (pointer: fine) {

@@ -2173,7 +2173,7 @@ body {
 
   // Мобильные кнопки
   .mobile-buttons {
-    display: none;
+    display: flex;
     justify-content: center;
     column-gap: 10px;
     margin-bottom: 12px;
@@ -2197,7 +2197,7 @@ body {
       border-radius: 5px;
       width: 140px;
       height: 45px;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       cursor: pointer;
@@ -2248,11 +2248,23 @@ body {
     &-opts {
       display: none;
     }
+
+    .mobile-buttons {
+      .filter-button {
+        display: flex;
+      }
+    }
   }
 
   @media (max-width: 990px) {
     &-cards__top-line {
       display: none;
+    }
+
+    .mobile-buttons {
+      .sort-button {
+        display: flex;
+      }
     }
   }
 
@@ -2287,10 +2299,6 @@ body {
 
     .bread-crumbs {
       display: none;
-    }
-
-    .mobile-buttons {
-      display: flex;
     }
 
     &__title {
