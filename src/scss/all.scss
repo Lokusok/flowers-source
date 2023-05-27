@@ -529,16 +529,6 @@
     position: absolute;
     left: 20px;
     top: 6px;
-    border: 2px dashed #E72222;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 18px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   // В избранное
@@ -547,34 +537,6 @@
     position: absolute;
     right: 24px;
     top: 33px;
-    background: none;
-    border: none;
-    z-index: 10;
-    cursor: pointer;
-    transition: filter ease .2s;
-
-    @media (pointer: fine) {
-      
-    }
-
-    .favourite-icon {
-      &__path {
-        fill: none;
-        stroke: vars.$color-accent-1;
-        stroke-width: 2px;
-        transition: fill ease .2s;
-      }
-    }
-
-    &.active {
-      filter: drop-shadow(2px 2px 6px vars.$color-accent-1);
-
-      .favourite-icon {
-        &__path {
-          fill: vars.$color-accent-1;
-        }
-      }
-    }
   }
 
   // Иконка "В топе"
@@ -875,6 +837,47 @@
   }
 }
 
+// Скидка товара
+.product-discount {
+  border: 2px dashed #E72222;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-to-favourite {
+  background: none;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  transition: filter ease .2s;
+
+  .favourite-icon {
+    &__path {
+      fill: none;
+      stroke: vars.$color-accent-1;
+      stroke-width: 2px;
+      transition: fill ease .2s;
+    }
+  }
+
+  &.active {
+    filter: drop-shadow(2px 2px 6px vars.$color-accent-1);
+
+    .favourite-icon {
+      &__path {
+        fill: vars.$color-accent-1;
+      }
+    }
+  }
+}
+
 // Хлебные крошки
 .bread-crumbs {
   display: flex;
@@ -887,6 +890,10 @@
     color: #828282;
     text-decoration: none;
     transition: opacity ease .2s;
+  }
+
+  &__link[href] {
+    text-decoration: underline;
 
     &:hover {
       opacity: .7;
@@ -895,10 +902,6 @@
     &:active {
       opacity: .4;
     }
-  }
-
-  &__link[href] {
-    text-decoration: underline;
   }
 }
 
@@ -914,5 +917,42 @@
     font-weight: 900;
     font-size: 48px;
     line-height: 18px;
+  }
+}
+
+// Белый инпут
+.white-area {
+  position: relative;
+
+  &__input-label {
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 61px;
+    background: #fff;
+    color: #BDBDBD;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 15px;
+  }
+
+  &__input {
+    border: 1px solid #E0E0E0;
+    width: 100%;
+    padding: 20.5px;
+    font-size: 20px;
+
+    &:focus-visible {
+      outline: 2px dashed vars.$color-accent-1
+    }
+
+    &:focus {
+      outline: none;
+      border-color: vars.$color-accent-1;
+    }
+
+    &:focus + .tel-popup__input-label {
+      color: vars.$color-accent-1;
+    }
   }
 }

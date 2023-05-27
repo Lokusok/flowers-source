@@ -1669,6 +1669,8 @@ body {
       font-weight: 700;
       font-size: 18px;
       line-height: 18px;
+      cursor: default;
+      color: #fff !important;
     }
 
     .inner-list {
@@ -1814,6 +1816,12 @@ body {
     }
 
     .menu-drop {
+      &.active {
+        .menu-drop__title {
+          color: vars.$color-accent-1 !important;
+        }
+      }
+
       &__icon {
         display: block;
       }
@@ -2524,6 +2532,292 @@ body {
       &__read-more {
         font-size: 14px;
         line-height: 18px;
+      }
+    }
+  }
+}
+
+// === Секция описания продукта ===
+.product {
+  &-area {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 3.3fr 4fr;
+    grid-column-gap: 120px;
+
+    &__sliders {
+      min-width: 0;
+
+      .product-main-slider {
+        margin-bottom: 12px;
+        position: relative;
+
+        .product-discount {
+          z-index: 10;
+          position: absolute;
+          top: 24px;
+          left: 24px;
+          width: 98px;
+          height: 98px;
+          font-size: 24px;
+          line-height: 18px;
+        }
+
+        .product-to-favourite {
+          z-index: 10;
+          position: absolute;
+          top: 44px;
+          right: 44px;
+        }
+      }
+
+      .product-thumbs-slider {
+        &__slide {
+          transition: opacity ease .2s;
+          cursor: pointer;
+        }
+
+        &__slide:hover {
+          opacity: .7;
+        }
+
+        &__slide:active {
+          opacity: .4;
+        }
+
+        &__slide.active-thumb {
+          opacity: .4;
+        }
+      }
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link-block {
+      margin-bottom: 45px;
+    }
+
+    &__category {
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      color: #BDBDBD;
+      transition: opacity ease .2s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &:active {
+        opacity: .4;
+      }
+    }
+
+    &__title {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 18px;
+      margin-bottom: 39px;
+    }
+
+    &__line {
+      display: flex;
+
+      &.stock-rate {
+        margin-bottom: 50px;
+      }
+
+      &.prices {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__in-stock {
+      margin-right: 62px;
+      color: #828282;
+    }
+
+    &__raiting {
+      display: flex;
+    }
+
+    &__new-price {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 18px;
+      color: vars.$color-accent-1;
+      margin-right: 29px;
+    }
+
+    &__old-price {
+      text-decoration: line-through;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 18px;
+      color: #BDBDBD;
+    }
+
+    &-table {
+      width: max-content;
+      margin-bottom: 56px;
+
+      &__col {
+        font-family: 'Euclid Circular', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        padding-top: 24px;
+      }
+
+      &__title {
+        color: #BDBDBD;
+      }
+
+      &__value {
+        padding-left: 24px;
+      }
+    }
+
+    .order {
+      display: flex;
+      margin-bottom: 46px;
+
+      &-counter {
+        margin-right: 34px;
+        border: 1px solid vars.$color-accent-1;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &__value {
+          font-family: 'Euclid Circular', sans-serif;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 18px;
+          margin: 0 26px;
+        }
+
+        &__button {
+          background: none;
+          border: none;
+          appearance: none;
+          cursor: pointer;
+          padding: 25px 7.5px;
+        }
+
+        &__button:hover {
+          .order-counter__icon path {
+            stroke: vars.$color-accent-1;
+          }
+        }
+      }
+
+      &__button {
+        padding: 22px 51px;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .tel-order {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 34px;
+
+      &__title {
+        font-weight: 30;
+        font-size: 16px;
+        line-height: 18px;
+        color: #828282;
+        margin-bottom: 20px;
+      }
+
+      &__input-block {
+        width: 70%;
+      }
+
+      &__button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 18px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 35px;
+      }
+    }
+
+    .tabs {
+      &__header {
+        display: flex;
+        column-gap: 85px;
+        margin-bottom: 34px;
+      }
+
+      &__tab {
+        background: none;
+        border: none;
+        appearance: none;
+        padding-right: 24px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 18px;
+        color: #828282;
+        cursor: pointer;
+        position: relative;
+        transition: opacity ease .2s;
+
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg width='15' height='8' viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.999912L7.5 6.96021L14 0.999912' stroke='%23828282' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        &:hover {
+          opacity: .7;
+        }
+
+        &:active {
+          opacity: .4;
+        }
+      }
+
+      &__tab.active {
+        color: vars.$color-accent-1;
+
+        &::before {
+          transform: translate(0, -20%) rotate(180deg);
+        }
+      }
+
+      &-content {
+        &__inner {
+          &.hide {
+            display: none;
+          }
+        }
+
+        &__text {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 25px;
+          color: #828282;
+        }
       }
     }
   }

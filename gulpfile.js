@@ -41,7 +41,7 @@ function scssToCss() {
   return src('./src/scss/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: 'compressed' }))
+      .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
       .pipe(autoprefixer({ overrideBrowserslist: ["last 10 version"] }))
       .pipe(rename('style.min.css'))
       .pipe(sourcemaps.write('.'))

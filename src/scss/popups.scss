@@ -64,39 +64,7 @@
   }
 
   &__input-block {
-    position: relative;
     margin-bottom: 67px;
-  }
-
-  &__input-label {
-    position: absolute;
-    transform: translate(0, -50%);
-    left: 61px;
-    background: #fff;
-    color: #BDBDBD;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  &__input {
-    border: 1px solid #E0E0E0;
-    width: 100%;
-    padding: 20.5px;
-    font-size: 20px;
-
-    &:focus-visible {
-      outline: 2px dashed vars.$color-accent-1
-    }
-
-    &:focus {
-      outline: none;
-      border-color: vars.$color-accent-1;
-    }
-
-    &:focus + .tel-popup__input-label {
-      color: vars.$color-accent-1;
-    }
   }
 
   &__button {
