@@ -12,14 +12,14 @@ block content
 
       .container.section__container.basket__container
         .section__row.basket__row
-          header.section__header.catalog__header
+          header.section__header.basket__header
             ul.bread-crumbs.section__bread-crumbs
               li.bread-crumbs__item
                 a(href="./index.html").white-underline-link.bread-crumbs__link Главная
               li.bread-crumbs__item
                 a.bread-crumbs__link Корзина
 
-            h2.section__title.catalog__title Корзина
+            h2.section__title.basket__title Корзина
 
           .basket-area
             .basket-area__products
@@ -35,13 +35,13 @@ block content
 
                 .product-counter
                   button(type="button").product-counter__button.product-counter__minus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Удалить одну единицу товара из корзины
                     <svg class="product-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.96029 1L2 7.5L7.96029 14" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
                   .product-counter__value 1                  
                   button(type="button").product-counter__button.product-counter__plus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Добавить одну единицу товара в корзину
                     <svg class="product-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.624668 14L6.58496 7.5L0.624668 1" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
@@ -53,9 +53,9 @@ block content
                     <svg class="basket-product__action-icon" aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="basket-product__action-icon-path" d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM2 5H12V16.5H2V5ZM10.5 1L9.5 0H4.5L3.5 1H0V2.5H14V1H10.5Z" fill="#956D84"/>
                     </svg>
-                  button(type="button").basket-product__action.basket-product__action_to-favourite
-                    <svg class="basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                  button(type="button").product-to-favourite.basket-product__action.basket-product__action_to-favourite
+                    <svg class="favourite-icon basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="favourite-icon__path basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
                     </svg>
 
               article.basket-product
@@ -70,13 +70,13 @@ block content
 
                 .product-counter
                   button(type="button").product-counter__button.product-counter__minus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Удалить одну единицу товара из корзины
                     <svg class="product-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.96029 1L2 7.5L7.96029 14" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
                   .product-counter__value 1                  
                   button(type="button").product-counter__button.product-counter__plus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Добавить одну единицу товара в корзину
                     <svg class="product-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.624668 14L6.58496 7.5L0.624668 1" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
@@ -88,9 +88,9 @@ block content
                     <svg class="basket-product__action-icon" aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="basket-product__action-icon-path" d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM2 5H12V16.5H2V5ZM10.5 1L9.5 0H4.5L3.5 1H0V2.5H14V1H10.5Z" fill="#956D84"/>
                     </svg>
-                  button(type="button").basket-product__action.basket-product__action_to-favourite
-                    <svg class="basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                  button(type="button").product-to-favourite.basket-product__action.basket-product__action_to-favourite
+                    <svg class="favourite-icon basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="favourite-icon__path basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
                     </svg>
 
               article.basket-product
@@ -105,13 +105,13 @@ block content
 
                 .product-counter
                   button(type="button").product-counter__button.product-counter__minus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Удалить одну единицу товара из корзины
                     <svg class="product-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.96029 1L2 7.5L7.96029 14" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
                   .product-counter__value 1                  
                   button(type="button").product-counter__button.product-counter__plus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Добавить одну единицу товара в корзину
                     <svg class="product-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.624668 14L6.58496 7.5L0.624668 1" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
@@ -123,9 +123,9 @@ block content
                     <svg class="basket-product__action-icon" aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="basket-product__action-icon-path" d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM2 5H12V16.5H2V5ZM10.5 1L9.5 0H4.5L3.5 1H0V2.5H14V1H10.5Z" fill="#956D84"/>
                     </svg>
-                  button(type="button").basket-product__action.basket-product__action_to-favourite
-                    <svg class="basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                  button(type="button").product-to-favourite.basket-product__action.basket-product__action_to-favourite
+                    <svg class="favourite-icon basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="favourite-icon__path basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
                     </svg>
 
               article.basket-product
@@ -140,13 +140,13 @@ block content
 
                 .product-counter
                   button(type="button").product-counter__button.product-counter__minus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Удалить одну единицу товара из корзины
                     <svg class="product-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.96029 1L2 7.5L7.96029 14" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
                   .product-counter__value 1                  
                   button(type="button").product-counter__button.product-counter__plus
-                    span.visually-hidden Добавить в корзину ещё один товар
+                    span.visually-hidden Добавить одну единицу товара в корзину
                     <svg class="product-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.624668 14L6.58496 7.5L0.624668 1" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
@@ -158,29 +158,29 @@ block content
                     <svg class="basket-product__action-icon" aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="basket-product__action-icon-path" d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM2 5H12V16.5H2V5ZM10.5 1L9.5 0H4.5L3.5 1H0V2.5H14V1H10.5Z" fill="#956D84"/>
                     </svg>
-                  button(type="button").basket-product__action.basket-product__action_to-favourite
-                    <svg class="basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+                  button(type="button").product-to-favourite.basket-product__action.basket-product__action_to-favourite
+                    <svg class="favourite-icon basket-product__action-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="favourite-icon__path basket-product__action-icon-path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
                     </svg>
-
 
             .basket-area__result
               .result-card
-                span.result-card__title Ваш заказ
+                .result-card__inner
+                  span.result-card__title Ваш заказ
 
-                .result-card__union
-                  .result-card__field
-                    span.result-card__field-title Товары
-                    span.result-card__field-value 5 558 ₴
+                  .result-card__union
+                    .result-card__field
+                      span.result-card__field-title Товары
+                      span.result-card__field-value 5 558 ₴
 
-                  .result-card__field
-                    span.result-card__field-title Скидка
-                    span.result-card__field-value 254 ₴
+                    .result-card__field
+                      span.result-card__field-title Скидка
+                      span.result-card__field-value 254 ₴
 
-                
-                .res-field
-                  span.res-field__title Всего
-                  span.res-field__price 5 304 ₴
+                  
+                  .res-field
+                    span.res-field__title Всего
+                    span.res-field__price 5 304 ₴
 
                 .result-card__button-block
                   button(type="button").action-btn.result-card__confirm 
@@ -189,7 +189,7 @@ block content
                 .result-card__outer-block
                   a(href="./catalog.html").white-underline-link.result-card__outer-link Продолжить покупки
                 
-    section#products-1.products.products-1.recommendations-products
+    section(data-max-slides-on-slide="2")#products-1.products.products-1.recommendations-products
       img.flowers-decor.recommendations-products__decor.recommendations-products__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
 
       .container.products__container

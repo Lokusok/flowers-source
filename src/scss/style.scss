@@ -3227,6 +3227,10 @@ body {
       }
     }
 
+    &__image {
+      width: 100%;
+    }
+
     &__title {
       grid-area: product-title;
       font-weight: 900;
@@ -3241,9 +3245,11 @@ body {
       row-gap: 6px;
       font-weight: 300;
       line-height: 18px;
+      white-space: nowrap;
 
       &__new-price {
         font-size: 16px;
+        text-decoration: none;
       }
 
       &__old-price {
@@ -3270,6 +3276,7 @@ body {
       font-weight: 900;
       font-size: 16px;
       line-height: 18px;
+      white-space: nowrap;
     }
 
     &__actions {
@@ -3313,17 +3320,21 @@ body {
   // Карточка с итоговой ценой (справа)
   .result-card {
     position: relative;
-    padding: 0 70px;
     border: 1px solid vars.$color-accent-1;
     display: flex;
     flex-direction: column;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      padding: 59px 70px 63px 70px;
+    }
 
     &__title {
       font-weight: 900;
       font-size: 36px;
       line-height: 36px;
       color: vars.$color-accent-1;
-      margin-top: 59px;
       margin-bottom: 69px;
     }
 
@@ -3356,7 +3367,6 @@ body {
       color: vars.$color-accent-2;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 63px;
 
       &__title {
         font-weight: 300;
@@ -3375,6 +3385,7 @@ body {
 
     .action-btn {
       padding: 22px 46px;
+      white-space: nowrap;
       
       &__text {
         font-family: 'Euclid Circular', sans-serif;
@@ -3402,6 +3413,221 @@ body {
         right: -24px;
         top: 50%;
         transform: translate(0, -50%);
+      }
+    }
+  }
+
+  @media (max-width: 1105px) {
+    &-area {
+      grid-column-gap: 14px;
+    }
+    
+    &-product {
+      padding: 16px 10px;
+    }
+
+    .result-card {
+      &__inner {
+        padding: 63px 40px 59px 40px;
+      }
+    }
+  }
+
+  @media (max-width: 1015px) {
+    &-area {
+      padding-top: 103px;
+    }
+
+    &-product {
+      grid-template-columns: 80px 150px auto;
+    }
+  }
+
+  @media (max-width: 880px) {
+    &-area {
+      grid-template-columns: 1fr;
+      grid-row-gap: 60px;
+      padding-top: 65px;
+
+      &__result {
+        justify-self: center;
+        width: 500px;
+      }
+    }
+
+    .result-card {
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: 710px) {
+    .result-card {
+      &__title {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &-area {
+      padding-top: 25px;
+    }
+
+    &-product {
+      padding: 10px;
+      grid-template-areas: 
+        "product-image product-title product-actions"
+        "product-image product-counter product-result"
+      ;
+      justify-content: space-around;
+
+      &__title {
+        font-size: 12px;
+      }
+
+      &-prices {
+        display: none;
+        row-gap: 3px;
+        line-height: 14px;
+
+        &__new-price {
+          font-size: 14px;
+        }
+
+        &__old-price {
+          font-size: 12px;
+        }
+      }
+
+      .product-counter {
+        &__button {
+          padding: 11px;
+        }
+
+        &__icon {
+          width: 12px;
+          height: 10px;
+        }
+      }
+    }
+
+    &-area {
+      &__result {
+        width: 400px;
+      }
+    }
+
+    .result-card {
+      &__inner {
+        padding: 30px 40px 41px 40px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 18px;
+        margin-bottom: 26px;
+      }
+
+      &__union {
+        row-gap: 25px;
+        margin-bottom: 48px;
+      }
+
+      &__field {
+        font-size: 14px;
+      }
+
+      .res-field {
+        &__title {
+          font-size: 16px;
+          line-height: 18px;          
+        }
+
+        &__value {
+          font-size: 24px;
+        }
+      }
+
+      &__button-block {
+        margin-bottom: 24px;
+        justify-content: stretch;
+        padding: 0 40px;
+      }
+
+      .action-btn {
+        padding: 16px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    &-product {
+      justify-content: space-between;
+      grid-column-gap: 16px;
+      grid-template-columns: 80px 110px auto;
+
+      &__image {
+        width: 60px;
+      }
+
+      &__actions {
+        column-gap: 10px;
+        justify-content: flex-end;
+      }
+
+      &__action-icon {
+        width: 10px;
+        height: 13px;        
+      }
+
+      .basket-product__action_to-favourite svg {
+        width: 16px;
+        height: 14px;
+      }
+    }
+
+    &-area {
+      padding: 0;
+      margin-top: 95px; // Для позиционирования абсолютной ссылки на каталог
+      grid-row-gap: 5px;
+      position: relative;
+
+      &__result {
+        justify-self: stretch;
+        width: auto;
+      }
+
+      &__products {
+        row-gap: 5px;
+      }
+    }
+
+    .result-card {
+      position: static;
+
+      &__outer-block {
+        top: -35px;
+        transform: translate(0, -100%);
+      }
+
+      &__outer-link {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    .result-card {
+      &__button-block {
+        padding: 0;
       }
     }
   }

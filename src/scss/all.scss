@@ -1018,14 +1018,14 @@
 
   @media (pointer: fine) {
     &__button:hover {
-      .order-counter__icon path {
+      .orderproduct-counter__icon path {
         stroke: vars.$color-accent-1;
       }
     }
   }
 
   &__button:active {
-    .order-counter__icon path {
+    .product-counter__icon path {
       opacity: .5;
     }
   }
@@ -1033,7 +1033,7 @@
   &__button.disabled {
     cursor: default;
 
-    .order-counter__icon path {
+    .product-counter__icon path {
       opacity: .2 !important;
       stroke: #BDBDBD !important;
     }

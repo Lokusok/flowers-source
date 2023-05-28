@@ -215,7 +215,11 @@ function setCorrectSliders() {
         const slidesWrapper = productsSlider.querySelector('.products-slider__wrapper');
         const allSlides = Array.from(productsSlider.querySelectorAll('.products-slider__slide'));
         const allProducts = productsSlider.querySelectorAll('.product-card');
-        const onOneSlide = 4;
+        let onOneSlide = 4;
+        const dataMax = productsSlider.closest('section').dataset.maxSlidesOnSlide
+        if (dataMax) {
+          onOneSlide = Number(dataMax);
+        }
         const countOfSlides = allProducts.length / onOneSlide;
         
         // Чтобы сделать нужное количество слайдов (4 по макету)
@@ -242,7 +246,7 @@ function setCorrectSliders() {
               .slice(onOneSlide,)
               .forEach((product) => {
                 allSlides
-                .find((anotherSlide) => Array.from(anotherSlide.children).length < 4)
+                .find((anotherSlide) => Array.from(anotherSlide.children).length < onOneSlide)
                 ?.append(product);
             });
           }
@@ -556,39 +560,42 @@ function setCorrectLoadMoreCatalog() {
 
 // Счётчики товаров
 function setCorrectCounterProducts() {
-  const counter = document.querySelector('.order-counter');
-  if (!counter) return;
-  const counterValue = document.querySelector('.order-counter__value');
-  const counterPlus = counter.querySelector('.order-counter__plus')
-  const counterMinus = counter.querySelector('.order-counter__minus')
-  const setCounterValue = (value) => {
-    counterValue.innerText = value;
-  };
-  const buttonsObserve = (value) => {
-    if (value >= maxCount) counterPlus.classList.add('disabled');
-    else counterPlus.classList.remove('disabled');
+  const counters = document.querySelectorAll('.product-counter');
+  if (!counters.length) return;
+  counters.forEach((counter) => {
+    const counterValue = counter.querySelector('.product-counter__value');
+    const counterPlus = counter.querySelector('.product-counter__plus')
+    const counterMinus = counter.querySelector('.product-counter__minus')
+    const setCounterValue = (value) => {
+      counterValue.innerText = value;
+    };
+    const buttonsObserve = (value) => {
+      if (value >= maxCount) counterPlus.classList.add('disabled');
+      else counterPlus.classList.remove('disabled');
 
-    if (value <= minCount) counterMinus.classList.add('disabled');
-    else counterMinus.classList.remove('disabled');
-  };
-  const minCount = 1;
-  const maxCount = 10;
-  let nowCount = 1;
+      if (value <= minCount) counterMinus.classList.add('disabled');
+      else counterMinus.classList.remove('disabled');
+    };
+    const minCount = 1;
+    const maxCount = 10;
+    let nowCount = 1;
 
-  setCounterValue(nowCount);
+    setCounterValue(nowCount);
+    buttonsObserve(nowCount);
 
-  counterPlus.addEventListener('click', () => {
-    if (nowCount + 1 > maxCount) return;
+    counterPlus.addEventListener('click', () => {
+      if (nowCount + 1 > maxCount) return;
+      
+      setCounterValue(++nowCount);
+      buttonsObserve(nowCount);
+    });
     
-    setCounterValue(++nowCount);
-    buttonsObserve(nowCount);
-  });
-  
-  counterMinus.addEventListener('click', () => {
-    if (nowCount - 1 < minCount) return;
+    counterMinus.addEventListener('click', () => {
+      if (nowCount - 1 < minCount) return;
 
-    setCounterValue(--nowCount);
-    buttonsObserve(nowCount);
+      setCounterValue(--nowCount);
+      buttonsObserve(nowCount);
+    });
   });
 }
 
