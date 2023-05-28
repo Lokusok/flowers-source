@@ -7,6 +7,9 @@ block variables
 block content
   main#main.main
     section.section.product
+      img.flowers-decor.product__decor.product__decor_1(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.product__decor.product__decor_2(src="./images/src/flowers-decor-3.png" alt="" aria-hidden="true")
+
       .container.section__container.product__container
         .section__row.product__row
           header.section__header.product__header
@@ -34,9 +37,21 @@ block content
                     img(src="./images/src/product-main-slide-1.jpg" alt="25 желтых тюльпанов")
                   .swiper-slide.product-main-slider__slide
                     img(src="./images/src/product-main-slide-1.jpg" alt="25 желтых тюльпанов")
+                  .swiper-slide.product-main-slider__slide
+                    img(src="./images/src/product-main-slide-1.jpg" alt="25 желтых тюльпанов")
+                  .swiper-slide.product-main-slider__slide
+                    img(src="./images/src/product-main-slide-1.jpg" alt="25 желтых тюльпанов")
+                  .swiper-slide.product-main-slider__slide
+                    img(src="./images/src/product-main-slide-1.jpg" alt="25 желтых тюльпанов")
 
               .swiper.product-thumbs-slider
                 .swiper-wrapper.product-thumbs-slider__wrapper
+                  .swiper-slide.product-thumbs-slider__slide
+                    img(src="./images/src/product-thumb-slide-1.jpg" alt="25 желтых тюльпанов")
+                  .swiper-slide.product-thumbs-slider__slide
+                    img(src="./images/src/product-thumb-slide-2.jpg" alt="25 желтых тюльпанов")
+                  .swiper-slide.product-thumbs-slider__slide
+                    img(src="./images/src/product-thumb-slide-3.jpg" alt="25 желтых тюльпанов")
                   .swiper-slide.product-thumbs-slider__slide
                     img(src="./images/src/product-thumb-slide-1.jpg" alt="25 желтых тюльпанов")
                   .swiper-slide.product-thumbs-slider__slide
@@ -82,16 +97,16 @@ block content
                   td.product-area-table__col.product-area-table__value Оформление
 
               .order
-                .order-counter
-                  button(type="button").order-counter__button.order-counter__minus
+                .product-counter
+                  button(type="button").product-counter__button.product-counter__minus
                     span.visually-hidden Добавить в корзину ещё один товар
-                    <svg class="order-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="product-counter__icon" aria-hidden="true" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.96029 1L2 7.5L7.96029 14" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
-                  .order-counter__value 1                  
-                  button(type="button").order-counter__button.order-counter__plus
+                  .product-counter__value 1                  
+                  button(type="button").product-counter__button.product-counter__plus
                     span.visually-hidden Добавить в корзину ещё один товар
-                    <svg class="order-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="product-counter__icon" aria-hidden="true" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.624668 14L6.58496 7.5L0.624668 1" stroke="#BDBDBD" stroke-width="1.5"/>
                     </svg>
 
@@ -117,17 +132,20 @@ block content
 
                 .tabs-content
                   .tabs-content__inner.tabs-content__inner_1
-                    p.tabs-content__text Тюльпан1 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
+                    p.tabs-content__text Следует отметить, что постоянное информационно-пропагандистское обеспечение нашей деятельности требует анализа как самодостаточных, так и внешне зависимых концептуальных решений. Внезапно, стремящиеся вытеснить традиционное производство, нанотехнологии могут быть разоблачены. Как принято считать, тщательные исследования конкурентов объединены в целые кластеры себе подобных. Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
                   .tabs-content__inner.tabs-content__inner_2.active
-                    p.tabs-content__text Тюльпан2 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
+                    p.tabs-content__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
                   .tabs-content__inner.tabs-content__inner_3
-                    p.tabs-content__text Тюльпан3 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
+                    ul.tabs-content__list
+                      li.tabs-content__review
+                        span.tabs-content__review-name Марина
+                        p.tabs-content__review-text Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Путь по всей свой на берегу заглавных предупредила напоивший, первую взобравшись речью.
+                      li.tabs-content__review
+                        a(href="#").tabs-content__review-link Смотреть все отзывы
 
     section#products-1.products.products-1.related-products
-      img.flowers-decor.products__decor.products__decor_1.products-1__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.products__decor.products__decor_2.products-1__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.products__decor.products__decor_3.products-1__decor_3(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
-
+      img.flowers-decor.related-products__decor.related-products__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.related-products__decor.related-products__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
 
       .container.products__container
         .products__row
@@ -431,10 +449,8 @@ block content
                             button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
     section#products-2.products.products-2.you-checked
-      img.flowers-decor.products__decor.products__decor_1.products-2__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.products__decor.products__decor_2.products-2__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.products__decor.products__decor_3.products-2__decor_3(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
-
+      img.flowers-decor.you-checked__decor.you-checked__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.you-checked__decor.you-checked__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
 
       .container.products__container
         .products__row

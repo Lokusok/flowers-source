@@ -106,6 +106,7 @@ function setCorrectChoices() {
             dropdownItem.addEventListener('click', () => {
               dropdownTitle.textContent = dropdownItem.textContent;
               dropdownTitle.classList.add('selected');
+              dropdownSelect.classList.remove('active');
             });
           });
         }
@@ -563,18 +564,31 @@ function setCorrectCounterProducts() {
   const setCounterValue = (value) => {
     counterValue.innerText = value;
   };
+  const buttonsObserve = (value) => {
+    if (value >= maxCount) counterPlus.classList.add('disabled');
+    else counterPlus.classList.remove('disabled');
+
+    if (value <= minCount) counterMinus.classList.add('disabled');
+    else counterMinus.classList.remove('disabled');
+  };
   const minCount = 1;
+  const maxCount = 10;
   let nowCount = 1;
 
   setCounterValue(nowCount);
 
   counterPlus.addEventListener('click', () => {
+    if (nowCount + 1 > maxCount) return;
+    
     setCounterValue(++nowCount);
+    buttonsObserve(nowCount);
   });
   
   counterMinus.addEventListener('click', () => {
     if (nowCount - 1 < minCount) return;
+
     setCounterValue(--nowCount);
+    buttonsObserve(nowCount);
   });
 }
 

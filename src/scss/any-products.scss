@@ -1,0 +1,63 @@
+.products.related-products {
+  // Декоративные изображения
+  .related-products__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: translate(0, -50%) scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .products__row {
+    padding-top: 82px !important;
+
+    @media (max-width: 550px) {
+      padding-top: 53px !important;
+    }
+  }
+}
+
+.products.you-checked {
+  // Декоративные изображения
+  .you-checked__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: translate(0, -35%) scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 50%;
+      transform: translate(0, -55%);
+    }
+  }
+
+  .products__row {
+    padding-top: 132px !important;
+
+    @media (max-width: 550px) {
+      padding-top: 83px !important;
+    }
+  }
+}
+
+.products.recommendations-products {
+  .recommendations-products__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: scale(-1, 1);
+    }
+  }
+
+  .products__row {
+    padding-top: 140px;
+  }
+}
