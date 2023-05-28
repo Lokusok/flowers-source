@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   setCorrectPopups();
   setCorrectCatalogFilters();
+  setCorrectLoadMoreCatalog();
+  setCorrectCounterProducts();
+  setCorrectTabs();
+  setCorrectInputMasks();
   setCorrectChoices();
   setCorrectMenuAccordeon();
   setCorrectBurger();
@@ -11,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
-  setCorrectInputMasks();
-  setCorrectLoadMoreCatalog();
 });
 
 
@@ -75,7 +77,7 @@ function setCorrectChoices() {
     // Меню с выбором
     dropdownsSelects.forEach((dropdownSelect) => {
       const documentClickHandler = (event) => {
-        const isChildOfDropdown = Boolean(event.target.closest('.dropdown'));
+        const isChildOfDropdown = Boolean(event.target.closest('.dropdown-list'));
         
         if (!isChildOfDropdown) {
           dropdownSelect.classList.remove('active');
@@ -83,7 +85,9 @@ function setCorrectChoices() {
         }
       };
 
-      dropdownSelect.addEventListener('click', () => {
+      dropdownSelect.addEventListener('click', (event) => {
+        event.stopPropagation();
+
         // Перед открытием нового меню - закрываем все другие
         dropdownsSelects.forEach((el) => {
           if (el === dropdownSelect) return;
@@ -332,7 +336,6 @@ function setCorrectFavourites() {
   favouriteBtns.forEach((btn) => {
     btn.addEventListener('click', (event) => {
       event.preventDefault();
-      console.log(btn);
       btn.classList.toggle('active');
     });
   });
@@ -550,4 +553,52 @@ function setCorrectLoadMoreCatalog() {
   });
 }
 
+// Счётчики товаров
+function setCorrectCounterProducts() {
+  const counter = document.querySelector('.order-counter');
+  if (!counter) return;
+  const counterValue = document.querySelector('.order-counter__value');
+  const counterPlus = counter.querySelector('.order-counter__plus')
+  const counterMinus = counter.querySelector('.order-counter__minus')
+  const setCounterValue = (value) => {
+    counterValue.innerText = value;
+  };
+  const minCount = 1;
+  let nowCount = 1;
 
+  setCounterValue(nowCount);
+
+  counterPlus.addEventListener('click', () => {
+    setCounterValue(++nowCount);
+  });
+  
+  counterMinus.addEventListener('click', () => {
+    if (nowCount - 1 < minCount) return;
+    setCounterValue(--nowCount);
+  });
+}
+
+// Табы
+function setCorrectTabs() {
+  const tabs = document.querySelector('.tabs');
+  if (!tabs) return;
+  const tabsBtns = tabs.querySelectorAll('.tabs__tab');
+  const tabsInners = tabs.querySelectorAll('.tabs-content__inner');
+  const closeAllSaveOne = (toSave) => {
+    tabsBtns.forEach((tabBtn, index) => {
+      if (tabBtn === toSave) return;
+
+      tabBtn.classList.remove('active');
+      tabsInners[index].classList.remove('active');
+    });
+  };
+
+  tabsBtns.forEach((tabBtn, index) => {
+    tabBtn.addEventListener('click', () => {
+      closeAllSaveOne(tabBtn);
+
+      tabBtn.classList.toggle('active');
+      tabsInners[index].classList.toggle('active');
+    });
+  });
+}

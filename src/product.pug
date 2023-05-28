@@ -51,20 +51,21 @@ block content
 
               span.product-area__title 25 желтых тюльпанов
 
-              .stock-rate.product-area__line
-                span.product-area__in-stock В наличии
-                .product-area__raiting
-                  span.visually-hidden Оценка: 5 из 5
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
-                  img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+              .stock-rate-prices-block.product-area__union
+                .stock-rate.product-area__line
+                  span.product-area__in-stock В наличии
+                  .product-area__raiting
+                    span.visually-hidden Оценка: 5 из 5
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                    img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
 
-              .prices.product-area__line
-                ins.product-area__new-price 795.00грн.
-                del.product-area__old-price 995.00грн.
+                .prices.product-area__line
+                  ins.product-area__new-price 795.00грн.
+                  del.product-area__old-price 995.00грн.
 
               table.product-area-table
                 tr.product-area-table__row
@@ -103,7 +104,10 @@ block content
                   input(type="tel" name="tel" required).white-area__input.tel-order__input
                   span.white-area__input-label.tel-order__input-label Номер телефона
 
-                  button(type="button").action-btn.tel-order__button Быстрый заказ
+                  button(type="button").action-btn.tel-order__button.tel-order__button_big Быстрый заказ
+                  button(type="button").action-btn.tel-order__button.tel-order__button_small
+                    span.visually-hidden Быстрый заказ
+                    img(src="./images/src/airplane-icon.svg" alt="" aria-hidden="true")
 
               .tabs
                 .tabs__header
@@ -112,14 +116,14 @@ block content
                   button(type="button").tabs__tab.tabs__tab_3 Отзывы(12)
 
                 .tabs-content
-                  .tabs-content__inner.tabs-content__inner_1.hide
+                  .tabs-content__inner.tabs-content__inner_1
                     p.tabs-content__text Тюльпан1 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
-                  .tabs-content__inner.tabs-content__inner_2
+                  .tabs-content__inner.tabs-content__inner_2.active
                     p.tabs-content__text Тюльпан2 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
-                  .tabs-content__inner.tabs-content__inner_3.hide
+                  .tabs-content__inner.tabs-content__inner_3
                     p.tabs-content__text Тюльпан3 - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и изысканностью линий. Если Вы подбираете букет цветов для близкого, дорогого человека, коллеге по работе, то, как нельзя, кстати, придутся нежные чарующие тюльпаны. Преподнося тюльпаны Вы дарите частичку легкого и весеннего настроения!
 
-    section#products-1.products.products-1
+    section#products-1.products.products-1.related-products
       img.flowers-decor.products__decor.products__decor_1.products-1__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_2.products-1__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_3.products-1__decor_3(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")
@@ -426,7 +430,7 @@ block content
                                 span.action-btn__text Заказать
                             button(type="button" data-popup-selector=".tel-popup").trigger.product-card__quick-order Быстрый заказ
 
-    section#products-2.products.products-2
+    section#products-2.products.products-2.you-checked
       img.flowers-decor.products__decor.products__decor_1.products-2__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_2.products-2__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
       img.flowers-decor.products__decor.products__decor_3.products-2__decor_3(src="./images/flowers-decor-2.png" alt="" aria-hidden="true")

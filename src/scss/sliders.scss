@@ -20,9 +20,10 @@
 
 // Стрелки навигации
 .slider-arrows {
-  margin-left: auto;
   display: flex;
   column-gap: 27px;
+  position: absolute;
+  right: 0;
 
   .products-arrow {
     background: none;
