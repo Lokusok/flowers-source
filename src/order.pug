@@ -1,0 +1,25 @@
+extends base/template
+
+block variables
+  -
+    var title = '25 желтых тюльпанов'
+
+block content
+  main#main.main
+    section.section.order
+      .container.section__container.order__container
+        .section__row.order__row
+          header.section__header.order__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Корзина
+              li.bread-crumbs__item
+                a.bread-crumbs__link Оформление заказа
+
+            h2.section__title.order__title Оформление заказа
+
+
+          .order-area
+            

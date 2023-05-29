@@ -23,6 +23,12 @@ block content
 
           .basket-area
             .basket-area__products
+              .basket-area__top-line
+                span.basket-area__note Название
+                span.basket-area__note Цена за шт.
+                span.basket-area__note Кол-во
+                span.basket-area__note Итог
+
               article.basket-product
                 a(href="./product.html").basket-product__image-block
                   img.basket-product__image(src="./images/src/basket-product-1.png" alt="букет цветов")
@@ -183,8 +189,9 @@ block content
                     span.res-field__price 5 304 ₴
 
                 .result-card__button-block
-                  button(type="button").action-btn.result-card__confirm 
-                    span.action-btn__text Оформить заказ
+                  button(type="button").action-btn.result-card__confirm
+                    a(href="./order.html").action-btn__inner
+                      span.action-btn__text Оформить заказ
 
                 .result-card__outer-block
                   a(href="./catalog.html").white-underline-link.result-card__outer-link Продолжить покупки

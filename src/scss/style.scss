@@ -3194,6 +3194,27 @@ body {
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+      position: relative;
+    }
+
+    // Заголовки над всеми продуктами
+    &__top-line {
+      position: absolute;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 242px 145px 142px 200px;
+      justify-content: space-between;
+      width: 60%;
+      top: -11px;
+      right: 176px;
+      transform: translate(0, -100%);
+    }
+
+    &__note {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      color: #BDBDBD;
     }
   }
 
@@ -3384,8 +3405,11 @@ body {
     }
 
     .action-btn {
-      padding: 22px 46px;
       white-space: nowrap;
+      
+      &__inner {
+        padding: 22px 46px;
+      }
       
       &__text {
         font-family: 'Euclid Circular', sans-serif;
@@ -3417,9 +3441,84 @@ body {
     }
   }
 
+  @media (max-width: 1420px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 242px 145px 131px 200px;
+      }
+    }
+  }
+
+  @media (max-width: 1380px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 242px 135px 131px 200px;
+        right: 165px;
+      }
+    }
+  }
+
+  @media (max-width: 1350px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 235px 118px 134px 200px;
+        right: 160px;
+      }
+    }
+  }
+  
+  @media (max-width: 1285px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 225px 129px 111px 200px;
+      }
+    }
+  }
+  
+  @media (max-width: 1230px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 225px 118px 120px 200px;
+      }
+    }
+  }
+  
+  @media (max-width: 1195px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 232px 114px 106px 200px;
+        right: 145px;
+      }
+    }
+  }
+
+  @media (max-width: 1165px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 232px 103px 106px 200px;
+      }
+    }
+  }
+
+  @media (max-width: 1155px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 214px 106px 97px 200px;
+      }
+    }
+  }
+
   @media (max-width: 1105px) {
     &-area {
       grid-column-gap: 14px;
+
+      &__note {
+        font-size: 13px;
+      }
+
+      &__top-line {
+        grid-template-columns: 232px 96px 96px 200px;
+      }
     }
     
     &-product {
@@ -3433,13 +3532,50 @@ body {
     }
   }
 
+  @media (max-width: 1080px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 207px 102px 100px 200px;
+        right: 137px;
+      }
+    }
+  }
+
+  @media (max-width: 1030px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 203px 102px 95px 200px;
+      }
+    }
+  }
+
   @media (max-width: 1015px) {
     &-area {
       padding-top: 103px;
+      &__top-line {
+        grid-template-columns: 168px 104px 95px 200px;
+      }
     }
 
     &-product {
       grid-template-columns: 80px 150px auto;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 148px 102px 93px 200px;
+        right: 122px;
+      }
+    }
+  }
+
+  @media (max-width: 890px) {
+    &-area {
+      &__top-line {
+        grid-template-columns: 148px 94px 88px 200px;
+      }
     }
   }
 
@@ -3452,6 +3588,10 @@ body {
       &__result {
         justify-self: center;
         width: 500px;
+      }
+
+      &__top-line {
+        display: none;
       }
     }
 
@@ -3560,10 +3700,13 @@ body {
       }
 
       .action-btn {
-        padding: 16px;
         width: 100%;
         text-align: center;
         justify-content: center;
+        
+        &__inner {
+          padding: 16px;
+        }
       }
     }
   }
@@ -3630,5 +3773,12 @@ body {
         padding: 0;
       }
     }
+  }
+}
+
+// === Секция оформления заказа ===
+.order {
+  &-area {
+    padding-top: 99px;
   }
 }
