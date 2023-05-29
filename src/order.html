@@ -481,7 +481,7 @@
       </div>
     </header>
     <main class="main" id="main">
-      <section class="section order">
+      <section class="section order"><img class="flowers-decor order__decor order__decor_1" src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true"><img class="flowers-decor order__decor order__decor_2" src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true"><img class="flowers-decor order__decor order__decor_3" src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true">
         <div class="container section__container order__container">
           <div class="section__row order__row">
             <header class="section__header order__header">
@@ -492,7 +492,203 @@
               </ul>
               <h2 class="section__title order__title">Оформление заказа</h2>
             </header>
-            <div class="order-area"></div>
+            <div class="order-area">
+              <div class="order-data order-area__datas">
+                <div class="receiver-data data-block"><span class="data-block__title">1. Контакты получателя</span>
+                  <div class="data-block__inputs">
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="text" name="username" required><span class="white-area__input-label data-field__input-label">Имя получателя *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__select-block data-field__input-block">
+                        <select class="white-area__input data-field__input" name="username" required>
+                          <option value="value-1">Киев</option>
+                          <option value="value-2">Львов</option>
+                          <option value="value-3">Харьков</option>
+                          <option value="value-4">Николаев</option>
+                          <option value="value-5">Одесса</option>
+                        </select><span class="white-area__input-label data-field__input-label">Регион *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="tel" name="tel" required><span class="white-area__input-label data-field__input-label">Телефон получателя *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="text" name="address" required><span class="white-area__input-label data-field__input-label">Адрес *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="date" name="date"><span class="white-area__input-label data-field__input-label">Дата доставки</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__select-block data-field__input-block">
+                        <select class="white-area__input data-field__input" name="date">
+                          <option value="value-1">6:00-9:00</option>
+                          <option value="value-2">9:00-12:00</option>
+                          <option value="value-3">12:00-15:00</option>
+                          <option value="value-4">15:00-18:00</option>
+                          <option value="value-5">21:00-00:00</option>
+                          <option value="value-6">00:00-3:00</option>
+                          <option value="value-7">3:00-6:00</option>
+                        </select><span class="white-area__input-label data-field__input-label">Время доставки</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sender-data data-block"><span class="data-block__title">2. Контакты отправителя</span>
+                  <div class="data-block__inputs">
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="text" name="username" required><span class="white-area__input-label data-field__input-label">Имя *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="tel" name="tel" required><span class="white-area__input-label data-field__input-label">Телефон *</span>
+                      </div>
+                    </div>
+                    <div class="data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="email" name="email" required><span class="white-area__input-label data-field__input-label">Email *</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-data data-block"><span class="data-block__title">3. Детали доставки</span>
+                  <div class="data-block__inputs">
+                    <div class="checkbox checkbox-1 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Доставка сюрпризом</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="surprise" checked>
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox checkbox-2 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Фотоотчет (+ 15 грн)</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="photo" checked>
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox checkbox-3 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Добавить вазу (+ 249 грн)</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="add-vase">
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox checkbox-4 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Напомнить о событии</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="remind">
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="checkbox checkbox-5 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Открытка</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="postcard">
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="in-group checkbox checkbox-6 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Визитка</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="card">
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="in-group checkbox checkbox-7 data-field">
+                      <label class="checkbox__label"><span class="checkbox__text">Полномасштабная открытка (+ 79грн)</span>
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="full-postcard">
+                        <div class="checkbox__checkbox"></div>
+                      </label>
+                    </div>
+                    <div class="input-field data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="text" name="reason" required><span class="white-area__input-label data-field__input-label">Повод для открытки</span>
+                      </div>
+                    </div>
+                    <div class="input-field data-field">
+                      <div class="white-area data-field__input-block">
+                        <input class="white-area__input data-field__input" type="text" name="reason" placeholder="До 70 символов" required><span class="white-area__input-label data-field__input-label">Текст открытки</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-area__result">
+                <div class="result-card">
+                  <div class="result-card__inner"><span class="result-card__title">Ваш заказ</span>
+                    <div class="result-card__union">
+                      <div class="result-card__field"><span class="result-card__field-title">25 желтых тюльпанов</span><span class="result-card__field-count">2</span><span class="result-card__field-value">5 558 ₴</span></div>
+                      <div class="result-card__field"><span class="result-card__field-title">25 розовых пионовидных роз</span><span class="result-card__field-count">1</span><span class="result-card__field-value">254 ₴</span></div>
+                      <div class="result-card__field"><span class="result-card__field-title">Мечтательница</span><span class="result-card__field-count">1</span><span class="result-card__field-value">254 ₴</span></div>
+                    </div>
+                    <div class="result-card__union result-union">
+                      <div class="result-card__field"><span class="result-card__field-title">Сумма заказа</span><span class="result-card__field-value">6000 ₴</span></div>
+                      <div class="result-card__field"><span class="result-card__field-title">Доставка</span><span class="result-card__field-value">100 ₴</span></div>
+                      <div class="result-card__field"><span class="result-card__field-title">Фотоотчет</span><span class="result-card__field-value">15 ₴</span></div>
+                    </div>
+                    <div class="res-field"><span class="res-field__title">Всего</span><span class="res-field__price">5 304 ₴</span></div>
+                  </div>
+                  <div class="result-card__button-block">
+                    <button class="action-btn result-card__confirm" type="button"><a class="action-btn__inner" href="./order.html"><span class="action-btn__text">Оформить заказ</span></a></button>
+                  </div>
+                </div>
+                <div class="result-fields">
+                  <div class="white-area result-fields__input-block">
+                    <input class="white-area__input data-field__input" type="text" name="username" placeholder="Введите код купона" required><span class="white-area__input-label result-fields__input-label">Купон</span>
+                  </div>
+                  <div class="white-area result-fields__input-block">
+                    <input class="white-area__input data-field__input" type="text" name="username" placeholder="Подарочный сертификат" required><span class="white-area__input-label result-fields__input-label">Введите номер подарочного сертификата</span>
+                  </div>
+                  <div class="result-fields__button-block">
+                    <button class="action-btn result-fields__confirm" type="button"><a class="action-btn__inner" href="./order.html"><span class="action-btn__text">Применить</span></a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map" id="map">
+        <div class="container map__container">
+          <div class="map__row">
+            <h2 class="visually-hidden map__title">Карта и контактные данные</h2>
+            <div class="map-content">
+              <div class="map-view map-content__map-view" id="map-view"></div>
+              <div class="map-card">
+                <div class="map-card__logo"><img src="./images/src/logo.svg" alt="Flowers Ukraine Логотип"></div>
+                <div class="map-card__content">
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/phone-icon.svg" alt="" aria-hidden="true">Телефон:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/skype-icon.svg" alt="" aria-hidden="true">Skype:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">Flowers-Ukraine</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/src/mail-icon.svg" alt="" aria-hidden="true">Почта:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">flowers.ukraine2014@gmail.com</li>
+                    </ul>
+                  </div>
+                  <ul class="social-list">
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/inst-icon.svg" alt="Instagram"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/skype-social-icon.svg" alt="Skype"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/src/facebook-icon.svg" alt="Facebook"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

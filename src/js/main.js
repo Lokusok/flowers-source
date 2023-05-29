@@ -445,7 +445,7 @@ function setCorrectPopups() {
 
 // Маски на инпуты
 function setCorrectInputMasks() {
-  const telMask = new Inputmask('8-(999)-999-99-99', { clearMaskOnLostFocus: true });
+  const telMask = new Inputmask('+380-(99)-99-99-999', { clearMaskOnLostFocus: true });
   const inputsTel = document.querySelectorAll('input[type="tel"]');
 
   inputsTel.forEach((inputTel) => {

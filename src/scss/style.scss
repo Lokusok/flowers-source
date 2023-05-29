@@ -3338,109 +3338,6 @@ body {
     }
   }
 
-  // Карточка с итоговой ценой (справа)
-  .result-card {
-    position: relative;
-    border: 1px solid vars.$color-accent-1;
-    display: flex;
-    flex-direction: column;
-
-    &__inner {
-      display: flex;
-      flex-direction: column;
-      padding: 59px 70px 63px 70px;
-    }
-
-    &__title {
-      font-weight: 900;
-      font-size: 36px;
-      line-height: 36px;
-      color: vars.$color-accent-1;
-      margin-bottom: 69px;
-    }
-
-    &__union {
-      display: flex;
-      flex-direction: column;
-      row-gap: 32px;
-      margin-bottom: 59px;
-    }
-
-    &__field {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 18px;
-
-      &-title {
-        color: #BDBDBD;
-      }
-
-      &-value {
-        color: vars.$color-accent-2;
-      }
-    }
-
-    .res-field {
-      font-size: 24px;
-      line-height: 18px;
-      color: vars.$color-accent-2;
-      display: flex;
-      justify-content: space-between;
-
-      &__title {
-        font-weight: 300;
-      }
-
-      &__price {
-        font-weight: 900;
-      }
-    }
-
-    &__button-block {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 33px;
-    }
-
-    .action-btn {
-      white-space: nowrap;
-      
-      &__inner {
-        padding: 22px 46px;
-      }
-      
-      &__text {
-        font-family: 'Euclid Circular', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 18px;
-      }
-    }
-
-    &__outer-block {
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform: translate(0, -175%);
-      padding-right: 24px;
-    }
-
-    &__outer-link {
-      display: flex;
-      align-items: center;
-
-      &::after {
-        content: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00012 11L5.58496 6L1.00012 1' stroke='%23BDBDBD' stroke-width='1.5'/%3E%3C/svg%3E%0A");
-        position: absolute;
-        right: -24px;
-        top: 50%;
-        transform: translate(0, -50%);
-      }
-    }
-  }
-
   @media (max-width: 1420px) {
     &-area {
       &__top-line {
@@ -3778,7 +3675,244 @@ body {
 
 // === Секция оформления заказа ===
 .order {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &_3 {
+      left: 0;
+      bottom: 0;
+      transform: scale(-1, 1);
+    }
+  }
+
   &-area {
     padding-top: 99px;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-column-gap: 31px;
+
+    &__result {
+      .result-card {
+        &__title {
+          margin-bottom: 39px;
+        }
+
+        &__union {
+          row-gap: 20px;
+          margin-bottom: 0;
+        }
+
+        &__field {
+          column-gap: 50px;
+
+          &-title {
+            flex-basis: 279px;
+          }
+          
+          &-value {
+            flex-basis: 100px;
+            text-align: right;
+          }
+        }
+
+        &__inner {
+          padding: 59px 70px 40px 70px;
+        }
+
+        .result-union {
+          margin-top: 40px;
+          margin-bottom: 40px;
+
+          .result-card__field-title {
+            color: vars.$color-accent-2;
+          }
+        }
+      }
+    }
+  }
+
+  // Блок с данными (отправителя, получателя)
+  .order-data {
+    display: grid;
+    grid-gap: 17px;
+    grid-template-areas: 
+      "receiver-data receiver-data"
+      "sender-data details-data"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+
+    .data-block {
+      padding: 44px;
+      border: 1px solid vars.$color-accent-1;
+      display: flex;
+      flex-direction: column;
+
+      &__inputs {
+        padding-top: 52px;
+        display: grid;
+        grid-gap: 49px 62px;
+      }
+
+      &.receiver-data {
+        grid-area: receiver-data;
+
+        .data-block__inputs {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      &.sender-data {
+        grid-area: sender-data;
+      }
+
+      &.details-data {
+        grid-area: details-data;
+
+        .data-block__inputs {
+          grid-gap: 0;
+        }
+
+        .checkbox {
+          &:not(.checkbox-1) {
+            .checkbox__label {
+              padding: 12.5px 0;
+            }
+          }
+
+          &__label {
+            padding: 12.5px 0;
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            column-gap: 14px;
+          }
+
+          &__text {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+          }
+
+          &__input {
+            
+          }
+
+          &__checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1px solid vars.$color-accent-1;
+            border-radius: 4px;
+            position: relative;
+
+            &::before {
+              content: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.625 7.125L1 4.5L0.125 5.375L3.625 8.875L11.125 1.375L10.25 0.5L3.625 7.125Z' fill='%23F3F3F3'/%3E%3C/svg%3E%0A");
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: none;
+            }
+          }
+
+          &__input:checked + .checkbox__checkbox {
+            background: vars.$color-accent-1;
+
+            &::before {
+              display: block;
+            }
+          }
+
+          &.in-group {
+            padding-left: 40px;
+          }
+        }
+
+        .input-field {
+          margin-top: 31px;
+
+          input {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &__title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 18px;
+      }
+    }
+
+    .data-field {
+      &__select-block {
+        position: relative;
+
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 4.71423L0.669873 0.428519L9.33013 0.42852L5 4.71423Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        select {
+          appearance: none;
+
+          option:hover {
+            background: vars.$color-accent-1;
+          }
+        }
+      }
+    }
+  }
+
+  // Инпуты с промокодом и сертификатом
+  .result-fields {
+    display: flex;
+    flex-direction: column;
+
+    &__input-block:nth-child(1) {
+      margin-top: 26px;
+    }
+
+    &__input-block:nth-child(n+2) {
+      margin-top: 33px;
+    }
+
+    &__input-block {
+      input {
+        font-size: 14px;
+      }
+    }
+
+    &__button-block {
+      margin-top: 37px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .action-btn {
+      &__inner {
+        padding: 22px 67px;
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
   }
 }

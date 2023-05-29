@@ -7,6 +7,11 @@ block variables
 block content
   main#main.main
     section.section.order
+      img.flowers-decor.order__decor.order__decor_1(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.order__decor.order__decor_2(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.order__decor.order__decor_3(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+
+
       .container.section__container.order__container
         .section__row.order__row
           header.section__header.order__header
@@ -22,4 +27,182 @@ block content
 
 
           .order-area
-            
+            .order-data.order-area__datas
+
+              //- Данные получателя букета
+              .receiver-data.data-block
+                span.data-block__title 1. Контакты получателя
+
+                .data-block__inputs
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="text" name="username" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Имя получателя *
+                  .data-field
+                    .white-area.data-field__select-block.data-field__input-block
+                      select(name="username" required).white-area__input.data-field__input
+                        option(value="value-1") Киев
+                        option(value="value-2") Львов
+                        option(value="value-3") Харьков
+                        option(value="value-4") Николаев
+                        option(value="value-5") Одесса
+                      span.white-area__input-label.data-field__input-label Регион *
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="tel" name="tel" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Телефон получателя *
+
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="text" name="address" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Адрес *
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="date" name="date").white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Дата доставки
+                  .data-field
+                    .white-area.data-field__select-block.data-field__input-block
+                      select(name="date").white-area__input.data-field__input
+                        option(value="value-1") 6:00-9:00
+                        option(value="value-2") 9:00-12:00
+                        option(value="value-3") 12:00-15:00
+                        option(value="value-4") 15:00-18:00
+                        option(value="value-5") 21:00-00:00
+                        option(value="value-6") 00:00-3:00
+                        option(value="value-7") 3:00-6:00
+                      span.white-area__input-label.data-field__input-label Время доставки
+
+              //- Данные отправителя букета
+              .sender-data.data-block
+                span.data-block__title 2. Контакты отправителя
+
+                .data-block__inputs
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="text" name="username" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Имя *
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="tel" name="tel" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Телефон *
+                  .data-field
+                    .white-area.data-field__input-block
+                      input(type="email" name="email" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Email *
+
+              //- Детали отправки букета    
+              .details-data.data-block
+                span.data-block__title 3. Детали доставки
+
+                .data-block__inputs
+                  .checkbox.checkbox-1.data-field
+                    label.checkbox__label
+                      span.checkbox__text Доставка сюрпризом
+                      input(type="checkbox" name="surprise" checked).visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .checkbox.checkbox-2.data-field
+                    label.checkbox__label
+                      span.checkbox__text Фотоотчет (+ 15 грн)
+                      input(type="checkbox" name="photo" checked).visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .checkbox.checkbox-3.data-field
+                    label.checkbox__label
+                      span.checkbox__text Добавить вазу (+ 249 грн)
+                      input(type="checkbox" name="add-vase").visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .checkbox.checkbox-4.data-field
+                    label.checkbox__label
+                      span.checkbox__text Напомнить о событии
+                      input(type="checkbox" name="remind").visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .checkbox.checkbox-5.data-field
+                    label.checkbox__label
+                      span.checkbox__text Открытка
+                      input(type="checkbox" name="postcard").visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .in-group.checkbox.checkbox-6.data-field
+                    label.checkbox__label
+                      span.checkbox__text Визитка
+                      input(type="checkbox" name="card").visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .in-group.checkbox.checkbox-7.data-field
+                    label.checkbox__label
+                      span.checkbox__text Полномасштабная открытка (+ 79грн)
+                      input(type="checkbox" name="full-postcard").visually-hidden.checkbox__input
+                      .checkbox__checkbox
+
+                  .input-field.data-field
+                    .white-area.data-field__input-block
+                      input(type="text" name="reason" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Повод для открытки
+
+                  .input-field.data-field
+                    .white-area.data-field__input-block
+                      input(type="text" name="reason" placeholder="До 70 символов" required).white-area__input.data-field__input
+                      span.white-area__input-label.data-field__input-label Текст открытки
+
+            .order-area__result
+              .result-card
+                .result-card__inner
+                  span.result-card__title Ваш заказ
+
+                  .result-card__union
+                    .result-card__field
+                      span.result-card__field-title 25 желтых тюльпанов
+                      span.result-card__field-count 2
+                      span.result-card__field-value 5 558 ₴
+
+                    .result-card__field
+                      span.result-card__field-title 25 розовых пионовидных роз
+                      span.result-card__field-count 1
+                      span.result-card__field-value 254 ₴
+
+                    .result-card__field
+                      span.result-card__field-title Мечтательница
+                      span.result-card__field-count 1
+                      span.result-card__field-value 254 ₴
+
+                  .result-card__union.result-union
+                    .result-card__field
+                      span.result-card__field-title Сумма заказа
+                      span.result-card__field-value 6000 ₴
+
+                    .result-card__field
+                      span.result-card__field-title Доставка
+                      span.result-card__field-value 100 ₴
+
+                    .result-card__field
+                      span.result-card__field-title Фотоотчет
+                      span.result-card__field-value 15 ₴
+                  
+                  .res-field
+                    span.res-field__title Всего
+                    span.res-field__price 5 304 ₴
+
+                .result-card__button-block
+                  button(type="button").action-btn.result-card__confirm
+                    a(href="./order.html").action-btn__inner
+                      span.action-btn__text Оформить заказ
+
+              .result-fields
+                .white-area.result-fields__input-block
+                  input(type="text" name="username" placeholder="Введите код купона" required).white-area__input.data-field__input
+                  span.white-area__input-label.result-fields__input-label Купон
+
+                .white-area.result-fields__input-block
+                  input(type="text" name="username" placeholder="Подарочный сертификат" required).white-area__input.data-field__input
+                  span.white-area__input-label.result-fields__input-label Введите номер подарочного сертификата
+
+                .result-fields__button-block
+                  button(type="button").action-btn.result-fields__confirm
+                    a(href="./order.html").action-btn__inner
+                      span.action-btn__text Применить
+
+    include includes/sections/map
+
