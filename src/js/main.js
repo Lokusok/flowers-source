@@ -2,10 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('no-js');
   document.body.classList.add('yes-js');
 
-  window.addEventListener('resize', () => {
-    location.reload();
-  });
+  // window.addEventListener('resize', () => {
+  //   location.reload();
+  // });
   
+  setCorrectAccordeon();
   setCorrectDateInputs();
   setCorrectPopups();
   setCorrectCatalogFilters();
@@ -651,5 +652,52 @@ function setCorrectDateInputs() {
         isMobile: true,
       });
     }
+  });
+}
+
+
+// Аккордеон (страница форума)
+function setCorrectAccordeon() {
+  const accordeons = document.querySelectorAll('.questions-accordion');
+
+  accordeons.forEach((accordeon) => {
+    const accordeonItems = accordeon.querySelectorAll('.questions-accordion__item');
+    const closeOne = (item) => {
+      const control = item.querySelector('.questions-accordion__control');
+      const content = item.querySelector('.questions-accordion__content');
+
+      control.setAttribute('aria-expanded', false);
+      content.setAttribute('aria-hidden', true);
+      item.classList.remove('active');
+      content.style.maxHeight = null;
+    };
+    const closeAllSaveOne = (save) => {
+      accordeonItems.forEach((item) => {
+        if (item === save) return;
+        closeOne(item);
+      });
+    };
+
+
+    accordeonItems.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        if (event.target.closest('.questions-accordion__content')) return;
+
+        const control = item.querySelector('.questions-accordion__control');
+        const content = item.querySelector('.questions-accordion__content');
+
+        closeAllSaveOne(item);
+        item.classList.toggle('active');
+
+        if (item.classList.contains('active')) {
+          control.setAttribute('aria-expanded', true);
+          content.setAttribute('aria-hidden', false);
+
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          closeOne(item);
+        }
+      })
+    });
   });
 }
