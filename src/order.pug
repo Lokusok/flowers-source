@@ -58,7 +58,8 @@ block content
                       span.white-area__input-label.data-field__input-label Адрес *
                   .data-field
                     .white-area.data-field__input-block
-                      input(type="date" name="date").white-area__input.data-field__input
+                      input(type="text" name="date" autocomplete="off").date-input.white-area__input.data-field__input
+                      img.white-area__icon(src="./images/src/calendar-icon.svg" alt="" aria-hidden="true")
                       span.white-area__input-label.data-field__input-label Дата доставки
                   .data-field
                     .white-area.data-field__select-block.data-field__input-block
@@ -94,7 +95,7 @@ block content
               .details-data.data-block
                 span.data-block__title 3. Детали доставки
 
-                .data-block__inputs
+                .checkboxes.data-block__inputs
                   .checkbox.checkbox-1.data-field
                     label.checkbox__label
                       span.checkbox__text Доставка сюрпризом
@@ -144,7 +145,7 @@ block content
 
                   .input-field.data-field
                     .white-area.data-field__input-block
-                      input(type="text" name="reason" placeholder="До 70 символов" required).white-area__input.data-field__input
+                      input(type="text" name="reason" placeholder="До 70 символов" maxlength="70" required).white-area__input.data-field__input
                       span.white-area__input-label.data-field__input-label Текст открытки
 
             .order-area__result

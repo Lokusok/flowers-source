@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('no-js');
   document.body.classList.add('yes-js');
+
+  window.addEventListener('resize', () => {
+    location.reload();
+  });
   
+  setCorrectDateInputs();
   setCorrectPopups();
   setCorrectCatalogFilters();
   setCorrectLoadMoreCatalog();
@@ -15,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
+  
 });
 
 
@@ -24,6 +30,7 @@ function setCorrectChoices() {
   const doChoicesLib = () => {
     const selectsDefault = document.querySelectorAll('.default-select');
     const selectsCatalog = document.querySelectorAll('.catalog-cards__top-line select');
+    const selectsDatas = document.querySelectorAll('.data-field__select-block select');
 
     selectsDefault.forEach((select) => {
       const choices = new Choices(select, {
@@ -60,6 +67,7 @@ function setCorrectChoices() {
     selectsCatalog.forEach((select) => {
       new Choices(select, {
         searchEnabled: false,
+        shouldSort: false,
         itemSelectText: '',
         classNames: {
           item: 'catalog-cards__elem',
@@ -67,7 +75,15 @@ function setCorrectChoices() {
           itemSelectable: 'catalog-cards__elem_active'
         }
       })
-    })
+    });
+
+    selectsDatas.forEach((select) => {
+      new Choices(select, {
+        searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: '',
+      });
+    });
   };
 
   // Кастомные многоуровневые выпадашки
@@ -210,8 +226,7 @@ function setCorrectSliders() {
         }
       });
    
-      const mediaMaxWidth = window.matchMedia('(max-width: 910px)');
-      const mediaMaxHandler = () => {
+      if (window.matchMedia('(max-width: 910px)').matches) {
         const slidesWrapper = productsSlider.querySelector('.products-slider__wrapper');
         const allSlides = Array.from(productsSlider.querySelectorAll('.products-slider__slide'));
         const allProducts = productsSlider.querySelectorAll('.product-card');
@@ -251,11 +266,7 @@ function setCorrectSliders() {
             });
           }
         }
-      };
-      if (mediaMaxWidth.matches) {
-        mediaMaxHandler();
       }
-      mediaMaxWidth.addEventListener('change', mediaMaxHandler);
     }
   };
   const doForumSlider = () => {
@@ -621,5 +632,24 @@ function setCorrectTabs() {
       tabBtn.classList.toggle('active');
       tabsInners[index].classList.toggle('active');
     });
+  });
+}
+
+// Инпуты для выбора даты
+function setCorrectDateInputs() {
+  const dateInputs = document.querySelectorAll('.date-input');
+  if (!dateInputs.length) return;
+  
+  dateInputs.forEach((dateInput) => {
+    const datepicker = new AirDatepicker(dateInput, {
+      minDate: new Date(),
+      buttons: ['today']
+    });
+
+    if (window.matchMedia('(max-width: 550px)').matches) {
+      datepicker.update({
+        isMobile: true,
+      });
+    }
   });
 }

@@ -892,6 +892,10 @@
     text-decoration: none;
     transition: opacity ease .2s;
   }
+
+  @media (max-width: 550px) {
+    display: none;
+  }
 }
 
 // Подчёркнутая белая ссылка
@@ -943,7 +947,24 @@
     margin-top: 48px;
     font-weight: 900;
     font-size: 48px;
-    line-height: 18px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 640px) {
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__row {
+      padding-top: 29px;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
   }
 }
 
@@ -955,12 +976,14 @@
     position: absolute;
     transform: translate(0, -50%);
     left: 61px;
+    top: 0;
     background: #fff;
     color: #BDBDBD;
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
     padding: 0 15px;
+    white-space: nowrap;
   }
 
   &__input {
@@ -981,6 +1004,14 @@
     &:focus + .tel-popup__input-label {
       color: vars.$color-accent-1;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translate(0, -50%);
+    pointer-events: none;
   }
 }
 
@@ -1142,4 +1173,106 @@
       transform: translate(0, -50%);
     }
   }
+
+  @media (max-width: 710px) {
+    .result-card {
+      &__title {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .result-card {
+      &__inner {
+        padding: 30px 40px 41px 40px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 18px;
+        margin-bottom: 26px;
+      }
+
+      &__union {
+        row-gap: 25px;
+        margin-bottom: 48px;
+      }
+
+      &__field {
+        font-size: 14px;
+      }
+
+      .res-field {
+        &__title {
+          font-size: 16px;
+          line-height: 18px;          
+        }
+
+        &__value {
+          font-size: 24px;
+        }
+      }
+
+      &__button-block {
+        margin-bottom: 24px;
+        justify-content: stretch;
+        padding: 0 40px;
+
+        .action-btn {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+          
+          &__inner {
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    .result-card {
+      &__button-block {
+        padding: 0;
+      }
+    }
+  }
 }
+
+// Календарь
+.air-datepicker {
+  .air-datepicker-body--day-name {
+    color: vars.$color-accent-1;
+    font-family: 'Euclid Circular', sans-serif;
+    font-weight: 900;
+  }
+  
+  .air-datepicker-cell.-day-.-current- {
+    color: vars.$color-accent-1;
+    font-weight: 900;
+    border: 1px solid vars.$color-accent-1;
+  }
+  
+  .air-datepicker-cell.-day-.-selected- {
+    background-color: vars.$color-accent-1;
+    color: #fff;
+  }
+  
+  .air-datepicker-cell.-day-.-other-month-.-selected- {
+    color: vars.$color-accent-2;
+    background-color: #fff;
+  }
+  
+  .air-datepicker-button {
+    font-family: 'Euclid Circular', sans-serif;
+    font-weight: 900;
+    color: vars.$color-accent-1;
+  }
+
+  @media (max-width: 330px) {
+    width: 95%;
+  }
+}
+

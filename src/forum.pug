@@ -1,0 +1,19 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Форум'
+
+block content
+  main#main.main
+    section.section.forum-section
+      .container.section__container.forum-section__container
+        .section__row.forum-section__row
+          header.section__header.forum-section__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a.bread-crumbs__link Форум
+
+            h2.section__title.forum-section__title Форум
