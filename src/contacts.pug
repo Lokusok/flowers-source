@@ -1,0 +1,73 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Контакты'
+
+block content
+  main#main.main
+    section.section#contacts.contacts
+      .container.section__container.contacts__container
+        .section__row.contacts__row
+          header.section__header.contacts__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Информация
+              li.bread-crumbs__item
+                a.bread-crumbs__link Корпоративным клиентам
+
+            h2.section__title.contacts__title Контакты
+
+          .contacts-area
+            .contacts-area__grid
+              .contacts-area__description
+                span.contacts-area__title Свяжитесь с нами
+                p.contacts-area__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+
+                ul.contacts-area__data-list
+                  li.contact-item
+                    .contact-item__icon
+                      img(src="./images/src/place-icon.svg" alt="" aria-hidden="true")
+
+                    span.contact-item__value м. Київ, вулиця Оболонська Набережна, 7, корпус 5
+                    
+                  li.contact-item
+                    .contact-item__icon
+                      img(src="./images/src/tel-big-icon.svg" alt="" aria-hidden="true")
+
+                    span.contact-item__value +380 99 937 1556
+
+                  li.contact-item
+                    .contact-item__icon
+                      img(src="./images/src/clock-icon.svg" alt="" aria-hidden="true")
+
+                    span.contact-item__value Пн - Пт: 09:00 - 20:00 #[br] Сб - Вс 09:00 - 15:00
+
+                  
+              .contacts-area__inputs
+                span.contacts-area__title Заполните форму для обратной связи
+
+                form(action="#" method="POST").contacts-area__form
+                  fieldset.contacts-area__form-fieldset
+                    legend.visually-hidden Ваши данные
+
+                    .white-area
+                      input(type="text" name="username" required).white-area__input
+                      span.white-area__input-label Ваше имя *
+
+                    .white-area
+                      input(type="email" name="email" required).white-area__input
+                      span.white-area__input-label E-Mail адрес *
+
+                    .white-area
+                      input(type="text" name="message").white-area__input
+                      span.white-area__input-label Ваше сообщение
+
+                  button(type="submit").action-btn.contacts-area__submit
+                    span.action-btn__inner
+                      span.action-btn__text Отправить
+
+    include includes/sections/map
+

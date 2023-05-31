@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectDateInputs();
   setCorrectPopups();
   setCorrectCatalogFilters();
-  setCorrectLoadMoreCatalog();
+  setCorrectLoadMore();
   setCorrectCounterProducts();
   setCorrectTabs();
   setCorrectInputMasks();
@@ -351,8 +351,7 @@ function setCorrectSliders() {
 
     if (window.matchMedia('(max-width: 1000px)').matches) {
       const mainSlide = reviewsSwiper.slides[0];
-      console.log(mainSlide);
-
+      
       Array.from(reviewsSwiper.slides)
         .slice(1,)
         .forEach((slide) => {
@@ -378,11 +377,6 @@ function setCorrectSliders() {
   doFavouriteSlider();
   doProductPageSliders();
   doReviewsSlider();
-
-  window.matchMedia('(min-width: 911px)')
-    .addEventListener('change', () => {
-      location.reload();
-    });
 }
 
 // Добавление в избранное
@@ -564,10 +558,16 @@ function setCorrectCatalogFilters() {
   doMobileFilters();
 }
 
-// Подгрузка товаров в каталоге
-function setCorrectLoadMoreCatalog() {
+// Подгрузка блоков по клику на "загрузить ещё"
+function setCorrectLoadMore() {
   const loadMoreBtn = document.querySelector('.load-more');
   if (!loadMoreBtn) return;
+  const loadWhat = loadMoreBtn.dataset.whatIs;
+  const multiNouns = {
+    products: ['товар', 'товара', 'товаров'],
+    reviews: ['отзыв', 'отзыв', 'отзывов'],
+    news: ['новость', 'новости', 'новостей'],
+  };
   const hidesCount = loadMoreBtn.querySelector('.load-more__count');
   const hidesProducts = document.getElementsByClassName('hide');
   const getNoun = (number, one, two, five) => {
@@ -587,7 +587,7 @@ function setCorrectLoadMoreCatalog() {
   };
   const updateCountState = (count) => {
     if (count === 0) hideLoadBtn();
-    hidesCount.innerText = count + ' ' + getNoun(count, 'товар', 'товара', 'товаров');
+    hidesCount.innerText = count + ' ' + getNoun(count, ...multiNouns[loadWhat]);
   };
   const hideLoadBtn = () => {
     loadMoreBtn.style.display = 'none';

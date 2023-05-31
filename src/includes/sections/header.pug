@@ -37,7 +37,7 @@ header#header.header
           ul.searches-cats
             li.searches-cats__cat-elem.cat-elem
               button(type="button").dropdown
-                span.dropdown__title.cat-elem__title Каталог товаров
+                span.dropdown__title.cat-elem__title.highlighted Каталог товаров
 
               ul.dropdown-list
                 li.dropdown-item(data-cat-value="cat-1" tabindex="0")
@@ -160,9 +160,21 @@ header#header.header
             li.searches-cats__cat-elem.cat-elem
               a(href="./sales.html").cat-elem__title Акции
             li.searches-cats__cat-elem.cat-elem
-              a(href="#").cat-elem__title Новости
+              a(href="./news.html").cat-elem__title Новости
             li.searches-cats__cat-elem.cat-elem
-              a(href="#").cat-elem__title Информация
+              button(type="button").dropdown
+                span.dropdown__title.cat-elem__title Информация
+
+              ul.dropdown-list
+                li.dropdown-item
+                  a(href="./about.html").dropdown-item__title О нас
+                li.dropdown-item
+                  a(href="./contacts.html").dropdown-item__title Контакты
+                li.dropdown-item
+                  a(href="./about.html").dropdown-item__title Оплата и доставка
+                li.dropdown-item
+                  a(href="./about.html").dropdown-item__title Корпоративным клиентам
+
 
       .other-links
         nav.nav-social

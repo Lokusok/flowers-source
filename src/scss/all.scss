@@ -1355,6 +1355,10 @@
       text-decoration: none;
       color: #B0B9C0;
       padding: 18px 28px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

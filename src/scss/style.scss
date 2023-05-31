@@ -38,7 +38,6 @@ body {
 
   main {
     flex-grow: 1;
-    overflow: hidden;
   }
 
   &.unscroll {
@@ -375,7 +374,10 @@ body {
 
           &__title {
             padding-right: 20px;
-            color: vars.$color-accent-1;
+
+            &.highlighted {
+              color: vars.$color-accent-1;
+            }
           }
 
           &__title::before {
@@ -1291,7 +1293,6 @@ body {
       display: flex;
       justify-content: center;
       height: 343px;
-      // overflow: hidden;
     }
 
     &__image {
@@ -1322,6 +1323,8 @@ body {
     &__text-block {
       padding: 28px 15px;
       color: #fff;
+      display: flex;
+      flex-direction: column;
     }
   
     &__title {
@@ -1336,6 +1339,34 @@ body {
       font-size: 16px;
       line-height: 18px;
     }
+
+    &__link-block {
+      margin-top: 22px;
+    }
+
+    &__link-more {
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity ease .2s;
+
+      @media (pointer: fine) {
+        &:hover {
+          opacity: .7;
+          text-decoration: underline;
+        }
+      }
+
+      &:active {
+        opacity: .4;
+      }
+    }
+  }
+
+  &-card.hide {
+    display: none;
   }
 
   // Слайдер
@@ -1406,6 +1437,16 @@ body {
       }
 
       &__descr {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 10px;
+      }
+
+      &__link-block {
+        margin-top: 16px;
+      }
+
+      &__link-more {
         font-size: 12px;
         line-height: 15px;
       }
@@ -3432,6 +3473,7 @@ body {
 // === Секция оформления заказа ===
 .order {
   position: relative;
+  overflow: hidden;
 
   // Декоративные изображения
   &__decor {
@@ -4391,3 +4433,284 @@ body {
   }
 }
 
+// === Секция с новостями ===
+.news {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+    }
+
+    &_2 {
+      right: 0;
+      top: 175px;
+    }
+
+    &_3 {
+      left: 0;
+      top: 750px;
+    }
+
+    &_4 {
+      right: 0;
+      top: 1210px;
+    }
+
+    &_5 {
+      left: 0;
+      bottom: 0;
+    }
+
+    &_6 {
+      right: 0;
+      bottom: 0;
+      transform: translate(0, 25%) scale(-1, 1);
+    }
+  }
+
+  &-area {
+    margin-top: 100px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24px 21px;
+    }
+  }
+
+  @media (max-width: 1885px) {
+    &-area {
+      &__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 1170px) {
+    .forum-card__inner {
+      min-width: 470px;
+    }
+  }
+
+  @media (max-width: 990px) {
+    .forum-card__inner {
+      min-width: 450px;
+    }
+  }
+
+  @media (max-width: 940px) {
+    &-area {
+      &__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .forum-card__inner {
+      min-width: 550px;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .forum-card__inner {
+      min-width: 470px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 51px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .forum-card__inner {
+      min-width: 420px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .forum-card__inner {
+      min-width: 370px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .forum-card__inner {
+      min-width: 320px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .forum-card__inner {
+      min-width: 270px;
+    }
+  }
+}
+
+// === Связь с компанией ===
+.contacts {
+  &-area {
+    margin-top: 113px;
+
+    &__grid {
+      display: flex;
+      column-gap: 150px;
+    }
+
+    &__description,
+    &__inputs {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    &__title {
+      font-weight: 300;
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    &__text {
+      margin-top: 49px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 30px;
+      color: #5A5A5A;
+    }
+
+    &__data-list {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        column-gap: 36px;
+      }
+    }
+    
+    &__form {
+      margin-top: 41px;
+
+      &-fieldset {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-bottom: 30px;
+      }
+      
+      input {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 22px 53px;
+      }
+    }
+
+    .action-btn {
+      &__inner {
+        padding: 22px 70px;
+      }
+
+      &__text {
+        font-family: 'Euclid Circular';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    &-area {
+      &__grid {
+        column-gap: 55px;
+      }
+    }
+  }
+
+  @media (max-width: 870px) {
+    &-area {
+      &__grid {
+        column-gap: 35px;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    &-area {
+      &__grid {
+        flex-direction: column-reverse;
+        row-gap: 56px;
+      }
+
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 46px;
+
+      &__title {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      &__form {
+        margin-top: 47px;
+      }
+
+      &__text {
+        margin-top: 31px;
+        font-size: 12px;
+      }
+
+      &__data-list {
+        margin-top: 31px;
+
+        .contact-item {
+          column-gap: 29px;
+
+          &__icon img {
+            width: 23px;
+          }
+
+          &__value {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 410px) {
+    &-area {
+      &__data-list {
+        .contact-item {
+          &__icon img {
+            width: 15px;
+          }
+        }
+      }
+
+      &__form {
+        .action-btn {
+          width: 100%;
+          justify-content: center;
+
+          &__inner {
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+}
