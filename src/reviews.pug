@@ -1,0 +1,409 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Отзывы'
+
+block content
+  main#main.main
+    .section#reviews.reviews
+      img.flowers-decor.reviews__decor.reviews__decor_1(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.reviews__decor.reviews__decor_2(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.reviews__decor.reviews__decor_3(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.reviews__decor.reviews__decor_4(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+
+      .container.section__container.reviews__container
+        .section__row.reviews__row
+          header.section__header.reviews__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a.bread-crumbs__link Отзывы
+
+            h2.section__title.reviews__title Отзывы
+
+          .reviews-area
+            button(type="button").reviews-area__arrow.reviews-area__arrow_prev
+              <svg class="reviews-area__arrow-icon" aria-hidden="true" width="25" height="44" viewBox="0 0 25 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.89649 19.8218L19.6824 0.903061C20.8774 -0.301022 22.8149 -0.301022 24.0094 0.903061C25.2039 2.10607 25.2039 4.05723 24.0094 5.26014L7.38673 22.0003L24.0089 38.7399C25.2034 39.9434 25.2034 41.8944 24.0089 43.0974C22.8144 44.3009 20.877 44.3009 19.6819 43.0974L0.896006 24.1784C0.298742 23.5766 0.00044632 22.7887 0.00044632 22.0004C0.00044632 21.2117 0.299322 20.4233 0.89649 19.8218Z" fill="#956D84"/>
+              </svg>
+
+            button(type="button").reviews-area__arrow.reviews-area__arrow_next
+              <svg class="reviews-area__arrow-icon" aria-hidden="true" width="26" height="44" viewBox="0 0 26 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.0646 19.8218L5.45252 0.903061C4.20496 -0.301022 2.18225 -0.301022 0.935293 0.903061C-0.311764 2.10607 -0.311764 4.05723 0.935293 5.26014L18.2889 22.0003L0.935798 38.7399C-0.31126 39.9434 -0.31126 41.8944 0.935798 43.0974C2.18286 44.3009 4.20546 44.3009 5.45302 43.0974L25.0651 24.1784C25.6886 23.5766 26 22.7887 26 22.0004C26 21.2117 25.688 20.4233 25.0646 19.8218Z" fill="#956D84"/>
+              </svg>
+
+            .swiper.reviews-slider
+              .swiper-wrapper.reviews-slider__wrapper
+                .swiper-slide.reviews-slider__slide
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                .swiper-slide.reviews-slider__slide
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+                  article.review
+                    .review__head
+                      img.review__photo(src="./images/src/review-photo-1.jpg" alt="Ирина Артипенко" width="74" height="74")
+                      h3.review__author Ирина Артипенко
+                    
+                    .review__content
+                      p.review__text Тюльпан - символ любви, весеннего обновления, счастья, теплой и солнечной погоды и хорошего приподнятого настроения! Тюльпан отличается элегантностью форм и ...
+
+                      .review__link-block
+                        a(href="#").review__link Весь отзыв
+                      
+                    .review__bottom
+                      .review__raiting
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+                        img(src="./images/src/star-icon.svg" alt="" aria-hidden="true")
+
+                      time.review__date 22.02.2021
+
+            .items-pagination.catalog-cards__bottom-line
+              button(type="button" style="display: flex;").action-btn.load-more.items-pagination__more.catalog-cards__more
+                span.load-more__text Еще #[span.load-more__count 16 товаров] 
+
+              .catalog-cards__pagination
+                .cards-pagination
+                  button(type="button").cards-pagination__arrow.cards-pagination__arrow_prev.disable
+                    span.help-text.visually-hidden На предыдущую страницу
+                  
+                    img(src="./images/src/arrow-prev-icon.svg" alt="" aria-hidden="true")
+                  button(type="button").cards-pagination__arrow.cards-pagination__arrow_next
+                    span.help-text.visually-hidden На следующую страницу
+                    img(src="./images/src/arrow-next-icon.svg" alt="" aria-hidden="true")
+                    
+
+                  ul.cards-pagination__list
+                    li.cards-pagination__item.active
+                      a(href="#").cards-pagination__link 1
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 2
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 3
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 4
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 5
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 6
+                    li.cards-pagination__item
+                      a(href="#").cards-pagination__link 7
+
+    include includes/sections/map

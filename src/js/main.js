@@ -333,12 +333,51 @@ function setCorrectSliders() {
       }
     });
   };
+  const doReviewsSlider = () => {
+    const reviewsSlider = document.querySelector('.reviews-slider');
+    const reviewsSwiper = new Swiper(reviewsSlider, {
+      allowTouchMove: true,
+      grabCursor: true,
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      speed: 500,
+      navigation: {
+        prevEl: '.reviews-area__arrow_prev',
+        nextEl: '.reviews-area__arrow_next',
+        disabledClass: 'disable',
+      }
+    });
+
+    if (window.matchMedia('(max-width: 1000px)').matches) {
+      const mainSlide = reviewsSwiper.slides[0];
+      console.log(mainSlide);
+
+      Array.from(reviewsSwiper.slides)
+        .slice(1,)
+        .forEach((slide) => {
+          const slideElems = Array.from(slide.children);
+
+          slideElems.forEach((slideElem) => {
+            const copiedElem = slideElem.cloneNode(true);
+            copiedElem.classList.add('hide');
+            mainSlide.append(copiedElem);
+            slideElem.remove();
+          });
+
+          slide.remove();
+      });
+
+      reviewsSwiper.update();
+    }
+  };
 
   doProductsSliders();
   doWelcomeSwiper();
   doForumSlider();
   doFavouriteSlider();
   doProductPageSliders();
+  doReviewsSlider();
 
   window.matchMedia('(min-width: 911px)')
     .addEventListener('change', () => {
@@ -557,7 +596,9 @@ function setCorrectLoadMoreCatalog() {
   if (window.matchMedia('(max-width: 910px)').matches) onOneRow = 2;
   let lastAmount = 0;
 
-  updateCountState(hidesProducts.length);
+  setTimeout(() => {
+    updateCountState(hidesProducts.length);
+  }, 0);
   
   loadMoreBtn.addEventListener('click', () => {
     const needRemoveHide = Array.from(hidesProducts).slice(lastAmount, onOneRow);
@@ -654,7 +695,6 @@ function setCorrectDateInputs() {
     }
   });
 }
-
 
 // Аккордеон (страница форума)
 function setCorrectAccordeon() {
