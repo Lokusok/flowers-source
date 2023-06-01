@@ -4714,3 +4714,107 @@ body {
     }
   }
 }
+
+// === Описание компании ===
+.about {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 195px;
+    }
+
+    &_3 {
+      left: 0;
+      top: 780px;
+      transform: scale(-1, 1);
+    }
+
+    &_4 {
+      right: 0;
+      top: 990px;
+      transform: scale(-1, 1);
+    }
+
+    &_5 {
+      left: 0;
+      top: 1605px;
+    }
+
+    &_6 {
+      right: 0;
+      top: 1750px;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &-area {
+    margin-top: 113px;
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 51px;
+    }
+  }
+}
+
+// === Описание оплаты и доставки ===
+.pay-deliver {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 195px;
+    }
+
+    &_3 {
+      left: 0;
+      top: 780px;
+      transform: scale(-1, 1);
+    }
+
+    &_4 {
+      right: 0;
+      top: 990px;
+      transform: scale(-1, 1);
+    }
+
+    &_5 {
+      left: 0;
+      top: 1605px;
+    }
+
+    &_6 {
+      right: 0;
+      top: 1750px;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &-area {
+    margin-top: 104px;
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 51px;
+    }
+  }
+}
