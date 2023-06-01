@@ -1,6 +1,7 @@
 @use 'libs/choices';
 @use 'libs/swiper';
 @use 'libs/air-datepicker';
+@use 'libs/simplebar';
 @use 'vars' as vars;
 @use 'reset';
 @use 'all';
@@ -4818,3 +4819,264 @@ body {
     }
   }
 }
+
+// === Пост (страничка новости) ===
+.post {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 195px;
+    }
+
+    &_3 {
+      left: 0;
+      top: 780px;
+      transform: scale(-1, 1);
+    }
+
+    &_4 {
+      right: 0;
+      top: 990px;
+      transform: scale(-1, 1);
+    }
+
+    &_5 {
+      left: 0;
+      top: 1745px;
+    }
+
+    &_6 {
+      right: 0;
+      top: 1990px;
+      transform: scale(-1, 1);
+    }
+  }
+
+  &-area {
+    margin-top: 113px;
+  }
+}
+
+// === Комментарии ===
+.comments {
+  &__row {
+    padding-top: 63px;
+  }
+
+  &__inputs,
+  &-widget {
+    flex-basis: 50%;
+    width: 50%;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__grid {
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 95px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
+
+    .action-btn {
+      &__inner {
+        padding: 22px 52px;
+      }
+
+      &__text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &-widget {
+    border: 1px solid vars.$color-accent-1;
+    padding: 52px 17px 74px 29px;
+    max-height: 606px;
+    overflow: hidden;
+
+    &__inner {
+      padding-right: 70px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 26px;
+      overflow: auto;
+      max-height: 100%;
+
+      .simplebar-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .simplebar-wrapper {
+        max-height: 606px;
+      }
+
+      .simplebar-track {
+        width: 10px;
+        background-color: rgba(vars.$color-accent-1, .1);
+      }
+
+      .simplebar-scrollbar {
+        background-color: rgba(vars.$color-accent-1, .5);
+        border-radius: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    // Комментарий
+    .comment {
+      display: flex;
+      align-items: center;
+      column-gap: 52px;
+
+      &__author {
+        display: flex;
+        align-items: center;
+        column-gap: 22px;
+
+        &-photo {
+          width: 49px;
+          height: 49px;
+          object-fit: cover;
+        }
+
+        &-name {
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      &__content {
+        font-size: 16px;
+        line-height: 20px;
+        color: #828282;
+      }      
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__grid {
+      column-gap: 50px;
+    }
+  }
+
+  @media (max-width: 1070px) {
+    &__grid {
+      align-items: center;
+      flex-direction: column-reverse;
+      row-gap: 40px;
+    }
+
+    &__inputs,
+    &-widget {
+      width: 75%;
+    }
+
+    &-widget {
+      .simplebar-wrapper {
+        max-height: 490px;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    &-widget {
+      .comment {
+        column-gap: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    &__inputs,
+    &-widget {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__grid {
+      margin-top: 53px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    &__inputs,
+    &-widget {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &-widget {
+      &__inner {
+        padding-right: 15px;
+      }
+
+      .comment {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    &-widget {
+      padding: 25px 17px 21px 29px;
+
+      .comment {
+        &__content {
+          font-size: 12px;
+        }
+      }
+
+      .simplebar-content {
+        row-gap: 15px;
+      }
+    }
+
+    &__form {
+      row-gap: 25px;
+
+      input {
+        font-size: 14px;
+      }
+
+      .action-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+

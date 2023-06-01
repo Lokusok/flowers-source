@@ -1624,6 +1624,11 @@
     p {
       margin-bottom: 10px;
     }
+
+    ul li::before {
+      min-width: 9px;
+      min-height: 9px;
+    }
   }
 
   @media (max-width: 440px) {

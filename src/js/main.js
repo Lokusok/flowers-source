@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   location.reload();
   // });
   
+  setCorrectScrollbars();
   setCorrectAccordeon();
   setCorrectDateInputs();
   setCorrectPopups();
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setCorrectSliders();
   setCorrectFavourites();
   setCorrectMap();
-  
 });
 
 
@@ -739,5 +739,13 @@ function setCorrectAccordeon() {
         }
       })
     });
+  });
+}
+
+// Кастомные скроллбары
+function setCorrectScrollbars() {
+  const commentsWidgetInner = document.querySelector('.comments-widget__inner');
+  const simplebar = new SimpleBar(commentsWidgetInner, {
+    autoHide: false,
   });
 }
