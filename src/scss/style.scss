@@ -2,6 +2,7 @@
 @use 'libs/swiper';
 @use 'libs/air-datepicker';
 @use 'libs/simplebar';
+@use 'libs/fancybox';
 @use 'vars' as vars;
 @use 'reset';
 @use 'all';
@@ -1288,12 +1289,23 @@ body {
 
     &__inner {
       background: linear-gradient(to bottom, transparent 30%, vars.$color-accent-1 30%);
+      width: 100%;
     }
 
     &__image-block {
+      position: relative;
       display: flex;
       justify-content: center;
       height: 343px;
+    }
+
+    &__play-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity ease .2s, scale ease .2s;
+      opacity: .5;
     }
 
     &__image {
@@ -1307,15 +1319,24 @@ body {
       color: #fff;
 
       @media (pointer: fine) {
-        &:hover {
+        &[href]:hover {
           .forum-card__image {
             transform: translate(0, -5%);
           }
+          
+          .forum-card__play-icon {
+            opacity: .3;
+          }
         }
-
-        &:active {
+        
+        &[href]:active {
           .forum-card__image {
             opacity: .7;
+          }
+
+          .forum-card__play-icon {
+            opacity: .1;
+            scale: .9;
           }
         }
       }
@@ -1326,6 +1347,13 @@ body {
       color: #fff;
       display: flex;
       flex-direction: column;
+    }
+
+    &__date {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 18px;
     }
   
     &__title {
@@ -1426,6 +1454,11 @@ body {
       &__inner {
         width: 40%;
         min-width: 395px;
+      }
+
+      &__date {
+        font-size: 12px;
+        margin-bottom: 10px;
       }
 
       &__text-block {
@@ -1732,6 +1765,7 @@ body {
     row-gap: 25px;
 
     &__link {
+      width: 100%;
       color: #fff;
       text-decoration: none;
       font-weight: 300;
@@ -1842,6 +1876,11 @@ body {
 
     &__logo {
       align-self: center;
+
+      img {
+        width: 125px;
+        height: 125px;
+      }
     }
 
     &__bottom {
@@ -1851,16 +1890,18 @@ body {
     
     &-block {
       text-align: left;
-      row-gap: 20px;
+      row-gap: 10px;
 
       &__title {
         font-weight: 900 !important;
+        font-size: 14px !important;
       }
     }
 
     &-list {
       &__link {
         padding: 10px 0 10px 0;
+        font-size: 12px !important;
       }
     }
 
@@ -1888,7 +1929,7 @@ body {
 
     &__lists {
       grid-template-columns: 1fr;
-      grid-row-gap: 34px;
+      grid-row-gap: 24px;
     }
   }
 
@@ -2142,15 +2183,16 @@ body {
 
     // Пагинация внизу с кнопкой "ещё"
     &__bottom-line {
-      margin-top: 75px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin-top: 75px;      
     }
 
     &__pagination {
       margin-top: 89px;
-    } 
+    }
+
+    &__more {
+      margin: 0;
+    }
   }
 
   // Мобильные кнопки
@@ -4482,6 +4524,10 @@ body {
     }
   }
 
+  .items-pagination {
+    margin-top: 60px;
+  }
+
   @media (max-width: 1885px) {
     &-area {
       &__grid {
@@ -4864,6 +4910,12 @@ body {
   &-area {
     margin-top: 113px;
   }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 51px;
+    }
+  }
 }
 
 // === Комментарии ===
@@ -5080,3 +5132,180 @@ body {
   }
 }
 
+// === Доставка ===
+.delivery {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 0;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 165px;
+    }
+
+    &_3 {
+      left: 0;
+      bottom: 0;
+      transform: scale(-1, 1) translate(0, 50%);
+    }
+  }
+
+  &-area {
+    margin-top: 101px;
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 42px;
+    }
+  }
+}
+
+// === Фото доставок, видеоотчёты ===
+.card-reviews {
+  position: relative;
+
+  // Декоративные изображения
+  &__decor {
+    &_1 {
+      left: 0;
+      top: 100px;
+      transform: scale(-1, 1);
+    }
+
+    &_2 {
+      right: 0;
+      top: 0;
+      transform: translate(0, -15%);
+    }
+
+    &_3 {
+      left: 0;
+      top: 935px;
+      transform: scale(-1, 1);
+    }
+
+    &_4 {
+      right: 0;
+      top: 765px;
+    }
+  }
+
+  &-area {
+    margin-top: 90px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 23px;
+    }
+
+    .items-pagination {
+      margin-top: 67px;
+    }
+  }
+
+  .forum-card {
+    &__inner {
+      width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    &__image {
+      width: 268px;
+    }
+
+    &__link-block {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    &__link-more {
+      text-decoration: underline;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+  
+  .map-row {
+    padding-top: 104px;
+  }
+
+  @media (max-width: 1435px) {
+    &-area {
+      &__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 975px) {
+    .forum-card {
+      &__image {
+        width: 250px;
+      }
+    }
+  }
+
+  @media (max-width: 885px) {
+    &-area {
+      &__grid {
+        grid-gap: 23px 10px;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    &-area {
+      &__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    &-area {
+      margin-top: 51px;
+    }
+
+    .forum-card {
+      &__image-block {
+        height: 292px;
+      }
+
+      &__image {
+        width: 227px;
+      }
+    }
+  }
+
+  @media (max-width: 565px) {
+    &-area {
+      &__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .forum-card {
+      &__inner {
+        width: 80% !important;
+      }
+    }
+  }
+  
+  @media (max-width: 370px) {
+    .forum-card {
+      &__inner {
+        width: 100% !important;
+      }
+    }
+  }
+}

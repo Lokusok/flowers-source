@@ -5,23 +5,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.addEventListener('resize', () => {
   //   location.reload();
   // });
+  const funcsToCall = [
+    setCorrectChoices,
+    setCorrectMenuAccordeon,
+    setCorrectBurger,
+    setCorrectMobileMenus,
+    setCorrectSliders,
+    setCorrectSliders,
+    setCorrectFavourites,
+    setCorrectMap,
+    setCorrectPopups,
+    setCorrectInputMasks,
+    setCorrectCatalogFilters,
+    setCorrectLoadMore,
+    setCorrectCounterProducts,
+    setCorrectTabs,
+    setCorrectDateInputs,
+    setCorrectAccordeon,
+    setCorrectScrollbars,
+    setCorrectFancybox,
+  ];
   
-  setCorrectScrollbars();
-  setCorrectAccordeon();
-  setCorrectDateInputs();
-  setCorrectPopups();
-  setCorrectCatalogFilters();
-  setCorrectLoadMore();
-  setCorrectCounterProducts();
-  setCorrectTabs();
-  setCorrectInputMasks();
-  setCorrectChoices();
-  setCorrectMenuAccordeon();
-  setCorrectBurger();
-  setCorrectMobileMenus();
-  setCorrectSliders();
-  setCorrectFavourites();
-  setCorrectMap();
+  funcsToCall.forEach((func) => {
+    try {
+      func();
+    } catch(err) {
+      console.error(err.message);
+    }
+  });
 });
 
 
@@ -197,6 +208,7 @@ function setCorrectMobileMenus() {
 function setCorrectSliders() {
   const doWelcomeSwiper = () => {
     const welcomeSlider = document.querySelector('.welcome-slider');
+    if (!welcomeSlider)return;
     const welcomeSwiper = new Swiper(welcomeSlider, {
       pagination: {
         el: '.welcome-slider-pagination',
@@ -206,6 +218,7 @@ function setCorrectSliders() {
   };
   const doProductsSliders = () => {
     const productsSliders = document.querySelectorAll('.products-slider');
+    if (!productsSliders.length) return;
     const productsSlidersLength = productsSliders.length;
 
     for (let i = 0; i < productsSlidersLength; i++) {
@@ -272,6 +285,7 @@ function setCorrectSliders() {
   };
   const doForumSlider = () => {
     const forumSlider = document.querySelector('.forum-slider');
+    if (!forumSlider) return;
     const forumSwiper = new Swiper(forumSlider, {
       slidesPerView: 1,
       spaceBetween: 21,
@@ -293,6 +307,7 @@ function setCorrectSliders() {
   };
   const doFavouriteSlider = () => {
     const favouriteSlider = document.querySelector('.favourite-slider');
+    if (!favouriteSlider) return;
     const favouriteSwiper = new Swiper(favouriteSlider, {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -319,6 +334,7 @@ function setCorrectSliders() {
   };
   const doProductPageSliders = () => {
     const productsMainSlider = document.querySelector('.product-main-slider');
+    if (!productsMainSlider) return;
     const productsThumbsSlider = document.querySelector('.product-thumbs-slider');
     const productsThumbsSwiper = new Swiper(productsThumbsSlider, {
       slidesPerView: 3,
@@ -335,6 +351,7 @@ function setCorrectSliders() {
   };
   const doReviewsSlider = () => {
     const reviewsSlider = document.querySelector('.reviews-slider');
+    if (!reviewsSlider) return;
     const reviewsSwiper = new Swiper(reviewsSlider, {
       allowTouchMove: true,
       grabCursor: true,
@@ -567,6 +584,8 @@ function setCorrectLoadMore() {
     products: ['товар', 'товара', 'товаров'],
     reviews: ['отзыв', 'отзыв', 'отзывов'],
     news: ['новость', 'новости', 'новостей'],
+    'photos-reviews': ['фотоотзыв', 'фотоотзыва', 'фотоотзывов'],
+    'videos-reviews': ['видоотзыв', 'видеоотзыва', 'видеоотзывов'],
   };
   const hidesCount = loadMoreBtn.querySelector('.load-more__count');
   const hidesProducts = document.getElementsByClassName('hide');
@@ -594,6 +613,18 @@ function setCorrectLoadMore() {
   };
   let onOneRow = 3;
   if (window.matchMedia('(max-width: 910px)').matches) onOneRow = 2;
+  if (
+      window.matchMedia('(max-width: 640px)').matches
+      && 
+      ['photos-reviews', 'videos-reviews'].includes(loadWhat)
+      ) {
+        const photosReviews = document.querySelectorAll('.forum-card');
+        Array.from(photosReviews)
+          .slice(4,)
+          .forEach((photosReview) => {
+            photosReview.classList.add('hide');
+          });
+      }
   let lastAmount = 0;
 
   setTimeout(() => {
@@ -718,7 +749,6 @@ function setCorrectAccordeon() {
       });
     };
 
-
     accordeonItems.forEach((item) => {
       item.addEventListener('click', (event) => {
         if (event.target.closest('.questions-accordion__content')) return;
@@ -745,7 +775,16 @@ function setCorrectAccordeon() {
 // Кастомные скроллбары
 function setCorrectScrollbars() {
   const commentsWidgetInner = document.querySelector('.comments-widget__inner');
+  if (!commentsWidgetInner) return;
+
   const simplebar = new SimpleBar(commentsWidgetInner, {
     autoHide: false,
+  });
+}
+
+// Fancybox: настройка
+function setCorrectFancybox() {
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
   });
 }

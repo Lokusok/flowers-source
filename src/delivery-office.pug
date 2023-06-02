@@ -1,0 +1,56 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Доставка цветов в офис'
+
+block content
+  main#main.main
+    section.section#delivery.delivery
+      img.flowers-decor.delivery__decor.delivery__decor_1(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.delivery__decor.delivery__decor_2(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.delivery__decor.delivery__decor_3(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+
+
+      .container.section__container.delivery__container
+        .section__row.delivery__row
+          header.section__header.delivery__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a(href="./news.html").white-underline-link.bread-crumbs__link Информация
+              li.bread-crumbs__item
+                a.bread-crumbs__link Корпоративным клиентам
+
+            h2.section__title.delivery__title Доставка цветов в офис
+
+          .delivery-area
+            article.article
+              p Уважаемые партнеры!
+
+              p Станьте корпоративным клиентом и получите самые выгодные предложения на все заказы от компании Flowers Ukraine. 
+
+              b Преимущества для наших корпоративных клиентов:
+
+              ul
+                li Скидки на заказы от 10% до 30% (в зависимости от суммы заказа)
+                li Разработка предложений под Ваш бюджет
+                li Оперативная доставка по Москве и Московской области
+                li Возможность безналичной оплаты
+                li Предоставление всех необходимых бухгалтерских документов
+                li Индивидуальный менеджер
+                li Специальные предложения и акции к праздникам (Новый год, 8 Марта, 14 Февраля, 23 Февраля, 9 Мая, 1 Сентября и т.д.)
+
+              b Контакты Отдела по работе с корпоративными клиентами:
+
+              p #[strong Руководитель] отдела: Александр
+
+              p #[strong Телефон:] +38 (067) 829 30 30; +38 (063) 829 30 30;
+
+              p #[strong E-mail:] flowers.ukraine2014@gmail.com
+
+    include includes/sections/map
+
+
+

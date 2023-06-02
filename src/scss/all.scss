@@ -1,5 +1,6 @@
 @use 'vars' as vars;
 
+
 .choices {
   padding-right: 17px;
 
@@ -1278,12 +1279,23 @@
 
 // Пагинация различных блоков
 .items-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__more {
     padding: 22px 51px;
     font-family: 'Euclid Circular', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-self: center;
+  }
+
+  &__pagination {
+    align-self: center;
   }
 
   .cards-pagination {
@@ -1417,6 +1429,10 @@
   }
 
   @media (max-width: 360px) {
+    &__more {
+      align-self: stretch;
+    }
+
     .cards-pagination {
       &__arrow {
         &_prev {
@@ -1466,6 +1482,8 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 30px;
+  display: flex;
+  flex-direction: column;
 
   &__images {
     margin-bottom: 23px;
@@ -1502,6 +1520,17 @@
     img:nth-child(3) {
       grid-column: 2 / 3;
     }
+  }
+
+  b {
+    color: vars.$color-accent-1;
+    font-weight: 900;
+    margin-bottom: 42px;
+    line-height: 20px;
+  }
+
+  strong {
+    font-weight: 900;
   }
 
   p {  
@@ -1625,9 +1654,17 @@
       margin-bottom: 10px;
     }
 
-    ul li::before {
-      min-width: 9px;
-      min-height: 9px;
+    b {
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      // padding-left: 13px;
+
+      &::before {
+        min-width: 9px;
+        min-height: 9px;
+      }
     }
   }
 
