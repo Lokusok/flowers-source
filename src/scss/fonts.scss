@@ -35,6 +35,15 @@
 }
 
 @font-face {
+  font-family: 'Euclid Circular';
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/EuclidCircularB-500.woff2) format('woff2'),
+       url(../fonts/EuclidCircularB-500.woff) format('woff'),
+       url(../fonts/EuclidCircularB-500.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'PT Sans';
   font-weight: 700;
   font-display: swap;

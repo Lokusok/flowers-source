@@ -7,9 +7,9 @@ block variables
 block content
   main#main.main
     section.section#order.order
-      img.flowers-decor.order__decor.order__decor_1(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.order__decor.order__decor_2(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
-      img.flowers-decor.order__decor.order__decor_3(src="./images/src/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.order__decor.order__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.order__decor.order__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.order__decor.order__decor_3(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
 
       .container.section__container.order__container
         .section__row.order__row
@@ -40,6 +40,7 @@ block content
                   .data-field
                     .white-area.data-field__select-block.data-field__input-block
                       select(name="username" required).white-area__input.data-field__input
+                        option(value="" selected disabled) Регион доставки
                         option(value="value-1") Киев
                         option(value="value-2") Львов
                         option(value="value-3") Харьков
@@ -58,11 +59,12 @@ block content
                   .data-field
                     .white-area.data-field__input-block
                       input(type="text" name="date" autocomplete="off").date-input.white-area__input.data-field__input
-                      img.white-area__icon(src="./images/src/calendar-icon.svg" alt="" aria-hidden="true")
+                      img.white-area__icon(src="./images/calendar-icon.svg" alt="" aria-hidden="true")
                       span.white-area__input-label.data-field__input-label Дата доставки
                   .data-field
                     .white-area.data-field__select-block.data-field__input-block
                       select(name="date").white-area__input.data-field__input
+                        option(value="" selected disabled) Время
                         option(value="value-1") 6:00-9:00
                         option(value="value-2") 9:00-12:00
                         option(value="value-3") 12:00-15:00
@@ -99,43 +101,43 @@ block content
                     label.checkbox__label
                       span.checkbox__text Доставка сюрпризом
                       input(type="checkbox" name="surprise" checked).visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .checkbox.checkbox-2.data-field
                     label.checkbox__label
                       span.checkbox__text Фотоотчет (+ 15 грн)
                       input(type="checkbox" name="photo" checked).visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .checkbox.checkbox-3.data-field
                     label.checkbox__label
                       span.checkbox__text Добавить вазу (+ 249 грн)
                       input(type="checkbox" name="add-vase").visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .checkbox.checkbox-4.data-field
                     label.checkbox__label
                       span.checkbox__text Напомнить о событии
                       input(type="checkbox" name="remind").visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .checkbox.checkbox-5.data-field
                     label.checkbox__label
                       span.checkbox__text Открытка
                       input(type="checkbox" name="postcard").visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .in-group.checkbox.checkbox-6.data-field
                     label.checkbox__label
                       span.checkbox__text Визитка
                       input(type="checkbox" name="card").visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .in-group.checkbox.checkbox-7.data-field
                     label.checkbox__label
                       span.checkbox__text Полномасштабная открытка (+ 79грн)
                       input(type="checkbox" name="full-postcard").visually-hidden.checkbox__input
-                      .checkbox__checkbox
+                      span.checkbox__checkbox
 
                   .input-field.data-field
                     .white-area.data-field__input-block
@@ -186,8 +188,8 @@ block content
                     span.res-field__price 5 304 ₴
 
                 .result-card__button-block
-                  button(type="button").action-btn.result-card__confirm
-                    a(href="./order.html").action-btn__inner
+                  a(href="./order.html").action-btn.result-card__confirm
+                    span.action-btn__inner
                       span.action-btn__text Оформить заказ
 
               .result-fields
@@ -200,8 +202,8 @@ block content
                   span.white-area__input-label.result-fields__input-label Введите номер подарочного сертификата
 
                 .result-fields__button-block
-                  button(type="button").action-btn.result-fields__confirm
-                    a(href="./order.html").action-btn__inner
+                  a(href="./order.html").action-btn.result-fields__confirm
+                    span.action-btn__inner
                       span.action-btn__text Применить
 
     include includes/sections/map

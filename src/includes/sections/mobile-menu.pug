@@ -3,7 +3,7 @@
     .menu__header
       span.menu__title Меню
       button(type="button").menu__close
-        img(src="./images/src/close-icon.svg" alt="закрыть меню")
+        img(src="./images/close-icon.svg" alt="закрыть меню")
 
     .menu__content
       .menu-field.tel-field
@@ -24,7 +24,7 @@
         .menu-field.favourite-field
           span.menu-field__title.city-field__title Закладки
           button(type="button" data-popup-selector=".favourite-popup").trigger.favourite-field__value.menu-field__value
-            img.favourite-field__icon(src="./images/src/heart-icon.svg" alt="избранное")
+            img.favourite-field__icon(src="./images/heart-icon.svg" alt="избранное")
             span.counter 2
         .menu-field.city-field
           span.menu-field__title.city-field__title Личный кабинет
@@ -63,6 +63,6 @@
         li.menu-links-item.highlighted
           a(href="./contacts.html").menu-links-item__link
             span.menu-links-item__title Контакты
-              img.left.menu-links-item__icon(src="./images/src/phone-icon.svg" alt="" aria-hidden="true")
+              img.left.menu-links-item__icon(src="./images/phone-icon.svg" alt="" aria-hidden="true")
 
       include ../partials/social-list

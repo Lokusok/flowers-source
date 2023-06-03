@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Flowers Ukraine | Оплата и доставка</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="./images/src/logo.svg">
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body class="no-js">
+    <div class="menu menu-mobile" id="menu-mobile">
+      <div class="menu__row">
+        <div class="menu__header"><span class="menu__title">Меню</span>
+          <button class="menu__close" type="button"><img src="./images/close-icon.svg" alt="закрыть меню"></button>
+        </div>
+        <div class="menu__content">
+          <div class="menu-field tel-field"><span class="menu-field__title tel-field__number">+38 (067) 829 30 30</span><a class="small action-btn tel-field__button" href="tel:380678293030"><span class="action-btn__inner tel-field__link"><span class="action-btn__text">Позвонить</span></span></a></div>
+          <div class="menu__area">
+            <div class="menu-field city-field"><span class="menu-field__title city-field__title">Киев</span>
+              <label class="menu-field__value city-field__value" for="select-city-mobile"> Выберите город
+                <select class="default-select options-list__select" id="select-city-mobile" name="city">
+                  <option value="kiev" selected>Киев</option>
+                  <option value="lvov">Львов</option>
+                  <option value="kharkov">Харьков</option>
+                  <option value="odessa">Одесса</option>
+                </select>
+              </label>
+            </div>
+            <div class="menu-field favourite-field"><span class="menu-field__title city-field__title">Закладки</span>
+              <button class="trigger favourite-field__value menu-field__value" type="button" data-popup-selector=".favourite-popup"><img class="favourite-field__icon" src="./images/heart-icon.svg" alt="избранное"><span class="counter">2</span></button>
+            </div>
+            <div class="menu-field city-field"><span class="menu-field__title city-field__title">Личный кабинет</span><a class="menu-field__value" href="#">Войти</a></div>
+          </div>
+          <ul class="menu-links">
+            <li class="menu-links-item"><a class="menu-links-item__link" href="./forum.html"><span class="menu-links-item__title">Форум</span></a></li>
+            <li class="menu-links-item"><a class="menu-links-item__link" href="./reviews.html"><span class="menu-links-item__title">Отзывы</span></a></li>
+            <li class="menu-links-item"><a class="menu-links-item__link" href="./sales.html"><span class="menu-links-item__title">Акции</span></a></li>
+            <li class="menu-links-item"><a class="menu-links-item__link" href="./news.html"><span class="menu-links-item__title">Новости</span></a></li>
+            <li class="menu-links-item">
+              <div class="menu-drop menu-links-item__link"><span class="menu-drop__title menu-links-item__title">Информация<i class="black menu-drop__icon"></i></span>
+                <ul class="inner-list menu-link-item__inner-list">
+                  <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Белые розы</span></a></li>
+                  <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Алые розы</span></a></li>
+                  <li class="inner-list-item"><a class="inner-list-item__link" href="#"><span class="inner-list-item__title">Бирюзовые лилии</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-links-item highlighted"><a class="menu-links-item__link" href="./contacts.html"><span class="menu-links-item__title">Контакты<img class="left menu-links-item__icon" src="./images/phone-icon.svg" alt="" aria-hidden="true"></span></a></li>
+          </ul>
+          <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/viber-icon.svg" alt="Viber"></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/inst-icon.svg" alt="Instagram"></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/tg-icon.svg" alt="Telegram"></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/facebook-icon.svg" alt="Facebook"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popup tel-popup" id="tel-popup">
+      <div class="popup__row tel-popup__row">
+        <div class="popup__content tel-popup__content"><span class="tel-popup__title">Заказ звонка</span>
+          <p class="tel-popup__description">Оставьте Ваш номер телефона и мы перезвоним Вам через 5 минут</p>
+          <div class="white-area tel-popup__input-block">
+            <input class="white-area__input tel-popup__input" type="tel" name="tel" required><span class="white-area__input-label tel-popup__input-label">Телефон *</span>
+          </div>
+          <button class="action-btn click-and-hide tel-popup__button" type="button"><span class="action-btn__inner"><span class="action-btn__text">Отправить</span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="popup favourite-popup" id="favourite-popup">
+      <div class="popup__row favourite-popup__row">
+        <div class="popup__content favourite-popup__content">
+          <div class="favourite-popup__top-line"><span class="favourite-popup__title">Избраное</span>
+            <div class="slider-arrows favourite-popup__arrows">
+              <button class="products-arrow favourite-arrow-prev" type="button"><svg class="products-arrow-prev__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.574258 13.0104L12.6138 1.30589C13.3797 0.560961 14.6214 0.560961 15.3869 1.30589C16.1524 2.05016 16.1524 3.25729 15.3869 4.0015L4.73374 14.3582L15.3866 24.7145C16.1521 25.459 16.1521 26.6661 15.3866 27.4103C14.621 28.1549 13.3794 28.1549 12.6135 27.4103L0.573948 15.7057C0.191172 15.3334 0 14.8459 0 14.3582C0 13.8703 0.191544 13.3825 0.574258 13.0104Z" fill="#956D84"/>
+</svg>
+              </button>
+              <button class="products-arrow favourite-arrow-next" type="button"><svg class="products-arrow-next__icon" aria-hidden="true" width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3869 13.0104L3.34735 1.30589C2.58149 0.560961 1.33978 0.560961 0.574286 1.30589C-0.191266 2.05016 -0.191266 3.25729 0.574286 4.0015L11.2274 14.3582L0.574596 24.7145C-0.190956 25.459 -0.190956 26.6661 0.574596 27.4103C1.34015 28.1549 2.5818 28.1549 3.34766 27.4103L15.3872 15.7057C15.77 15.3334 15.9612 14.8459 15.9612 14.3582C15.9612 13.8703 15.7696 13.3825 15.3869 13.0104Z" fill="#956D84"/>
+</svg>
+              </button>
+            </div>
+          </div>
+          <div class="favourite-popup__inner">
+            <div class="swiper favourite-slider">
+              <div class="swiper-wrapper favourite-slider__wrapper">
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-19%</span><img class="product-card__image" src="./images/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">101 красная роза</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">2280 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-10%</span><img class="product-card__image" src="./images/product-card-image-2.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">25 розовых пионовидных роз</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1680 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-19%</span><img class="product-card__image" src="./images/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">Влюблённость</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1270 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-19%</span><img class="product-card__image" src="./images/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">101 красная роза</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">2280 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-10%</span><img class="product-card__image" src="./images/product-card-image-2.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">25 розовых пионовидных роз</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1680 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="swiper-slide product-card">
+                  <div class="product-card-image-block"><a class="product-card__link" href="#">
+                      <div class="product-card-image-block__top-line"><span class="product-discount product-card__discount">-19%</span><img class="product-card__image" src="./images/product-card-image-1.png" alt="сто одна красная роза" loading="lazy"></div>
+                      <div class="product-card-image-block__bottom-line">
+                        <div class="product-card__in-top">TOP</div>
+                      </div></a>
+                    <button class="product-to-favourite product-card__to-favourite" type="button"><svg class="favourite-icon" aria-hidden="true" width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="favourite-icon__path" d="M20 34.6938L17.5834 32.5488C9.00004 24.96 3.33337 19.9387 3.33337 13.8125C3.33337 8.79125 7.36671 4.875 12.5 4.875C15.4 4.875 18.1834 6.19125 20 8.255C21.8167 6.19125 24.6 4.875 27.5 4.875C32.6334 4.875 36.6667 8.79125 36.6667 13.8125C36.6667 19.9387 31 24.96 22.4167 32.5488L20 34.6938Z" fill="#956D84"/>
+</svg>            
+                    </button>
+                  </div>
+                  <div class="product-card-text-block">
+                    <div class="product-card-text-block__inner">
+                      <div class="product-card-text-block__raiting"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"><img class="product-card-text-block-raiting-star" src="./images/star-icon.svg" alt="" aria-hidden="true" loading="lazy"></div>
+                      <div class="product-card-text-block__middle-line">
+                        <h3 class="product-card-text-block__title">Влюблённость</h3>
+                        <div class="product-card-text-block-price">
+                          <del class="product-card-text-block-price__old">2800 грн</del><ins class="product-card-text-block-price__new">1270 грн</ins>
+                        </div>
+                      </div>
+                      <div class="product-card-text-block__bottom-line">
+                        <button class="action-btn product-card__get-order" type="button"><span class="action-btn__inner"><span class="action-btn__text">Заказать</span></span></button>
+                        <button class="trigger product-card__quick-order" type="button" data-popup-selector=".tel-popup">Быстрый заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="pagination favourite-slider-pagination"></div>
+            <button class="click-and-hide favourite-popup__close" type="button">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="options" id="options">
+      <div class="container options__container">
+        <div class="options__row desktop">
+          <ul class="options__lists">
+            <li class="options-list">
+              <label class="options-list__title" for="select-valute">Валюта</label>
+              <select class="default-select options-list__select" id="select-valute" name="valute">
+                <option value="grivens" selected>Грн</option>
+                <option value="rubles">Рбл</option>
+                <option value="dollars">Длр</option>
+                <option value="dollars">Евр</option>
+              </select>
+            </li>
+            <li class="options-list">
+              <label class="options-list__title" for="select-language">Язык</label>
+              <select class="default-select options-list__select" id="select-language" name="language">
+                <option value="ru" selected>RU</option>
+                <option value="ua">UA</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+            <li class="options-list">
+              <label class="options-list__title" for="select-city">Город</label>
+              <select class="default-select options-list__select" id="select-city" name="city">
+                <option value="kiev" selected>Киев</option>
+                <option value="lvov">Львов</option>
+                <option value="kharkov">Харьков</option>
+                <option value="odessa">Одесса</option>
+              </select>
+            </li>
+          </ul>
+          <nav class="nav">
+            <ul class="options__links">
+              <li class="options-link"><a class="options-link__link-container" href="#">
+                  <div class="options-link__icon-block"><img class="options-link__icon" src="./images/src/heart-icon.svg" alt="" aria-hidden="true">
+                    <div class="options-link__icon-counter-block"><span class="counter options-link__icon-counter">2</span></div>
+                  </div><span class="options-link__title">Закладки</span></a></li>
+              <li class="options-link"><a class="options-link__link-container" href="#">
+                  <div class="options-link__icon-block"><img class="options-link__icon" src="./images/src/car-icon.svg" alt="" aria-hidden="true"></div><span class="options-link__title">Доставка и оплата</span></a></li>
+              <li class="options-link"><a class="options-link__link-container" href="#">
+                  <div class="options-link__icon-block"><img class="options-link__icon" src="./images/src/phone-icon.svg" alt="" aria-hidden="true"></div><span class="options-link__title">Контакты</span></a></li>
+            </ul>
+            <ul class="options__login options-enter">
+              <li class="options-enter__elem"><a class="options-enter__link options-enter__login" href="#" aria-label="Войти в аккаунт"><img class="options-enter__icon" src="./images/src/user-icon.svg" alt="" aria-hidden="true"><span class="options-enter__title">Войти</span></a></li>
+              <li class="options-enter__delimiter"></li>
+              <li class="options-enter__elem"><a class="options-enter__link options-enter__register" href="#" aria-label="Зарегистрировать аккаунт"><span class="options-enter__title">Регистрация</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="options__row mobile">
+          <ul class="options__lists options__links">
+            <li class="options-list options-list-1">
+              <select class="default-select options-list__select" id="select-valute-mobile" name="valute">
+                <option value="grivens" selected>Грн</option>
+                <option value="rubles">Рбл</option>
+                <option value="dollars">Длр</option>
+                <option value="dollars">Евр</option>
+              </select>
+            </li>
+            <li class="options-link"><a class="options-link__link-container" href="#">
+                <div class="options-link__icon-block"><svg class="options-link__icon" aria-hidden="true" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.1332 12.0334C4.52571 12.0334 4.0332 12.526 4.0332 13.1334C4.0332 13.7409 4.52567 14.2334 5.1332 14.2334C5.74074 14.2334 6.2332 13.741 6.2332 13.1334C6.23252 12.5262 5.74044 12.0341 5.1332 12.0334ZM5.1332 13.5001C4.93069 13.5001 4.76655 13.336 4.76655 13.1334C4.76655 12.9309 4.93069 12.7668 5.1332 12.7668C5.33571 12.7668 5.49986 12.9309 5.49986 13.1334C5.49964 13.3359 5.33563 13.4999 5.1332 13.5001Z" fill="#956D84"/>
+<path d="M16.8666 12.0334C16.2591 12.0334 15.7666 12.526 15.7666 13.1334C15.7666 13.7409 16.2591 14.2334 16.8666 14.2334C17.4741 14.2334 17.9666 13.741 17.9666 13.1334C17.966 12.5262 17.4738 12.0341 16.8666 12.0334ZM16.8666 13.5001C16.6641 13.5001 16.4999 13.336 16.4999 13.1334C16.4999 12.9309 16.6641 12.7668 16.8666 12.7668C17.0691 12.7668 17.2333 12.9309 17.2333 13.1334C17.2331 13.3359 17.069 13.4999 16.8666 13.5001Z" fill="#956D84"/>
+<path d="M21.7205 6.81411L19.1947 3.96958C18.9854 3.73394 18.6852 3.5994 18.37 3.60005H15.0333V1.40005C15.0327 0.792814 14.5406 0.300693 13.9333 0.300049H1.1C0.492766 0.300693 0.000644567 0.792814 3.58087e-08 1.40005V10.9334C-4.29329e-05 11.0306 0.038586 11.1239 0.107379 11.1927C0.176129 11.2615 0.269414 11.3001 0.366695 11.3001H0.733348V12.4001C0.733992 13.0073 1.22611 13.4994 1.83335 13.5001H2.59596C2.77668 14.7625 3.85804 15.7001 5.13335 15.7001C6.40866 15.7001 7.49001 14.7625 7.67074 13.5001H14.3293C14.5101 14.7625 15.5914 15.7001 16.8667 15.7001C18.1421 15.7001 19.2234 14.7625 19.4041 13.5001H20.9C21.5072 13.4994 21.9994 13.0073 22 12.4001V7.54531C21.9997 7.27551 21.9003 7.01529 21.7205 6.81411ZM0.733348 10.5667V1.40005C0.733562 1.19762 0.897574 1.03357 1.1 1.0334H13.9333C14.1358 1.03361 14.2998 1.19762 14.3 1.40005V10.5667H0.733348ZM2.59596 12.7667H1.83335C1.63092 12.7665 1.46687 12.6025 1.4667 12.4V11.3H3.34056C2.93777 11.6937 2.67605 12.2092 2.59596 12.7667ZM5.13335 14.9667C4.12083 14.9667 3.3 14.1459 3.3 13.1334C3.3 12.1208 4.12083 11.3 5.13335 11.3C6.14586 11.3 6.9667 12.1209 6.9667 13.1334C6.96549 14.1454 6.14535 14.9655 5.13335 14.9667ZM8.8 12.7667H7.6707C7.5906 12.2092 7.32892 11.6937 6.92613 11.3H8.8V12.7667ZM12.1 12.7667H9.53335V11.3H12.1V12.7667ZM14.3293 12.7667H12.8333V11.3H15.0739C14.6711 11.6937 14.4094 12.2092 14.3293 12.7667ZM16.8667 14.9667C15.8541 14.9667 15.0333 14.1459 15.0333 13.1334C15.0333 12.1208 15.8541 11.3 16.8667 11.3C17.8792 11.3 18.7 12.1208 18.7 13.1334C18.6988 14.1454 17.8787 14.9655 16.8667 14.9667ZM21.2667 12.4C21.2664 12.6025 21.1024 12.7665 20.9 12.7667H19.404C19.2212 11.5054 18.1411 10.569 16.8667 10.5667H15.0333V4.3334H16.5V8.00005C16.5006 8.60728 16.9928 9.0994 17.6 9.10005H21.2667V12.4ZM21.2667 8.3667H17.6C17.3976 8.36649 17.2335 8.20247 17.2333 8.00005V4.3334H18.37C18.4753 4.3328 18.5758 4.3774 18.6459 4.45586L21.1727 7.30146C21.2328 7.36849 21.2663 7.45525 21.2667 7.54531V8.3667H21.2667Z" fill="#956D84"/>
+</svg>
+                </div><span class="options-link__title">Доставка и оплата</span></a></li>
+            <li class="options-list options-list-2">
+              <select class="default-select options-list__select" id="select-language-mobile" name="language">
+                <option value="ru" selected>RU</option>
+                <option value="ua">UA</option>
+                <option value="en">EN</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <header class="header" id="header">
+      <div class="container header__container">
+        <div class="header__row">
+          <button class="burger header__burger" type="button"><span class="burger__inner"><span class="burger__line burger__line_1"></span><span class="burger__line burger__line_2"></span><span class="burger__line burger__line_3"></span></span></button><a class="logo header__logo" href="./index.html"><img class="logo__image" src="./images/logo.svg" alt="Flowers Ukraine"></a>
+          <div class="header__advanced searches">
+            <ul class="searches-inputs">
+              <li class="searches-inputs__input-elem input-elem">
+                <button class="dropdown dropdown-select input-elem__input" type="button"><span class="dropdown__title">Поиск по категориям</span></button>
+                <ul class="dropdown-list">
+                  <li class="dropdown-item" data-cat-value="cat-1" tabindex="0"><span class="dropdown-item__title">Категория № 1</span></li>
+                  <li class="dropdown-item" data-cat-value="cat-2" tabindex="0"><span class="dropdown-item__title">Категория № 2</span></li>
+                  <li class="dropdown-item" data-cat-value="cat-3" tabindex="0"><span class="dropdown-item__title">Категория № 3</span></li>
+                  <li class="dropdown-item" data-cat-value="cat-4" tabindex="0"><span class="dropdown-item__title">Категория № 4</span></li>
+                  <li class="dropdown-item" data-cat-value="cat-5" tabindex="0"><span class="dropdown-item__title">Категория № 5</span></li>
+                </ul>
+              </li>
+              <li class="searches-inputs__input-elem input-elem">
+                <input class="input-elem__input" type="text" placeholder="Поиск по товарам">
+                <button class="input-elem__search-btn" type="button" aria-label="Начать поиск"><img src="./images/search-icon.svg" alt="" aria-hidden="true"></button>
+              </li>
+            </ul>
+            <nav class="nav">
+              <ul class="searches-cats">
+                <li class="searches-cats__cat-elem cat-elem">
+                  <button class="dropdown" type="button"><span class="dropdown__title cat-elem__title highlighted">Каталог товаров</span></button>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item" data-cat-value="cat-1" tabindex="0"><span class="dropdown-item__title">Букеты</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                      </div>
+                      <ul class="dropdown-list">
+                        <li class="dropdown-item"><a class="dropdown-item__title" href="./catalog.html">Цветы в коробке с пироженым Macarons</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-2" tabindex="0"><span class="dropdown-item__title">Розы</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-3" tabindex="0"><span class="dropdown-item__title">Цветы в коробке</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-4" tabindex="0"><span class="dropdown-item__title">Композиции</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-5" tabindex="0"><span class="dropdown-item__title">Подарки</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-6" tabindex="0"><span class="dropdown-item__title">Подарочные корзины</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-7" tabindex="0"><span class="dropdown-item__title">Букеты невесты</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown-item" data-cat-value="cat-8" tabindex="0"><span class="dropdown-item__title">Вкусные букеты</span>
+                      <div class="dropdown-item__more"><svg class="dropdown-item__icon" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+</svg>
+                        <ul class="dropdown-list">
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке с пироженым Macarons</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в коробке сердце</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item__title" href="#">Цветы в прямоугольной коробке </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="searches-cats__cat-elem cat-elem"><a class="cat-elem__title" href="./forum.html">Форум</a></li>
+                <li class="searches-cats__cat-elem cat-elem"><a class="cat-elem__title" href="./reviews.html">Отзывы</a></li>
+                <li class="searches-cats__cat-elem cat-elem"><a class="cat-elem__title" href="./sales.html">Акции</a></li>
+                <li class="searches-cats__cat-elem cat-elem"><a class="cat-elem__title" href="./news.html">Новости</a></li>
+                <li class="searches-cats__cat-elem cat-elem">
+                  <button class="dropdown" type="button"><span class="dropdown__title cat-elem__title">Информация</span></button>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item"><a class="dropdown-item__title" href="./about.html">О нас</a></li>
+                    <li class="dropdown-item"><a class="dropdown-item__title" href="./contacts.html">Контакты</a></li>
+                    <li class="dropdown-item"><a class="dropdown-item__title" href="./pay-deliver.html">Оплата и доставка</a></li>
+                    <li class="dropdown-item"><a class="dropdown-item__title" href="./delivery-office.html">Корпоративным клиентам</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="other-links">
+            <nav class="nav-social">
+              <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/viber-icon.svg" alt="Viber"></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/inst-icon.svg" alt="Instagram"></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/tg-icon.svg" alt="Telegram"></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/facebook-icon.svg" alt="Facebook"></a></li>
+              </ul>
+            </nav><a class="other-links__tel" href="tel:380678293030">+38 (067) 829 30 30</a>
+            <div class="other-links__opts"><a class="other-links__link search-link" href="#"><img src="./images/search-icon.svg" alt="поиск"></a>
+              <button class="trigger other-links__link favourite-link" type="button" data-popup-selector=".favourite-popup"><img src="./images/heart-icon.svg" alt="избранное"><span class="counter">2</span></button><a class="other-links__link basket-link" href="./basket.html"><img src="./images/cart-icon.svg" alt="корзина"><span class="counter">1</span></a><span class="other-links__summary">₴ 1 520</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main" id="main">
+      <section class="section pay-deliver" id="pay-deliver"><img class="flowers-decor pay-deliver__decor pay-deliver__decor_1" src="./images/flowers-decor-1.png" alt="" aria-hidden="true"><img class="flowers-decor pay-deliver__decor pay-deliver__decor_2" src="./images/flowers-decor-1.png" alt="" aria-hidden="true"><img class="flowers-decor pay-deliver__decor pay-deliver__decor_3" src="./images/flowers-decor-1.png" alt="" aria-hidden="true" loading="lazy"><img class="flowers-decor pay-deliver__decor pay-deliver__decor_4" src="./images/flowers-decor-5.png" alt="" aria-hidden="true" loading="lazy"><img class="flowers-decor pay-deliver__decor pay-deliver__decor_5" src="./images/flowers-decor-5.png" alt="" aria-hidden="true" loading="lazy"><img class="big flowers-decor pay-deliver__decor pay-deliver__decor_6" src="./images/flowers-decor-3.png" alt="" aria-hidden="true" loading="lazy">
+        <div class="container section__container pay-deliver__container">
+          <div class="section__row pay-deliver__row">
+            <header class="section__header pay-deliver__header">
+              <ul class="bread-crumbs section__bread-crumbs">
+                <li class="bread-crumbs__item"><a class="white-underline-link bread-crumbs__link" href="./index.html">Главная</a></li>
+                <li class="bread-crumbs__item"><a class="white-underline-link bread-crumbs__link" href="./index.html">Информация</a></li>
+                <li class="bread-crumbs__item"><a class="bread-crumbs__link">Оплата и доставка</a></li>
+              </ul>
+              <h2 class="section__title pay-deliver__title">Оплата и доставка</h2>
+            </header>
+            <div class="pay-deliver-area">
+              <article class="article">
+                <p>Flowers-Ukraine.com - это единая сеть партнеров, курьерская доставка цветов, что гарантирует доставку букетов и подарков по всей Украине вовремя и в надлежащем виде. Доставка цветов по украине осуществляется в удобное для Вас время.</p>
+                <p>Цветы и корзины фруктов - это скоропортящийся продукт, поэтому компания оставляет за собой право изменения состава и внешнего вида товара на 20-25% с сохранением общего вида и стоимости компонентов.</p>
+                <p>Доставка цветов в областные центры Украины - от 100 грн</p>
+                <p>За ранние (с 7 до 9) и вечерние (с 21 до 23) временные промежутки доставки доплата составляет 50грн.</p>
+                <p>В крупных городах: Киев, Днепропетровск, Одесса, Донецк, Харьков </p>
+                <ul>
+                  <li>доставка осуществляется бесплатно при заказе от 800 грн;</li>
+                  <li>при заказе менее 800 грн доставка оплачивается отдельно и составляет 100 грн.</li>
+                </ul>
+                <p>Доставка цветов по районным цетрам и поселкам от 160 грн, более подробно уточнять у менеджера.</p>
+                <p>При высокой загруженности дорог время доставки гарантировать невозможно. Надеемся на Ваше понимание!</p>
+                <p>Доставка заказов оплаченных после 18:00 по киевскому времени, при условии ранней доставки на следующий день, может быть перенесена на более позднее время по согласованию с заказчиком.</p>
+                <p>Вы можете оплатить товар:</p>
+                <ul class="pay-images-list">
+                  <li class="pay-images-list__item"><img src="./images/pay-deliver-1.png" alt="Приват Банк"></li>
+                  <li class="pay-images-list__item"><img src="./images/pay-deliver-2.png" alt="Виза"></li>
+                  <li class="pay-images-list__item"><img src="./images/pay-deliver-3.png" alt="МастерКард"></li>
+                  <li class="pay-images-list__item"><img src="./images/pay-deliver-4.png" alt="Portmone.com"></li>
+                  <li class="pay-images-list__item"><img src="./images/pay-deliver-5.png" alt="Яндекс деньги"></li>
+                </ul>
+                <p>«Приват24» – самый популярный Интернет-банк Украины.</p>
+                <p>Наличными оплата производится предварительно перед фактом доставки наличными курьеру. Стоимость услуги выезда курьера составляет 20 грн. Оплата карточкой Visa/MasterCard В нашем магазине Вы можете оплатить заказ при помощи платежной (пластиковой) карты.Сервис проведения платежей обеспечивается Межбанковской системой электронной доставки и оплаты счетов Portmone.com с использованием современного и безопасного механизма авторизации платежных карт. Реквизиты платежных карт вводятся на сайте Portmone.com в защищенном режиме, и недоступны сотрудникам. Яндекс.Деньги После оплаты, пожалуйста напишите нам email с суммой проплаты и номером Вашего заказа. А также укажите эту информацию при переводе.</p>
+                <p>Мы работаем по всей Украине!</p>
+                <h3>Договор-оферта интернет-магазина</h3>
+                <p>Интернет-магазин flowers-ukraine.com (далее ПРОДАВЕЦ), публикует настоящий договор, являющийся публичным договором-офертой в адрес как физических, так и юридических лиц (далее ПОКУПАТЕЛЬ) о нижеследующем:</p>
+                <p>Статья 1. Предмет договора-оферты.</p>
+                <p>1.1. ПРОДАВЕЦ обязуется произвести пополнение виртуального счета на сайте flowers-ukraine.com ПОКУПАТЕЛЮ, а ПОКУПАТЕЛЬ обязуется оплатить услугу любым удобным способом на сайте платежного шлюза WWW.INTERKASSA.COM.</p>
+                <p>Статья 2. Момент заключения договора.</p>
+                <p>2.1. Текст данного Договора является публичной офертой</p>
+                <p>2.2. Факт оформления ЗАКАЗА УСЛУГИ у ПРОДАВЦА как самостоятельно, так и через оператора, является безоговорочным принятием данного Договора, и ПОКУПАТЕЛЬ рассматривается как лицо, вступившее с ПРОДАВЦОМ в договорные отношения.</p>
+                <p>2.3. Оформление ЗАКАЗА УСЛУГИ и расчета осуществляется путем заказа ПОКУПАТЕЛЕМ в интернет-магазине flowers-ukraine.com.</p>
+                <p>Статья 3. Стоимость УСЛУГИ.</p>
+                <p>3.1. Цены в интернет-магазине указаны в валюте страны покупателя.</p>
+                <p>3.2. Стоимость УСЛУГИ выбирается ПОКУПАТЕЛЕМ, от нее зависит сумма, которая будет зачислена ПОКУПАТЕЛЮ на виртуальный счет сайта flowers-ukraine.com.</p>
+                <p>3.3. Один ПОКУПАТЕЛЬ имеет право заказывать УСЛУГУ неограниченное количество раз.</p>
+                <p>Статья 4. Оплата УСЛУГИ.</p>
+                <p>4.1. Оплата услуги осуществляется ПОКУПАТЕЛЕМ одним из множества доступных способов, на сайте платежного шлюза WWW.INTERKASSA.COM</p>
+                <p>4.2. В большинстве случаев, комиссия с ПОКУПАТЕЛЯ не взимается, однако платежный шлюз WWW.INTERKASSA.COM, а так же платежная система имеют право взимать</p>
+                <p>Статья 5. Оказание УСЛУГИ.</p>
+                <p>5.1. В большинстве случаев оказание УСЛУГИ ПОКУПАТЕЛЮ осуществляется автоматической системой после проведения платежа в срок не более одного часа.</p>
+                <p>5.2. В случае, если в течение одного часа УСЛУГА ПОКУПАТЕЛЮ не оказана, он обязан сообщить о возникновении проблемы консультанту по телефону и указать необходимые для проверки платежа сведения, в этом случае УСЛУГА будет оказана в ручном режиме в течение 48 часов с момента обращения.</p>
+                <p>Статья 6. Права и обязанности сторон.</p>
+                <p>6.1. ПРОДАВЕЦ обязуется:</p>
+                <p>6.1.1. Не разглашать любую частную информацию ПОКУПАТЕЛЯ и не предоставлять доступ к этой информации третьим лицам, за исключением случаев, предусмотренных законодательством.</p>
+                <p>6.1.2. Предоставить ПОКУПАТЕЛЮ возможность получения бесплатных консультаций по контактным данным, указанным на сайте магазина (flowers-ukraine.com). Объем консультаций ограничивается конкретными вопросами, связанными с выполнениями ЗАКАЗА.</p>
+                <p>6.1.3. Оказать ПОКУПАТЕЛЮ УСЛУГУ пополнения счета на сайте flowers-ukraine.com автоматической системой в течение часа после оплаты услуги, либо в ручном режиме в течение 48 часов после обращение ПОКУПАТЕЛЯ в консультанту (см. п.5.2).</p>
+                <p>6.1.4. ПРОДАВЕЦ оставляет за собой право изменять настоящий ДОГОВОР в одностороннем порядке до момента его заключения.</p>
+                <p>6.2. ПОКУПАТЕЛЬ обязуется:</p>
+                <p>6.2.1. До момента заключения ДОГОВОРА ознакомиться с содержанием договора-оферты, условиями оплаты и доставки на сайте магазина (flowers-ukraine.com).</p>
+                <p>6.2.2. Предоставлять достоверную информацию о себе (контактные телефоны, адрес электронной почты) и реквизиты для доставки уведомления об успешном платеже.</p>
+                <p>Статья 7. Ответственность сторон и разрешение споров.</p>
+                <p>7.1. Стороны несут ответственность за неисполнение или ненадлежащее исполнение настоящего ДОГОВОРА в порядке, предусмотренном настоящим ДОГОВОРОМ и действующим законодательством.</p>
+                <p>7.3. ПРОДАВЕЦ не несет ответственности, если различные ожидания ПОКУПАТЕЛЯ об оказанной услуге оказались не оправданны.</p>
+                <p>7.4. ПРОДАВЕЦ не несет ответственности за частичное или полное неисполнение обязательств по оказанию УСЛУГИ, если они являются следствием форс-мажорных обстоятельств.</p>
+                <p>7.5. ПОКУПАТЕЛЬ, оформляя ЗАКАЗ, несет ответственность за достоверность предоставляемой информации о себе, а так же подтверждает, что с условиями настоящего ДОГОВОРА ознакомлен и согласен.</p>
+                <p>7.6. Все споры и разногласия, возникающие при исполнении СТОРОНАМИ обязательств по настоящему Договору, решаются путем переговоров. В случае невозможности их устранения, СТОРОНЫ имеют право обратиться за судебной защитой своих интересов.</p>
+                <p>Статья 8. Возврат средств.</p>
+                <p>8.1. Все платежи на сайте flowers-ukraine.com конечны и не могут быть возвращены полностью или частично на счет ПОКУПАТЕЛЯ.</p>
+                <p>Статья 9. Форс-мажорные обстоятельства.</p>
+                <p>9.1. Стороны освобождаются от ответственности за неисполнение или ненадлежащее исполнение обязательств по Договору на время действия непреодолимой силы. Под непреодолимой силой понимаются чрезвычайные и непреодолимые при данных условиях обстоятельства, препятствующие исполнению своих обязательств СТОРОНАМИ по настоящему Договору. К ним относятся стихийные явления (землетрясения, наводнения и т. п.), обстоятельства общественной жизни (военные действия, чрезвычайные положения, крупнейшие забастовки, эпидемии и т. п.), запретительные меры государственных органов (запрещение перевозок, валютные ограничения, международные санкции запрета на торговлю и т. п.). В течение этого времени СТОРОНЫ не имеют взаимных претензий, и каждая из СТОРОН принимает на себя свой риск последствия форс-мажорных обстоятельств.</p>
+                <p>Статья 10. Срок действия договора.</p>
+                <p>10.1. Настоящий ДОГОВОР вступает в силу с момента обращения в Интернет-магазин flowers-ukraine.com и оформления ЗАКАЗА, и заканчивается при полном исполнении обязательств СТОРОНАМИ.</p>
+                <p>Статья 11. Реквизиты интернет магазина.</p>
+                <p>Адрес в сети Интернет - flowers-ukraine.com</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map" id="map">
+        <div class="container map__container">
+          <div class="map__row">
+            <h2 class="visually-hidden map__title">Карта и контактные данные</h2>
+            <div class="map-content">
+              <div class="map-view map-content__map-view" id="map-view"></div>
+              <div class="map-card">
+                <div class="map-card__logo"><img src="./images/logo.svg" alt="Flowers Ukraine Логотип"></div>
+                <div class="map-card__content">
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/phone-icon.svg" alt="" aria-hidden="true">Телефон:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                      <li class="map-card__tel map-card-list__item">+38 (063) 829 30 30</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/skype-icon.svg" alt="" aria-hidden="true">Skype:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">Flowers-Ukraine</li>
+                    </ul>
+                  </div>
+                  <div class="map-card-field">
+                    <div class="map-card-field__title"> <img src="./images/mail-icon.svg" alt="" aria-hidden="true">Почта:</div>
+                    <ul class="map-card-list">
+                      <li class="map-card-list__item">flowers.ukraine2014@gmail.com</li>
+                    </ul>
+                  </div>
+                  <ul class="social-list">
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/inst-icon.svg" alt="Instagram"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/skype-social-icon.svg" alt="Skype"></a></li>
+                    <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__icon" src="./images/facebook-icon.svg" alt="Facebook"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer"><img class="flowers-decor footer__decor footer__decor_1" src="./images/flowers-decor-footer-1.png" alt="" aria-hidden="true" loading="lazy"><img class="flowers-decor footer__decor footer__decor_2" src="./images/flowers-decor-footer-2.png" alt="" aria-hidden="true" loading="lazy">
+      <div class="container footer__container">
+        <div class="footer__row">
+          <div class="footer__top">
+            <div class="footer__logo"><img src="./images/logo-light.svg" alt="Flowers Ukraine Логотип"></div>
+            <div class="footer__lists">
+              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Информация<i class="white menu-drop__icon"></i></span>
+                <ul class="inner-list footer-list">
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="./about.html">О нас</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="./pay-deliver.html">Доставка и оплата</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Служба поддержки<i class="white menu-drop__icon"></i></span>
+                <ul class="inner-list footer-list">
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Карта сайта</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Возврат товара</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="./contacts.html">Связаться с нами</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Для сотрудничества</a></li>
+                </ul>
+              </div>
+              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Личный кабинет<i class="white menu-drop__icon"></i></span>
+                <ul class="inner-list footer-list">
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Личный кабинет</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">История заказа</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Закладки</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Список новостей</a></li>
+                </ul>
+              </div>
+              <div class="menu-drop footer-block"><span class="menu-drop__title footer-block__title">Дополнительно<i class="white menu-drop__icon"></i></span>
+                <ul class="inner-list footer-list">
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Подарочные</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Сертификаты</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="#">Акции</a></li>
+                  <li class="inner-list-item footer-list__item"><a class="inner-list-item__title footer-list__link" href="./delivery-office.html">Цветы в офис</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom"><span class="footer__copyright">Copyright &copy; 2021. Все права защищены</span>
+            <div class="pay-methods footer__pay-methods"><span class="pay-methods__title">Способы оплаты:</span>
+              <ul class="pay-methods__list">
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-1.svg" alt="privatbank"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-2.svg" alt="liqpay"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-3.svg" alt="mastercard"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-4.svg" alt="maestro"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-5.svg" alt="visa electron"></li>
+                <li class="pay-method pay-methods__method"><img class="pay-method__image" src="./images/pay-method-6.svg" alt="visa"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+extends base/template
+
+block variables
+  -
+    var title = 'Подарок каждому клиенту'
+
+block content
+  main#main.main
+    section.section#gifts.gifts
+      img.flowers-decor.gifts__decor.gifts__decor_1(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.gifts__decor.gifts__decor_2(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+      img.flowers-decor.gifts__decor.gifts__decor_3(src="./images/flowers-decor-1.png" alt="" aria-hidden="true")
+
+      .container.section__container.gifts__container
+        .section__row.gifts__row
+          header.section__header.gifts__header
+            ul.bread-crumbs.section__bread-crumbs
+              li.bread-crumbs__item
+                a(href="./index.html").white-underline-link.bread-crumbs__link Главная
+              li.bread-crumbs__item
+                a.bread-crumbs__link Подарок каждому клиенту
+
+            h2.section__title.gifts__title Подарок каждому клиенту
+
+          .gifts-area
+            .gifts-area__grid
+              article.gift-card.gift-card-1
+                picture
+                  source(type="image/avif" srcset="./images/gift-1.avif 1x")
+                  source(type="image/webp" srcset="./images/gift-1.webp 1x")
+                  img(src="./images/gift-1.jpg" alt="" aria-hidden="true").gift-card__image
+                h3.gift-card__text Скидки #[b -6%] на все букеты #[b по предзаказу] на 8 марта
+              article.gift-card.gift-card-2
+                picture
+                  source(type="image/avif" srcset="./images/gift-2.avif 1x")
+                  source(type="image/webp" srcset="./images/gift-2.webp 1x")
+                  img(src="./images/gift-2.jpg" alt="" aria-hidden="true").gift-card__image
+                h3.gift-card__text Подкормка #[b Crystal Clear] продлевает свежесть цветов от #[b 30 до 100%]
+              article.gift-card.gift-card-3
+                picture
+                  source(type="image/avif" srcset="./images/gift-3.avif 1x")
+                  source(type="image/webp" srcset="./images/gift-3.webp 1x")
+                  img(src="./images/gift-3.jpg" alt="" aria-hidden="true").gift-card__image
+                h3.gift-card__text #[b Фирменная] карточка с Вашим #[b текстом]
+              article.gift-card.gift-card-4
+                picture
+                  source(type="image/avif" srcset="./images/gift-4.avif 1x")
+                  source(type="image/webp" srcset="./images/gift-4.webp 1x")
+                  img(src="./images/gift-4.jpg" alt="" aria-hidden="true").gift-card__image
+                h3.gift-card__text При заказе цветов #[b в коробке], конфеты #[b Rafaello в подарок] к закзазу
+
+    include includes/sections/map
+
+

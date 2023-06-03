@@ -58,18 +58,18 @@ function pugToHtml() {
 }
 
 function cleanDist() {
-  return src('dist')
+  return src('dist', { allowEmpty: true })
     .pipe(clean());
 }
 
 function moveFiles() {
   return src([
     './src/*.html',
-    './src/css/style.css',
+    './src/css/style.min.css',
     './src/js/main.js',
     './src/images/*.*',
     '!./src/images/stack',
-    '!./src/images/*.svg', './src/images/sprite.svg',
+    // '!./src/images/*.svg', './src/images/sprite.svg',
     './src/fonts/*.*',
   ], { base: 'src' })
     .pipe(dest('./dist'));
@@ -112,7 +112,7 @@ function images() {
 function sprite() {
   return src('./src/images/*.svg')
     .pipe(svgSprite({
-      mode: {
+      mode: {        
         stack: {
           sprite: '../sprite.svg',
           example: true
